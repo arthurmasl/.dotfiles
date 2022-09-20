@@ -7,6 +7,7 @@ map("n", "<Leader>w", ":w<CR>")
 map("n", "<Leader>q", ":q<CR>")
 map("n", "<Leader>Q", ":q!<CR>")
 map("n", "<Leader>h", ":noh<CR>")
+map("n", "<Leader>c", ":tabclose<CR>")
 
 -- split
 map("n", "s", "i<CR><ESC>k")
@@ -62,3 +63,7 @@ end, { silent = true })
 vim.keymap.set({ "n" }, "<Leader>tb", require("gitsigns").toggle_current_line_blame, { silent = true })
 vim.keymap.set({ "n" }, "<Leader>td", require("gitsigns").toggle_deleted, { silent = true })
 vim.keymap.set({ "n" }, "<Leader>dd", require("gitsigns").diffthis, { silent = true })
+
+map("n", "<Leader>dd", ":DiffviewOpen<CR>")
+map("n", "<Leader>dh", ":DiffviewFileHistory<CR>")
+map("n", "<Leader>dH", ":DiffviewFileHistory %<CR>")

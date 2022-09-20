@@ -16,10 +16,12 @@ return require("packer").startup(function()
 	use({ "rafamadriz/friendly-snippets" })
 
 	use({ "jose-elias-alvarez/null-ls.nvim" })
+	use("lukas-reineke/lsp-format.nvim")
 	use({ "mattn/emmet-vim" })
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make", cond = vim.fn.executable("make") == 1 })
+
 	use({ "kyazdani42/nvim-tree.lua" })
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "akinsho/toggleterm.nvim", tag = "*" })
@@ -29,13 +31,13 @@ return require("packer").startup(function()
 			require("Comment").setup()
 		end,
 	})
-	use({ "TimUntersberger/neogit", requires = { "sindrets/diffview.nvim" } })
+
+	use({ "TimUntersberger/neogit" })
+	use({ "sindrets/diffview.nvim" })
 	use({ "lewis6991/gitsigns.nvim" })
-	use({
-		"AckslD/nvim-neoclip.lua",
-		requires = {
-			{ "kkharji/sqlite.lua", module = "sqlite" },
-		},
-	})
+
+	use({ "AckslD/nvim-neoclip.lua" })
+	use({ "kkharji/sqlite.lua", module = "sqlite" })
+
 	use({ "windwp/nvim-spectre" })
 end)
