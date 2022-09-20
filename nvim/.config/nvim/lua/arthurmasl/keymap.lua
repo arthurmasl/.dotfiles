@@ -53,7 +53,9 @@ map("n", "<Leader>fh", ":Telescope help_tags<CR>")
 map("n", "<Leader>fd", ":Telescope diagnostics<CR>")
 map("n", "<Leader>fs", ":Telescope git_status<CR>")
 map("n", "<Leader>fc", ":Telescope git_branches<CR>")
-map("n", "<Leader>fp", ":Telescope neoclip<CR>")
+map("n", "<Leader>fv", ":Telescope neoclip<CR>")
+vim.keymap.set("n", "<Leader>fp", require("telescope.builtin").commands, opts)
+vim.keymap.set("n", "<Leader>fk", require("telescope.builtin").keymaps, opts)
 
 -- git
 map("n", "<Leader>g", ":Neogit kind=split<CR>")
