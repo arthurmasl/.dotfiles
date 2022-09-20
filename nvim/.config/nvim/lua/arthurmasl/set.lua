@@ -1,24 +1,24 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-vim.opt.fileencoding = 'utf-8'
-vim.opt.encoding = 'utf-8'
+vim.opt.fileencoding = "utf-8"
+vim.opt.encoding = "utf-8"
 vim.opt.hidden = true
 
 vim.opt.showmode = false
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
-vim.opt.cursorlineopt = 'number'
-vim.opt.mouse = 'a'
+vim.opt.cursorlineopt = "number"
+vim.opt.mouse = "a"
 vim.opt.laststatus = 3
 vim.opt.cmdheight = 1
 
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.scrolloff = 20 
+vim.opt.scrolloff = 20
 
 vim.opt.autoindent = true
 vim.opt.smartindent = true
@@ -29,7 +29,7 @@ vim.opt.wrap = false
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2 
+vim.opt.shiftwidth = 2
 
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
@@ -41,13 +41,13 @@ vim.opt.splitbelow = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv('HOME') .. '/.vim/undodir'
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.updatetime = 50
 
-vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 vim.opt.fillchars = {
-  eob = ' ', 
+	eob = " ",
 }
