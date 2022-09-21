@@ -9,7 +9,7 @@ vim.opt.showmode = false
 vim.opt.signcolumn = "yes"
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
-vim.opt.cursorlineopt = "number"
+vim.opt.cursorlineopt = "both"
 vim.opt.mouse = "a"
 vim.opt.laststatus = 3
 vim.opt.cmdheight = 1
@@ -45,6 +45,7 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.updatetime = 50
+vim.opt.autoread = true
 
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
