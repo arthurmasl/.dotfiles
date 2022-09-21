@@ -42,4 +42,5 @@ return require("packer").startup(function()
 	use({ "kkharji/sqlite.lua", module = "sqlite" })
 
 	use({ "windwp/nvim-spectre" })
+	-- use({ "RRethy/vim-illuminate" })
 end)
