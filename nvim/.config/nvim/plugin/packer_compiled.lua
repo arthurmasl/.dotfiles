@@ -234,6 +234,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/arthurmasl/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/Users/arthurmasl/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
   }
 }
 

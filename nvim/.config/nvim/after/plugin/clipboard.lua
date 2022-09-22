@@ -12,6 +12,20 @@ local function all(tbl, check)
 end
 
 require("neoclip").setup({
+	keys = {
+		telescope = {
+			i = {
+				paste = "<cr>",
+			},
+			n = {
+				select = "<cr>",
+			},
+		},
+		fzf = {
+			paste = "<cr>",
+		},
+	},
+
 	filter = function(data)
 		return not all(data.event.regcontents, is_whitespace)
 	end,

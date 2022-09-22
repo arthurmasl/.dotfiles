@@ -52,3 +52,5 @@ vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.fillchars = {
 	eob = " ",
 }
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"

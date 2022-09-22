@@ -43,4 +43,6 @@ return require("packer").startup(function()
 
 	use({ "windwp/nvim-spectre" })
 	-- use({ "RRethy/vim-illuminate" })
+
+	use("ThePrimeagen/vim-be-good")
 end)
