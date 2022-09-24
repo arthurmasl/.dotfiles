@@ -19,6 +19,9 @@ map("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>")
 vim.keymap.set({ "n", "v", "o" }, "<Down>", "}", opts)
 vim.keymap.set({ "n", "v", "o" }, "<Up>", "{", opts)
 
+vim.keymap.set({ "n", "v", "o" }, "<Left>", "^", opts)
+vim.keymap.set({ "n", "v", "o" }, "<Right>", "$", opts)
+
 vim.cmd([[nnoremap <expr> & ':%s/'.expand('<cword>').'//gn<CR>``']])
 
 -- rename
