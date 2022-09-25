@@ -19,6 +19,7 @@ map("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>")
 vim.keymap.set({ "n", "v", "o" }, "<Down>", "}", opts)
 vim.keymap.set({ "n", "v", "o" }, "<Up>", "{", opts)
 
+-- jump left/right
 vim.keymap.set({ "n", "v", "o" }, "<Left>", "^", opts)
 vim.keymap.set({ "n", "v", "o" }, "<Right>", "$", opts)
 
@@ -72,7 +73,7 @@ vim.keymap.set({ "n" }, "<Leader>td", require("gitsigns").toggle_deleted, { sile
 vim.keymap.set({ "n" }, "<Leader>dd", require("gitsigns").diffthis, { silent = true })
 
 map("n", "]h", ":Gitsigns next_hunk<CR>")
-map("n", "[h", ":Gitsigns previous_hunk<CR>")
+map("n", "[h", ":Gitsigns prev_hunk<CR>")
 
 map("n", "<Leader>dd", ":DiffviewOpen<CR>")
 map("n", "<Leader>dh", ":DiffviewFileHistory<CR>")
