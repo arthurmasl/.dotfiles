@@ -513,13 +513,19 @@
             ]
           },
           {
-            "description": "Map ctrl shift w to delete line back",
+            "description": "Map ctrl u to delete line back",
             "manipulators": [
               {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [".iterm2$"],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
                 "from": {
-                  "key_code": "w",
+                  "key_code": "u",
                   "modifiers": {
-                    "mandatory": ["control", "shift"],
+                    "mandatory": ["control"],
                     "optional": ["any"]
                   }
                 },
@@ -561,11 +567,11 @@
             ]
           },
           {
-            "description": "Map ctrl q to delete char back",
+            "description": "Map ctrl i to delete char back",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "q",
+                  "key_code": "i",
                   "modifiers": {
                     "mandatory": ["control"],
                     "optional": ["any"]
@@ -576,61 +582,6 @@
                     "key_code": "delete_or_backspace"
                   }
                 ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Map ctrl u to undo",
-            "manipulators": [
-              {
-                "conditions": [
-                  {
-                    "bundle_identifiers": [".iterm2$"],
-                    "type": "frontmost_application_unless"
-                  }
-                ],
-                "from": {
-                  "key_code": "u",
-                  "modifiers": {
-                    "mandatory": ["control"],
-                    "optional": ["any"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "z",
-                    "modifiers": ["command"]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Map ctrl r to redo",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "r",
-                  "modifiers": {
-                    "mandatory": ["control"],
-                    "optional": ["any"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "z",
-                    "modifiers": ["command", "shift"]
-                  }
-                ],
-                "conditions": [
-                  {
-                    "bundle_identifiers": [".iterm2$"],
-                    "type": "frontmost_application_unless"
-                  }
-                ],
-
                 "type": "basic"
               }
             ]
