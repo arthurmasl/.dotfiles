@@ -23,6 +23,13 @@ return require("packer").startup(function()
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make", cond = vim.fn.executable("make") == 1 })
+	use({
+		"kylechui/nvim-surround",
+		tag = "*",
+		config = function()
+			require("nvim-surround").setup({})
+		end,
+	})
 
 	use({ "kyazdani42/nvim-tree.lua" })
 	use({ "nvim-lualine/lualine.nvim" })
