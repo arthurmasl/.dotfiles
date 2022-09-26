@@ -567,11 +567,11 @@
             ]
           },
           {
-            "description": "Map ctrl i to delete char back",
+            "description": "Map ctrl q to delete char back",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "i",
+                  "key_code": "q",
                   "modifiers": {
                     "mandatory": ["control"],
                     "optional": ["any"]
