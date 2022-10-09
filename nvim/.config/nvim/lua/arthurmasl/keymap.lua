@@ -31,6 +31,12 @@ vim.cmd([[:nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>]])
 -- spectre
 vim.cmd([[nnoremap <leader>F <cmd>lua require('spectre').open()<CR>]])
 
+-- resize
+vim.cmd([[nnoremap <leader>=l :vertical-resize +20<CR>]])
+vim.cmd([[nnoremap <leader>=h :vertical-resize -20<CR>]])
+vim.cmd([[nnoremap <leader>=k :res +20<CR>]])
+vim.cmd([[nnoremap <leader>=j :res -20<CR>]])
+
 -- diagnostic
 vim.keymap.set("n", "<leader>sd", vim.diagnostic.open_float)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
@@ -65,6 +71,8 @@ map("n", "<Leader>fv", ":Telescope neoclip<CR>")
 vim.keymap.set("n", "<Leader>f/", require("telescope.builtin").current_buffer_fuzzy_find, opts)
 vim.keymap.set("n", "<Leader>fc", require("telescope.builtin").commands, opts)
 vim.keymap.set("n", "<Leader>fk", require("telescope.builtin").keymaps, opts)
+vim.keymap.set("n", "<Leader>fF", require("telescope.builtin").resume, opts)
+-- vim.keymap.set("n", "<Leader>fq", require("telescope.builtin").quickfix, opts)
 
 -- git
 map("n", "<Leader>g", ":Neogit kind=split<CR>")

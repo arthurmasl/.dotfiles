@@ -753,6 +753,8 @@
 	<integer>524288</integer>
 	<key>JobName</key>
 	<true/>
+	<key>MetalSlowFrameRate</key>
+	<real>60</real>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1692,10 +1694,14 @@
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
+	<key>ShowMetalFPSmeter</key>
+	<false/>
 	<key>ShowNewOutputIndicator</key>
 	<true/>
 	<key>ShowPaneTitles</key>
 	<true/>
+	<key>SlowFrameRate</key>
+	<real>60</real>
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SoundForEsc</key>
@@ -1718,6 +1724,8 @@
 	<false/>
 	<key>TmuxWarnBeforePausing</key>
 	<false/>
+	<key>UseAdaptiveFrameRate</key>
+	<true/>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseTmuxStatusBar</key>
@@ -1728,6 +1736,8 @@
 	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>disableMetalWhenUnplugged</key>
+	<false/>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewPreferredModeKey</key>
