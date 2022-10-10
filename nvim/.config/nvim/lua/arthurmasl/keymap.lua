@@ -32,10 +32,10 @@ vim.cmd([[:nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>]])
 vim.cmd([[nnoremap <leader>F <cmd>lua require('spectre').open()<CR>]])
 
 -- resize
-vim.cmd([[nnoremap <leader>=l :vertical-resize +20<CR>]])
-vim.cmd([[nnoremap <leader>=h :vertical-resize -20<CR>]])
-vim.cmd([[nnoremap <leader>=k :res +20<CR>]])
-vim.cmd([[nnoremap <leader>=j :res -20<CR>]])
+vim.cmd([[nnoremap <leader>=l :vertical-resize -20<CR>]])
+vim.cmd([[nnoremap <leader>=h :vertical-resize +20<CR>]])
+vim.cmd([[nnoremap <leader>=k :res +10<CR>]])
+vim.cmd([[nnoremap <leader>=j :res -10<CR>]])
 
 -- diagnostic
 vim.keymap.set("n", "<leader>sd", vim.diagnostic.open_float)
