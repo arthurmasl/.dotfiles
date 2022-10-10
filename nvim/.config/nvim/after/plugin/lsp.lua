@@ -33,7 +33,19 @@ lspconfig.emmet_ls.setup({
 
 lspconfig.clangd.setup({
 	capabilities = capabilities,
-	on_attach = on_attach,
+	-- on_attach = on_attach,
+	on_attach = function(client, bufnr)
+		if client.supports_method("textDocument/formatting") then
+			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				group = augroup,
+				buffer = bufnr,
+				callback = function()
+					vim.cmd("TermExec cmd='gcc ./app.c; ./a.out'")
+				end,
+			})
+		end
+	end,
 })
 
 -- vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
