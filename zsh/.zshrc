@@ -8,7 +8,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions z)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions z fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,3 +29,14 @@ export NVM_DIR="$HOME/.nvm"
 # bindkey '\t' autosuggest-accept
 alias vim='nvim'
 alias v='nvim'
+
+# fzf
+DISABLE_FZF_KEY_BINDINGS="true"
+
+export FZF_F_COMMAND='fd --type f --strip-cwd-prefix'
+export FZF_D_COMMAND='fd --type d --strip-cwd-prefix'
+export FZF_CTRL_T_COMMAND="$FZF_F_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_D_COMMAND"
+
+bindkey '^f' fzf-file-widget
+bindkey '^g' fzf-cd-widget
