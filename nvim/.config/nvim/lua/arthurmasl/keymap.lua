@@ -50,8 +50,8 @@ vim.keymap.set("n", "<Leader>lr", vim.lsp.buf.rename, opts)
 vim.keymap.set("n", "<Leader>lc", vim.lsp.buf.code_action, opts)
 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-vim.keymap.set("n", "gI", vim.lsp.buf.implementation, opts)
+vim.keymap.set("n", "gD", vim.lsp.buf.implementation, opts)
+-- vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 vim.keymap.set("n", "<Leader>fr", require("telescope.builtin").lsp_references, opts)
 
 vim.keymap.set("n", "<Leader>lds", require("telescope.builtin").lsp_document_symbols, opts)

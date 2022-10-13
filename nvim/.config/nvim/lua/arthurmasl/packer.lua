@@ -6,11 +6,14 @@ return require("packer").startup(function()
 	use({ "EdenEast/nightfox.nvim" })
 	use({ "neovim/nvim-lspconfig" })
 
+	use({ "hrsh7th/nvim-cmp" })
 	use({ "hrsh7th/cmp-nvim-lsp" })
+
 	use({ "hrsh7th/cmp-buffer" })
 	use({ "hrsh7th/cmp-path" })
-	use({ "hrsh7th/cmp-cmdline" })
-	use({ "hrsh7th/nvim-cmp" })
+
+	use({ "hrsh7th/cmp-nvim-lsp-signature-help" })
+
 	use({ "saadparwaiz1/cmp_luasnip" })
 	use({ "L3MON4D3/LuaSnip" })
 	use({ "rafamadriz/friendly-snippets" })
@@ -50,6 +53,14 @@ return require("packer").startup(function()
 
 	use({ "windwp/nvim-spectre" })
 	-- use({ "RRethy/vim-illuminate" })
+
+	use({
+		"lewis6991/impatient.nvim",
+		config = function()
+			require("impatient")
+		end,
+	})
+	use("simrat39/rust-tools.nvim")
 
 	use("ThePrimeagen/vim-be-good")
 end)

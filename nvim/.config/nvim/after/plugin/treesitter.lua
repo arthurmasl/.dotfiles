@@ -12,6 +12,8 @@ require("nvim-treesitter.configs").setup({
 		"regex",
 		"java",
 		"c",
+		"rust",
+		"toml",
 		"bash",
 		"gitignore",
 	},
