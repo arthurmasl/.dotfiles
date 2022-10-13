@@ -2,6 +2,7 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 require("lsp-format").setup({})
 
+local rt = require("rust-tools")
 local lspconfig = require("lspconfig")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
@@ -27,6 +28,7 @@ vim.diagnostic.config({
 -- ]])
 
 lspconfig.tsserver.setup({
+  on_attach = on_attach,
 	flags = lsp_flags,
 	capabilities = capabilities,
 })
@@ -40,7 +42,6 @@ lspconfig.emmet_ls.setup({
 		"less",
 		"sass",
 		"scss",
-		-- "typescriptreact",
 	},
 })
 
@@ -59,6 +60,31 @@ lspconfig.clangd.setup({
 			})
 		end
 	end,
+})
+
+rt.setup({
+	tools = {
+		runnables = {
+			use_telescope = true,
+		},
+		-- inlay_hints = {
+		-- 	auto = true,
+		-- 	show_parameter_hints = false,
+		-- 	parameter_hints_prefix = "",
+		-- 	other_hints_prefix = "",
+		-- },
+	},
+
+	server = {
+		settings = {
+			on_attach = on_attach,
+			["rust-analyzer"] = {
+				checkOnSave = {
+					command = "clippy",
+				},
+			},
+		},
+	},
 })
 
 -- vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')

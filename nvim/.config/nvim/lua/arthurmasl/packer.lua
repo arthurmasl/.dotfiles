@@ -20,6 +20,7 @@ return require("packer").startup(function()
 
 	use({ "jose-elias-alvarez/null-ls.nvim" })
 	use({ "lukas-reineke/lsp-format.nvim" })
+
 	use({ "mattn/emmet-vim" })
 	use({ "windwp/nvim-autopairs" })
 
@@ -54,12 +55,7 @@ return require("packer").startup(function()
 	use({ "windwp/nvim-spectre" })
 	-- use({ "RRethy/vim-illuminate" })
 
-	use({
-		"lewis6991/impatient.nvim",
-		config = function()
-			require("impatient")
-		end,
-	})
+	use("lewis6991/impatient.nvim")
 	use("simrat39/rust-tools.nvim")
 
 	use("ThePrimeagen/vim-be-good")
