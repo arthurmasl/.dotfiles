@@ -54,7 +54,7 @@ lspconfig.clangd.setup({
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
-					vim.cmd("TermExec cmd='gcc ./app.c; ./a.out'")
+					vim.cmd("TermExec cmd='gcc ./main.c; ./a.out'")
 				end,
 			})
 		end
