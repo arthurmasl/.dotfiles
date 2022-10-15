@@ -57,6 +57,8 @@ vim.keymap.set("n", "<Leader>fr", require("telescope.builtin").lsp_references, o
 vim.keymap.set("n", "<Leader>lds", require("telescope.builtin").lsp_document_symbols, opts)
 vim.keymap.set("n", "<Leader>lws", require("telescope.builtin").lsp_dynamic_workspace_symbols, opts)
 
+vim.keymap.set("n", "<Leader>tf", ":FormatToggle<CR>", { silent = false })
+
 vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 vim.keymap.set("n", "<Leader>lh", vim.lsp.buf.signature_help, opts)
 
