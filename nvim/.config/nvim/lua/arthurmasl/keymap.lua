@@ -5,9 +5,10 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 map("n", "<Leader><CR>", ":source %<CR>", { silent = false })
 map("n", "<Leader>w", ":w<CR>")
 map("n", "<Leader>q", ":q<CR>")
+map("n", "<Leader>ca", ":qa<CR>")
+map("n", "<Leader>ct", ":tabclose<CR>")
 map("n", "<Leader>Q", ":q!<CR>")
 map("n", "<Leader>h", ":noh<CR>")
-map("n", "<Leader>c", ":tabclose<CR>")
 
 -- split
 map("n", "s", "0i<CR><ESC>k")

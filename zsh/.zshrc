@@ -12,14 +12,17 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions z fzf)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="/usr/local/bin:$PATH"
+export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/bin/nvim:$PATH
 export PATH="$HOME/nvim/bin:$PATH"
 export FZF_BASE=/usr/local/opt/fzf/install
+
+export LIBRARY_PATH=/usr/local/lib
 export C_INCLUDE_PATH=/usr/local/include
+export LD_LIBRARY_PATH=/usr/local/lib
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
