@@ -19,6 +19,7 @@ export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/bin/nvim:$PATH
 export PATH="$HOME/nvim/bin:$PATH"
 export FZF_BASE=/usr/local/opt/fzf/install
+export C_INCLUDE_PATH=/usr/local/include
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
