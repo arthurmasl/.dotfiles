@@ -11,7 +11,10 @@ map("n", "<Leader>Q", ":q!<CR>")
 map("n", "<Leader>h", ":noh<CR>")
 
 -- split
-map("n", "s", "0i<CR><ESC>k")
+map("n", "s", "o<ESC>")
+map("n", "<C-s>", "O<ESC>")
+map("n", "<C-a>", "a<CR><ESC>")
+-- map("n", "<C-S>", "a<CR><ESC>k$")
 
 -- explorer
 map("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>")
