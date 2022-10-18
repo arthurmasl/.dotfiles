@@ -67,8 +67,8 @@ vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 vim.keymap.set("n", "<Leader>lh", vim.lsp.buf.signature_help, opts)
 
 -- telescope
-map("n", "<Leader>ff", ":Telescope find_files hidden=true no_ignore=true<CR>")
-map("n", "<Leader>fg", ":Telescope live_grep  no_ignore=true<CR>")
+map("n", "<Leader>ff", ":Telescope find_files hidden=false no_ignore=false<CR>")
+map("n", "<Leader>fg", ":Telescope live_grep  no_ignore=false<CR>")
 map("n", "<Leader>fs", ":Telescope grep_string<CR>")
 map("n", "<Leader>fp", ":Telescope buffers ignore_current_buffer=true sort_lastused=true sort_mru=true<CR>")
 map("n", "<Leader>fh", ":Telescope help_tags<CR>")
