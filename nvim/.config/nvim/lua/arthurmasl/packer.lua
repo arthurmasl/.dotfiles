@@ -21,8 +21,8 @@ return require("packer").startup(function()
 	use({ "jose-elias-alvarez/null-ls.nvim" })
 	use({ "lukas-reineke/lsp-format.nvim" })
 
-	use({ "mattn/emmet-vim" })
-	use({ "windwp/nvim-autopairs" })
+	-- use({ "mattn/emmet-vim" })
+	-- use({ "windwp/nvim-autopairs" })
 
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
@@ -52,7 +52,7 @@ return require("packer").startup(function()
 	use({ "AckslD/nvim-neoclip.lua" })
 	use({ "kkharji/sqlite.lua", module = "sqlite" })
 
-	use({ "windwp/nvim-spectre" })
+	-- use({ "windwp/nvim-spectre" })
 	-- use({ "RRethy/vim-illuminate" })
 
 	use("lewis6991/impatient.nvim")

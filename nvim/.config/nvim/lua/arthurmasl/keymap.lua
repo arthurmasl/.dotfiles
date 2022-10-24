@@ -5,9 +5,9 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 map("n", "<Leader><CR>", ":source %<CR>", { silent = false })
 map("n", "<Leader>w", ":w<CR>")
 map("n", "<Leader>q", ":q<CR>")
-map("n", "<Leader>ca", ":qa<CR>")
-map("n", "<Leader>ct", ":tabclose<CR>")
-map("n", "<Leader>Q", ":q!<CR>")
+map("n", "<Leader>Q", ":qa<CR>")
+map("n", "<Leader>C", ":tabclose<CR>")
+-- map("n", "<Leader>Q", ":q!<CR>")
 map("n", "<Leader>h", ":noh<CR>")
 
 -- split
@@ -33,7 +33,7 @@ vim.cmd([[nnoremap <expr> & ':%s/'.expand('<cword>').'//gn<CR>``']])
 vim.cmd([[nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>]])
 
 -- spectre
-vim.cmd([[nnoremap <leader>F :lua require('spectre').open()<CR>]])
+-- vim.cmd([[nnoremap <leader>F :lua require('spectre').open()<CR>]])
 
 -- resize
 vim.cmd([[nnoremap <leader>=l :vertical-resize -20<CR>]])

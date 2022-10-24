@@ -22,9 +22,9 @@ vim.diagnostic.config({
 	-- },
 })
 
--- vim.cmd([[
 -- set signcolumn=yes
--- autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
+-- vim.cmd([[
+-- autocmd CursorHold, CursorHoldI * lua vim.diagnostic.open_float(nil, { focusable = false })
 -- ]])
 
 lspconfig.tsserver.setup({
@@ -33,17 +33,17 @@ lspconfig.tsserver.setup({
 	capabilities = capabilities,
 })
 
-lspconfig.emmet_ls.setup({
-	capabilities = capabilities,
-	filetypes = {
-		"css",
-		"html",
-		"javascriptreact",
-		"less",
-		"sass",
-		"scss",
-	},
-})
+-- lspconfig.emmet_ls.setup({
+-- 	capabilities = capabilities,
+-- 	filetypes = {
+-- 		"css",
+-- 		"html",
+-- 		"javascriptreact",
+-- 		"less",
+-- 		"sass",
+-- 		"scss",
+-- 	},
+-- })
 
 lspconfig.clangd.setup({
 	capabilities = capabilities,
@@ -88,4 +88,4 @@ rt.setup({
 	},
 })
 
--- vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+-- vim.api.nvim_buf_set_option(0, "omnifunc", "v:lua.vim.lsp.omnifunc")
