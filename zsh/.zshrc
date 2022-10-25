@@ -44,3 +44,6 @@ export FZF_ALT_C_COMMAND="$FZF_D_COMMAND"
 
 bindkey '^f' fzf-file-widget
 bindkey '^g' fzf-cd-widget
+
+bindkey -s '^v' 'nvim .^M'
+bindkey -s '^x' 'clear^M' 
