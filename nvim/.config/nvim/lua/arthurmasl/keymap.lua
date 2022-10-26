@@ -84,6 +84,7 @@ vim.keymap.set("n", "<Leader>fF", require("telescope.builtin").resume, opts)
 -- vim.keymap.set("n", "<Leader>fq", require("telescope.builtin").quickfix, opts)
 
 -- git
+-- vim.keymap.set({ "n" }, "<Leader>g", require("neogit").open({ kind = "split" }), { silent = true })
 map("n", "<Leader>g", ":Neogit kind=split<CR>")
 vim.keymap.set({ "n" }, "<Leader>hb", function()
 	require("gitsigns").blame_line({ full = true })

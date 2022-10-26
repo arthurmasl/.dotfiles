@@ -22,7 +22,7 @@ return require("packer").startup(function()
 	use({ "lukas-reineke/lsp-format.nvim" })
 
 	-- use({ "mattn/emmet-vim" })
-	-- use({ "windwp/nvim-autopairs" })
+	use({ "windwp/nvim-autopairs" })
 
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
