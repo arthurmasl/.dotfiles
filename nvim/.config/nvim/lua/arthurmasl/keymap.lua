@@ -36,10 +36,10 @@ vim.cmd([[nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>]])
 -- vim.cmd([[nnoremap <leader>F :lua require('spectre').open()<CR>]])
 
 -- resize
-vim.cmd([[nnoremap <leader>=l :vertical-resize -20<CR>]])
-vim.cmd([[nnoremap <leader>=h :vertical-resize +20<CR>]])
-vim.cmd([[nnoremap <leader>=k :res +10<CR>]])
-vim.cmd([[nnoremap <leader>=j :res -10<CR>]])
+vim.cmd([[nnoremap <C-w><Right> :vertical-resize -10<CR>]])
+vim.cmd([[nnoremap <C-w><Left> :vertical-resize +10<CR>]])
+vim.cmd([[nnoremap <C-w><Up> :res +10<CR>]])
+vim.cmd([[nnoremap <C-w><Down> :res -10<CR>]])
 
 -- copy path
 vim.cmd([[nnoremap <leader>p :let @+ = expand("%")<CR>]])
