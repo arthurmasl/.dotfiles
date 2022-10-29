@@ -403,7 +403,7 @@
               },
               {
                 "from": {
-                  "key_code": "r",
+                  "key_code": "w",
                   "modifiers": {
                     "mandatory": ["option"]
                   }
