@@ -98,5 +98,6 @@ map("n", "[h", ":Gitsigns prev_hunk<CR>")
 
 map("n", "<Leader>dd", ":DiffviewOpen<CR>")
 map("n", "<Leader>db", ":DiffviewOpen origin/develop<CR>")
+-- map("n", "<Leader>db", ":DiffviewOpen HEAD~2<CR>")
 map("n", "<Leader>dH", ":DiffviewFileHistory<CR>")
 map("n", "<Leader>dh", ":DiffviewFileHistory %<CR>")

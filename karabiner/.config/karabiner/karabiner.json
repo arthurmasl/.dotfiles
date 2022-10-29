@@ -375,7 +375,7 @@
               },
               {
                 "from": {
-                  "key_code": "w",
+                  "key_code": "r",
                   "modifiers": {
                     "mandatory": ["option"]
                   }
@@ -631,7 +631,7 @@
             ]
           },
           {
-            "description": "lock screen",
+            "description": "lock screen (fn  + l)",
             "manipulators": [
               {
                 "from": {
