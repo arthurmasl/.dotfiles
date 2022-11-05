@@ -6,6 +6,11 @@ neogit.setup({
 	integrations = {
 		diffview = true,
 	},
+	mappings = {
+		status = {
+			["o"] = "Toggle",
+		},
+	},
 })
 
 local gs = require("gitsigns")
