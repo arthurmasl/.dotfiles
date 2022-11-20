@@ -1,7 +1,11 @@
+local custom_theme = require("lualine.themes.auto")
+
+custom_theme.normal.c.bg = "#222831"
+
 require("lualine").setup({
 	options = {
 		icons_enabled = false,
-		theme = "auto",
+		theme = custom_theme,
 		component_separators = "",
 		section_separators = "",
 		disabled_filetypes = {
