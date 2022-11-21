@@ -37,6 +37,8 @@ require("nvim-tree").setup({
 				-- { key = "<C-s>", action = "split" },
 				{ key = "<Up>", action = "toggle_file_info" },
 				{ key = "<C-g>", action = "cd" },
+				{ key = "s", action = nil },
+				{ key = "<C-s>", action = "system_open" },
 			},
 		},
 	},

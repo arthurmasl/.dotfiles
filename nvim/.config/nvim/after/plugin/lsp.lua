@@ -22,7 +22,6 @@ vim.diagnostic.config({
 	-- },
 })
 
--- set signcolumn=yes
 -- vim.cmd([[
 -- autocmd CursorHold, CursorHoldI * lua vim.diagnostic.open_float(nil, { focusable = false })
 -- ]])
