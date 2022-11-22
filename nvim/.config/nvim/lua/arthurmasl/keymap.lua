@@ -45,7 +45,7 @@ vim.cmd([[nnoremap <C-w>1 :res -10<CR>]])
 vim.cmd([[nnoremap <leader>p :let @+ = expand("%")<CR>]])
 
 -- diagnostic
-vim.keymap.set("n", "<leader>sd", vim.diagnostic.open_float)
+vim.keymap.set("n", "<leader>od", vim.diagnostic.open_float)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 
