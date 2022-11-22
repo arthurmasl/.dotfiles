@@ -9,22 +9,20 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 vim.diagnostic.config({
-	virtual_text = true,
+	virtual_text = false,
 	signs = true,
 	update_in_insert = true,
 	underline = true,
 	severity_sort = false,
-	-- float = {
-	-- 	border = "rounded",
-	-- 	source = "always",
-	-- 	header = "",
-	-- 	prefix = "",
-	-- },
+	float = {
+		-- border = "rounded",
+		-- source = "always",
+		header = "",
+		prefix = "",
+	},
 })
 
--- vim.cmd([[
--- autocmd CursorHold, CursorHoldI * lua vim.diagnostic.open_float(nil, { focusable = false })
--- ]])
+vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
 
 lspconfig.tsserver.setup({
 	on_attach = on_attach,
