@@ -42,7 +42,20 @@ vim.cmd([[nnoremap <C-w>2 :res +10<CR>]])
 vim.cmd([[nnoremap <C-w>1 :res -10<CR>]])
 
 -- copy path
-vim.cmd([[nnoremap <leader>p :let @+ = expand("%")<CR>]])
+-- vim.cmd([[nnoremap <leader>p :let @+ = expand("%")<CR>]])
+
+-- paste from
+vim.keymap.set({ "n", "v", "o" }, "<leader>p", '"0p', opts)
+
+-- movement with zz
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+
+map("n", "gg", "ggzz")
+map("n", "G", "Gzz")
+
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
 
 -- diagnostic
 vim.keymap.set("n", "<leader>od", vim.diagnostic.open_float)

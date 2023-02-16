@@ -21,8 +21,7 @@ require("diffview").setup({
 			layout = "diff2_horizontal",
 		},
 		merge_tool = {
-			layout = "diff3_horizontal",
-			-- layout = "diff1_plain",
+			layout = "diff3_mixed",
 			disable_diagnostics = true,
 		},
 		file_history = {
