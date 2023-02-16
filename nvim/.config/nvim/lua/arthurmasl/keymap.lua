@@ -19,6 +19,12 @@ map("n", "<C-s>", "O<ESC>")
 -- explorer
 map("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>")
 
+-- toggles
+map("n", "<Leader>ts", ":set spell!<CR>")
+vim.keymap.set("n", "<Leader>tf", ":FormatToggle<CR>", { silent = false })
+vim.keymap.set({ "n" }, "<Leader>tb", require("gitsigns").toggle_current_line_blame, { silent = true })
+vim.keymap.set({ "n" }, "<Leader>td", require("gitsigns").toggle_deleted, { silent = true })
+
 -- jump up/down
 vim.keymap.set({ "n", "v", "o" }, "<Down>", "}", opts)
 vim.keymap.set({ "n", "v", "o" }, "<Up>", "{", opts)
@@ -74,8 +80,6 @@ vim.keymap.set("n", "<Leader>fr", require("telescope.builtin").lsp_references, o
 vim.keymap.set("n", "<Leader>lds", require("telescope.builtin").lsp_document_symbols, opts)
 vim.keymap.set("n", "<Leader>lws", require("telescope.builtin").lsp_dynamic_workspace_symbols, opts)
 
-vim.keymap.set("n", "<Leader>tf", ":FormatToggle<CR>", { silent = false })
-
 vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 vim.keymap.set("n", "<Leader>lh", vim.lsp.buf.signature_help, opts)
 
@@ -102,8 +106,6 @@ map("n", "<Leader>g", ":Neogit kind=split<CR>")
 vim.keymap.set({ "n" }, "<Leader>hb", function()
 	require("gitsigns").blame_line({ full = true })
 end, { silent = true })
-vim.keymap.set({ "n" }, "<Leader>tb", require("gitsigns").toggle_current_line_blame, { silent = true })
-vim.keymap.set({ "n" }, "<Leader>td", require("gitsigns").toggle_deleted, { silent = true })
 vim.keymap.set({ "n" }, "<Leader>dd", require("gitsigns").diffthis, { silent = true })
 
 map("n", "]h", ":Gitsigns next_hunk<CR>")
