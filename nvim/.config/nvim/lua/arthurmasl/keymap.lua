@@ -18,6 +18,7 @@ map("n", "<C-s>", "O<ESC>")
 
 -- explorer
 map("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>")
+map("n", "<Leader>E", ":NvimTreeFindFile<CR>")
 
 -- toggles
 map("n", "<Leader>ts", ":set spell!<CR>")
