@@ -20,6 +20,9 @@ map("n", "<C-s>", "O<ESC>")
 map("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>")
 map("n", "<Leader>E", ":NvimTreeFindFile<CR>")
 
+-- alternative file
+map("n", "<C-O>", ":e #<CR>")
+
 -- toggles
 map("n", "<Leader>ts", ":set spell!<CR>")
 vim.keymap.set("n", "<Leader>tf", ":FormatToggle<CR>", { silent = false })
