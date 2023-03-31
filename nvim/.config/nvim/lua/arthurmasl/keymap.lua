@@ -21,7 +21,7 @@ map("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>")
 map("n", "<Leader>E", ":NvimTreeFindFile<CR>")
 
 -- alternative file
-map("n", "<C-O>", ":e #<CR>")
+-- map("n", "<C-S-o>", ":e #<CR>")
 
 -- toggles
 map("n", "<Leader>ts", ":set spell!<CR>")
