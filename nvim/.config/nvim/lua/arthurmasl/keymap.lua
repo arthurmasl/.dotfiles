@@ -103,7 +103,12 @@ vim.keymap.set("n", "<Leader>f/", require("telescope.builtin").current_buffer_fu
 vim.keymap.set("n", "<Leader>fc", require("telescope.builtin").commands, opts)
 vim.keymap.set("n", "<Leader>fk", require("telescope.builtin").keymaps, opts)
 vim.keymap.set("n", "<Leader>fF", require("telescope.builtin").resume, opts)
--- vim.keymap.set("n", "<Leader>fq", require("telescope.builtin").quickfix, opts)
+
+vim.keymap.set("n", "<Leader>fq", require("telescope.builtin").quickfix, opts)
+vim.keymap.set("n", "<Leader>fQ", require("telescope.builtin").quickfixhistory, opts)
+
+vim.keymap.set("n", "]q", ":cnext<CR>", opts)
+vim.keymap.set("n", "[q", ":cprev<CR>", opts)
 
 -- git
 -- vim.keymap.set({ "n" }, "<Leader>g", require("neogit").open({ kind = "split" }), { silent = true })
