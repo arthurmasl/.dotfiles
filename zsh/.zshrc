@@ -37,8 +37,8 @@ alias v='nvim'
 # fzf
 DISABLE_FZF_KEY_BINDINGS="true"
 
-export FZF_F_COMMAND='fd --type f --strip-cwd-prefix'
-export FZF_D_COMMAND='fd --type d --strip-cwd-prefix'
+export FZF_F_COMMAND='fd --type f --strip-cwd-prefix --hidden --exclude={.git,node_modules,build,tmp}'
+export FZF_D_COMMAND='fd --type d --strip-cwd-prefix --hidden --exclude={.git,node_modules,build,tmp}'
 export FZF_CTRL_T_COMMAND="$FZF_F_COMMAND"
 export FZF_ALT_C_COMMAND="$FZF_D_COMMAND"
 
