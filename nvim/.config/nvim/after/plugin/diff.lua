@@ -28,4 +28,16 @@ require("diffview").setup({
 			layout = "diff2_horizontal",
 		},
 	},
+
+	keymaps = {
+		file_panel = {
+			["q"] = ":DiffviewClose<CR>",
+		},
+		file_history_panel = {
+			["q"] = ":DiffviewClose<CR>",
+		},
+		view = {
+			["q"] = ":DiffviewClose<CR>",
+		},
+	},
 })

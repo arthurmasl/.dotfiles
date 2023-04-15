@@ -112,7 +112,8 @@ vim.keymap.set("n", "[q", ":cprev<CR>", opts)
 
 -- git
 -- vim.keymap.set({ "n" }, "<Leader>g", require("neogit").open({ kind = "split" }), { silent = true })
-map("n", "<Leader>g", ":Neogit kind=split<CR>")
+-- map("n", "<Leader>g", ":Neogit kind=split<CR>")
+map("n", "<Leader>g", ":Neogit<CR>")
 vim.keymap.set({ "n" }, "<Leader>hb", function()
 	require("gitsigns").blame_line({ full = true })
 end, { silent = true })
