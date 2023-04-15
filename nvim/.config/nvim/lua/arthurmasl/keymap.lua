@@ -18,7 +18,7 @@ map("n", "<C-s>", "O<ESC>")
 
 -- explorer
 map("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>")
-map("n", "<Leader>E", ":NvimTreeFindFile<CR>")
+map("n", "<Leader>E", ":NvimTreeFocus<CR>")
 
 -- alternative file
 map("n", "<C-b>", ":e #<CR>")
