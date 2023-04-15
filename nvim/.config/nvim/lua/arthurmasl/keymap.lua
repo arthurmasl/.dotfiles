@@ -82,8 +82,8 @@ vim.keymap.set("n", "gD", require("telescope.builtin").lsp_implementations, opts
 -- vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 vim.keymap.set("n", "<Leader>fr", require("telescope.builtin").lsp_references, opts)
 
-vim.keymap.set("n", "<Leader>lds", require("telescope.builtin").lsp_document_symbols, opts)
-vim.keymap.set("n", "<Leader>lws", require("telescope.builtin").lsp_dynamic_workspace_symbols, opts)
+vim.keymap.set("n", "<Leader>fs", require("telescope.builtin").lsp_document_symbols, opts)
+vim.keymap.set("n", "<Leader>fS", require("telescope.builtin").lsp_dynamic_workspace_symbols, opts)
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 vim.keymap.set("n", "<Leader>lh", vim.lsp.buf.signature_help, opts)
@@ -91,7 +91,7 @@ vim.keymap.set("n", "<Leader>lh", vim.lsp.buf.signature_help, opts)
 -- telescope
 map("n", "<Leader>ff", ":Telescope find_files hidden=false no_ignore=false<CR>")
 map("n", "<Leader>fg", ":Telescope live_grep  no_ignore=false<CR>")
-map("n", "<Leader>fs", ":Telescope grep_string<CR>")
+-- map("n", "<Leader>fs", ":Telescope grep_string<CR>")
 map("n", "<Leader>fp", ":Telescope buffers ignore_current_buffer=true sort_lastused=true sort_mru=true<CR>")
 map("n", "<Leader>fh", ":Telescope help_tags<CR>")
 map("n", "<Leader>fd", ":Telescope diagnostics<CR>")
