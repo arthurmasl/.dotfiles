@@ -5,16 +5,17 @@ vim.opt.fileencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.hidden = true
 
+vim.opt.clipboard = "unnamedplus"
+vim.opt.mouse = "a"
+
 vim.opt.showmode = false
 vim.opt.signcolumn = "yes"
 vim.opt.termguicolors = true
 vim.opt.cursorline = false
 vim.opt.cursorlineopt = "both"
-vim.opt.mouse = "a"
 vim.opt.laststatus = 3
 vim.opt.cmdheight = 1
-
-vim.opt.clipboard = "unnamedplus"
+vim.opt.showtabline = 0
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -46,8 +47,6 @@ vim.opt.undofile = true
 
 vim.opt.updatetime = 50
 vim.opt.autoread = true
-
-vim.opt.showtabline = 0
 
 -- vim.opt.foldlevel = 20
 -- vim.opt.foldmethod = "expr"
