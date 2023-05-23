@@ -23,7 +23,9 @@ vim.keymap.set("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>", opts)
 vim.keymap.set("n", "<Leader>E", ":NvimTreeFocus<CR>", opts)
 
 -- alternative file
-vim.keymap.set("n", "<C-b>", ":e #<CR>", opts)
+vim.keymap.set("n", "<C-a>", ":e #<CR>", opts)
+vim.keymap.set("n", "<C-b>", ":bprevious<CR>", opts)
+vim.keymap.set("n", "<C-n>", ":bnext<CR>", opts)
 
 -- toggles
 vim.keymap.set("n", "<Leader>ts", ":set spell!<CR>", opts)
