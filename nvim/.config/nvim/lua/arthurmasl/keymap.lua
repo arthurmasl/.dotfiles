@@ -49,6 +49,7 @@ vim.cmd([[nnoremap <expr> & ':%s/'.expand('<cword>').'//gn<CR>``']])
 
 -- rename
 vim.cmd([[nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>]])
+vim.cmd([[nnoremap <Leader>R :%s///g<Left><Left><Left>]])
 
 -- resize alt + hjkl
 vim.cmd([[nnoremap <C-w>3 :vertical-resize -10<CR>]])
@@ -64,7 +65,6 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", opts)
 vim.keymap.set("n", "<C-u>", "<C-u>zz", opts)
 
 vim.keymap.set("n", "gg", "ggzz", opts)
-vim.keymap.set("n", "gd", "gdzz", opts)
 vim.keymap.set("n", "G", "Gzz", opts)
 
 vim.keymap.set("n", "n", "nzzzv", opts)
