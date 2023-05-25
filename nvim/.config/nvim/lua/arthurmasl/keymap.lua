@@ -46,6 +46,7 @@ vim.keymap.set({ "n", "v", "o" }, "<Right>", "$", opts)
 
 -- select word under cursor
 vim.cmd([[nnoremap <expr> & ':%s/'.expand('<cword>').'//gn<CR>``']])
+vim.keymap.set({ "v" }, "&", [[y/\V<C-r>=escape(@",'/\')<CR><CR>N]], opts)
 
 -- rename
 vim.cmd([[nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>]])
