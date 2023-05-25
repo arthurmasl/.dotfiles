@@ -17,11 +17,11 @@
         },
         "rules": [
           {
-            "description": "cmd + j to cmd + tab",
+            "description": "cmd + k to cmd + tab",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "j",
+                  "key_code": "k",
                   "modifiers": {
                     "mandatory": ["command"]
                   }
@@ -37,11 +37,11 @@
             ]
           },
           {
-            "description": "cmd + k to cmd + shift + tab",
+            "description": "cmd + j to cmd + shift + tab",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "k",
+                  "key_code": "j",
                   "modifiers": {
                     "mandatory": ["command"]
                   }
