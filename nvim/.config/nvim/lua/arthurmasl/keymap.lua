@@ -51,6 +51,7 @@ vim.keymap.set({ "v" }, "&", [[y/\V<C-r>=escape(@",'/\')<CR><CR>N]], opts)
 -- rename
 vim.cmd([[nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>]])
 vim.cmd([[nnoremap <Leader>R :%s///g<Left><Left><Left>]])
+vim.keymap.set({ "v" }, "<Leader>r", [[y:%s/<C-r>"//g<Left><Left>]])
 
 -- resize alt + hjkl
 vim.cmd([[nnoremap <C-w>3 :vertical-resize -10<CR>]])
