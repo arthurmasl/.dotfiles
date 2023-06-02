@@ -81,8 +81,8 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 vim.keymap.set("n", "<Leader>lr", vim.lsp.buf.rename, opts)
 vim.keymap.set("n", "<Leader>lc", vim.lsp.buf.code_action, opts)
 
-vim.keymap.set("n", "gd", telescope.lsp_definitions, opts)
-vim.keymap.set("n", "gD", telescope.lsp_implementations, opts)
+vim.keymap.set("n", "gD", telescope.lsp_definitions, opts)
+vim.keymap.set("n", "gd", telescope.lsp_implementations, opts)
 -- vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
