@@ -96,6 +96,7 @@ vim.keymap.set(
 	":Telescope buffers ignore_current_buffer=true sort_lastused=true sort_mru=true<CR>",
 	opts
 )
+vim.keymap.set("n", "<Leader>f'", telescope.registers, opts)
 
 vim.keymap.set("n", "<Leader>fh", ":Telescope help_tags<CR>", opts)
 vim.keymap.set("n", "<Leader>fd", ":Telescope diagnostics<CR>", opts)
