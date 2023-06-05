@@ -47,3 +47,10 @@ bindkey '^g' fzf-cd-widget
 
 bindkey -s '^v' 'nvim .^M'
 bindkey -s '^x' 'clear^M' 
+
+# bun completions
+[ -s "/Users/arthurmasl/.bun/_bun" ] && source "/Users/arthurmasl/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
