@@ -83,6 +83,12 @@ vim.keymap.set("n", "<Leader>lc", vim.lsp.buf.code_action, opts)
 
 vim.keymap.set("n", "gd", telescope.lsp_definitions, opts)
 vim.keymap.set("n", "gD", telescope.lsp_implementations, opts)
+vim.keymap.set("n", "gV", function()
+	telescope.lsp_definitions({ jump_type = "vsplit" })
+end, opts)
+vim.keymap.set("n", "gS", function()
+	telescope.lsp_definitions({ jump_type = "split" })
+end, opts)
 -- vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)

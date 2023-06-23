@@ -104,7 +104,7 @@ require("nvim-tree").setup({
 		},
 	},
 	view = {
-		adaptive_size = true,
+		adaptive_size = false,
 		-- mappings = {
 		-- 	list = {
 		-- 		-- { key = "<C-s>", action = "split" },
