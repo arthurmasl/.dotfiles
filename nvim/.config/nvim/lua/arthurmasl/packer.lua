@@ -33,7 +33,7 @@ return require("packer").startup(function()
 	use({ "akinsho/toggleterm.nvim", tag = "*" })
 	use({ "numToStr/Comment.nvim" })
 
-	use({ "TimUntersberger/neogit" })
+	use({ "NeogitOrg/neogit" })
 	use({ "sindrets/diffview.nvim" })
 	use({ "lewis6991/gitsigns.nvim" })
 
