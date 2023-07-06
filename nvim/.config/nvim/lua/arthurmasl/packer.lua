@@ -47,5 +47,12 @@ return require("packer").startup(function()
 	use("lewis6991/impatient.nvim")
 	use("simrat39/rust-tools.nvim")
 
+	use({
+		"kwkarlwang/bufjump.nvim",
+		config = function()
+			require("bufjump").setup()
+		end,
+	})
+
 	use("ThePrimeagen/vim-be-good")
 end)
