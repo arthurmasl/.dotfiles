@@ -120,7 +120,9 @@ vim.keymap.set("n", "<Leader>fc", telescope.commands, opts)
 vim.keymap.set("n", "<Leader>fk", telescope.keymaps, opts)
 vim.keymap.set("n", "<Leader>fF", telescope.resume, opts)
 
-vim.keymap.set("n", "<Leader>fq", telescope.quickfix, opts)
+vim.keymap.set("n", "<Leader>fq", function()
+	telescope.quickfix({ show_line = false })
+end, opts)
 vim.keymap.set("n", "<Leader>fQ", telescope.quickfixhistory, opts)
 
 vim.keymap.set("n", "]q", ":cnext<CR>", opts)
