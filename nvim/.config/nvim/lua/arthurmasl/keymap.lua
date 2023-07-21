@@ -135,7 +135,7 @@ vim.keymap.set("n", "[h", ":Gitsigns prev_hunk<CR>", opts)
 -- git
 vim.keymap.set("n", "<Leader>g", ":Neogit<CR>", opts)
 vim.keymap.set("n", "<Leader>dd", ":DiffviewOpen<CR>", opts)
-vim.keymap.set("n", "<Leader>db", ":DiffviewOpen HEAD<CR>", opts) -- origin-develop
+vim.keymap.set("n", "<Leader>db", ":DiffviewOpen develop<CR>", opts) -- origin-develop
 vim.keymap.set("n", "<Leader>dH", ":DiffviewFileHistory<CR>", opts)
 vim.keymap.set("n", "<Leader>dh", ":DiffviewFileHistory %<CR>", opts)
 
