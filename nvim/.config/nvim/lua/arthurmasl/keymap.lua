@@ -114,6 +114,9 @@ vim.keymap.set("n", "<Leader>fb", ":Telescope git_branches<CR>", opts)
 vim.keymap.set("n", "<Leader>fv", ":Telescope neoclip<CR>", opts)
 
 vim.keymap.set("n", "<Leader>fr", telescope.lsp_references, opts)
+vim.keymap.set("n", "<Leader>fr", function()
+	telescope.lsp_references({ show_line = false })
+end, opts)
 vim.keymap.set("n", "<Leader>fs", telescope.lsp_document_symbols, opts)
 vim.keymap.set("n", "<Leader>fS", telescope.lsp_dynamic_workspace_symbols, opts)
 
