@@ -24,14 +24,15 @@ return require("packer").startup(function()
 	use({ "windwp/nvim-autopairs" })
 
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
-	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make", cond = vim.fn.executable("make") == 1 })
-	use({ "kylechui/nvim-surround", tag = "*" })
+	use({ "nvim-telescope/telescope.nvim" })
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	use({ "kylechui/nvim-surround" })
 
 	use({ "kyazdani42/nvim-tree.lua" })
 	use({ "nvim-lualine/lualine.nvim" })
-	use({ "akinsho/toggleterm.nvim", tag = "*" })
+	use({ "akinsho/toggleterm.nvim" })
 	use({ "numToStr/Comment.nvim" })
+	use({ "kwkarlwang/bufjump.nvim" })
 
 	use({ "NeogitOrg/neogit" })
 	use({ "sindrets/diffview.nvim" })
@@ -43,16 +44,6 @@ return require("packer").startup(function()
 	-- use({ "mattn/emmet-vim" })
 	-- use({ "windwp/nvim-spectre" })
 	-- use({ "RRethy/vim-illuminate" })
-
-	use("lewis6991/impatient.nvim")
-	use("simrat39/rust-tools.nvim")
-
-	use({
-		"kwkarlwang/bufjump.nvim",
-		config = function()
-			require("bufjump").setup()
-		end,
-	})
-
-	use("ThePrimeagen/vim-be-good")
+	-- use({ "simrat39/rust-tools.nvim" })
+	-- use({ "ThePrimeagen/vim-be-good" })
 end)

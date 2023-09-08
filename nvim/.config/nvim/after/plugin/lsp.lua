@@ -2,7 +2,7 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 require("lsp-format").setup({})
 
-local rt = require("rust-tools")
+-- local rt = require("rust-tools")
 local lspconfig = require("lspconfig")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
@@ -61,29 +61,29 @@ lspconfig.clangd.setup({
 	end,
 })
 
-rt.setup({
-	tools = {
-		runnables = {
-			use_telescope = true,
-		},
-		-- inlay_hints = {
-		-- 	auto = true,
-		-- 	show_parameter_hints = false,
-		-- 	parameter_hints_prefix = "",
-		-- 	other_hints_prefix = "",
-		-- },
-	},
-
-	server = {
-		settings = {
-			on_attach = on_attach,
-			["rust-analyzer"] = {
-				checkOnSave = {
-					command = "clippy",
-				},
-			},
-		},
-	},
-})
+-- rt.setup({
+-- 	tools = {
+-- 		runnables = {
+-- 			use_telescope = true,
+-- 		},
+-- 		-- inlay_hints = {
+-- 		-- 	auto = true,
+-- 		-- 	show_parameter_hints = false,
+-- 		-- 	parameter_hints_prefix = "",
+-- 		-- 	other_hints_prefix = "",
+-- 		-- },
+-- 	},
+--
+-- 	server = {
+-- 		settings = {
+-- 			on_attach = on_attach,
+-- 			["rust-analyzer"] = {
+-- 				checkOnSave = {
+-- 					command = "clippy",
+-- 				},
+-- 			},
+-- 		},
+-- 	},
+-- })
 
 -- vim.api.nvim_buf_set_option(0, "omnifunc", "v:lua.vim.lsp.omnifunc")
