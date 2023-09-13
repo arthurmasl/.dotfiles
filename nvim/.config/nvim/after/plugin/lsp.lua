@@ -31,6 +31,12 @@ lspconfig.tsserver.setup({
 	capabilities = capabilities,
 })
 
+lspconfig.volar.setup({
+	on_attach = on_attach,
+	flags = lsp_flags,
+	capabilities = capabilities,
+})
+
 -- lspconfig.emmet_ls.setup({
 -- 	capabilities = capabilities,
 -- 	filetypes = {
