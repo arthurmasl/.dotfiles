@@ -41,6 +41,8 @@ return require("packer").startup(function()
 	use({ "AckslD/nvim-neoclip.lua" })
 	use({ "kkharji/sqlite.lua", module = "sqlite" })
 
+	-- use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+
 	-- use({ "mattn/emmet-vim" })
 	-- use({ "windwp/nvim-spectre" })
 	-- use({ "RRethy/vim-illuminate" })

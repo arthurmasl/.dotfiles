@@ -7,6 +7,7 @@ vim.opt.hidden = true
 
 vim.opt.clipboard = "unnamedplus"
 vim.opt.mouse = "a"
+vim.opt.pumheight = 15
 
 vim.opt.showmode = false
 vim.opt.signcolumn = "yes"
