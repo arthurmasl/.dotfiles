@@ -41,15 +41,20 @@ return require("packer").startup(function()
 	use({ "AckslD/nvim-neoclip.lua" })
 	use({ "kkharji/sqlite.lua", module = "sqlite" })
 
-	-- use({
-	-- 	"mfussenegger/nvim-dap",
-	-- 	requires = {
-	-- 		"rcarriga/nvim-dap-ui",
-	-- 		"theHamsta/nvim-dap-virtual-text",
-	-- 		"mxsdev/nvim-dap-vscode-js",
-	-- 	},
-	-- })
+	use({
+		"mfussenegger/nvim-dap",
+		requires = {
+			"rcarriga/nvim-dap-ui",
+			"theHamsta/nvim-dap-virtual-text",
+			"mxsdev/nvim-dap-vscode-js",
+		},
+	})
 
+	use({
+		"microsoft/vscode-js-debug",
+		opt = true,
+		run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+	})
 	-- use({ "mattn/emmet-vim" })
 	-- use({ "windwp/nvim-spectre" })
 	-- use({ "RRethy/vim-illuminate" })
