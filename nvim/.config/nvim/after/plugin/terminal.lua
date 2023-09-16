@@ -4,9 +4,9 @@ require("toggleterm").setup({
 	start_in_insert = true,
 	auto_scroll = true,
 	size = 15,
-	-- persist_mode = true,
-	-- persist_size = true,
-	-- direction = "horizontal",
+	persist_mode = false,
+	persist_size = false,
+  start_in_insert = true,
 	-- direction = 'vertical' | 'horizontal' | 'tab' | 'float',
 })
 
