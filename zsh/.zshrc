@@ -45,6 +45,7 @@ bindkey '^g' fzf-cd-widget
 
 bindkey -s '^v' 'nvim .^M'
 bindkey -s '^x' 'clear^M' 
+bindkey -s '^b' 'cd ../^M' 
 
 # bun completions
 [ -s "/Users/arthurmasl/.bun/_bun" ] && source "/Users/arthurmasl/.bun/_bun"
