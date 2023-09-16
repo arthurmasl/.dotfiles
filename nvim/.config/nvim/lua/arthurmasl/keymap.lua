@@ -18,6 +18,8 @@ vim.keymap.set("n", "<C-s>", "O<ESC>", opts)
 -- vim.keymap.set("n", "<C-a>", "a<CR><ESC>", opts)
 -- vim.keymap.set("n", "<C-S>", "a<CR><ESC>k$", opts)
 
+vim.keymap.set("n", "S", "xi", opts)
+
 -- explorer
 vim.keymap.set("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>", opts)
 vim.keymap.set("n", "<Leader>E", ":NvimTreeFocus<CR>", opts)
