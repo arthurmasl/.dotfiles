@@ -54,8 +54,8 @@ local function on_attach(bufnr)
 	vim.keymap.set("n", "q", api.tree.close, opts("Close"))
 	vim.keymap.set("n", "r", api.fs.rename, opts("Rename"))
 	vim.keymap.set("n", "R", api.tree.reload, opts("Refresh"))
-	vim.keymap.set("n", "s", api.node.run.system, opts("Run System"))
-	vim.keymap.set("n", "S", api.tree.search_node, opts("Search"))
+	vim.keymap.set("n", "S", api.node.run.system, opts("Run System"))
+	-- vim.keymap.set("n", "S", api.tree.search_node, opts("Search"))
 	vim.keymap.set("n", "U", api.tree.toggle_custom_filter, opts("Toggle Hidden"))
 	vim.keymap.set("n", "W", api.tree.collapse_all, opts("Collapse"))
 	vim.keymap.set("n", "x", api.fs.cut, opts("Cut"))
@@ -70,7 +70,8 @@ local function on_attach(bufnr)
 	-- You will need to insert "your code goes here" for any mappings with a custom action_cb
 	vim.keymap.set("n", "<Up>", api.node.show_info_popup, opts("Info"))
 	vim.keymap.set("n", "<C-g>", api.tree.change_root_to_node, opts("CD"))
-	vim.keymap.set("n", "<C-s>", api.node.run.system, opts("Run System"))
+	-- vim.keymap.set("n", "<C-s>", api.node.run.system, opts("Run System"))
+	vim.keymap.set("n", "<C-s>", api.node.open.horizontal, opts("Open: Horizontal Split"))
 end
 
 require("nvim-tree").setup({
