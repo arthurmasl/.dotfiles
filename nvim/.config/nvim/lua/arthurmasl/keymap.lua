@@ -58,8 +58,8 @@ vim.cmd([[nnoremap <Leader>R :%s///g<Left><Left><Left>]])
 vim.keymap.set({ "v" }, "<Leader>r", [[y:%s/<C-r>"//g<Left><Left>]])
 
 -- resize alt + hjkl
-vim.cmd([[nnoremap <C-w>3 :vertical-resize -30<CR>]])
-vim.cmd([[nnoremap <C-w>) :vertical-resize +30<CR>]])
+vim.cmd([[nnoremap <C-w>3 :vertical-resize -20<CR>]])
+vim.cmd([[nnoremap <C-w>) :vertical-resize +20<CR>]])
 vim.cmd([[nnoremap <C-w>2 :res +10<CR>]])
 vim.cmd([[nnoremap <C-w>1 :res -10<CR>]])
 
