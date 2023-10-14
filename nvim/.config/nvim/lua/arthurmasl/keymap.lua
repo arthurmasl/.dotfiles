@@ -42,12 +42,12 @@ vim.keymap.set("n", "<Leader>tg", function()
 end, opts)
 
 -- jump up/down
-vim.keymap.set({ "n", "v", "o" }, "<Down>", "}", opts)
-vim.keymap.set({ "n", "v", "o" }, "<Up>", "{", opts)
+-- vim.keymap.set({ "n", "v", "o" }, "<Down>", "}", opts)
+-- vim.keymap.set({ "n", "v", "o" }, "<Up>", "{", opts)
 
 -- jump left/right
-vim.keymap.set({ "n", "v", "o" }, "<Left>", "^", opts)
-vim.keymap.set({ "n", "v", "o" }, "<Right>", "$", opts)
+-- vim.keymap.set({ "n", "v", "o" }, "<Left>", "^", opts)
+-- vim.keymap.set({ "n", "v", "o" }, "<Right>", "$", opts)
 
 -- select word under cursor
 vim.cmd([[nnoremap <expr> & ':%s/'.expand('<cword>').'//gn<CR>``']])
