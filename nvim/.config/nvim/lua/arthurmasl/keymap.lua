@@ -42,12 +42,12 @@ vim.keymap.set("n", "<Leader>tg", function()
 end, opts)
 
 -- jump up/down
--- vim.keymap.set({ "n", "v", "o" }, "<Down>", "}", opts)
--- vim.keymap.set({ "n", "v", "o" }, "<Up>", "{", opts)
+vim.keymap.set({ "n", "v", "o" }, "<Down>", "}", opts)
+vim.keymap.set({ "n", "v", "o" }, "<Up>", "{", opts)
 
 -- jump left/right
--- vim.keymap.set({ "n", "v", "o" }, "<Left>", "^", opts)
--- vim.keymap.set({ "n", "v", "o" }, "<Right>", "$", opts)
+vim.keymap.set({ "n", "v", "o" }, "<Left>", "^", opts)
+vim.keymap.set({ "n", "v", "o" }, "<Right>", "$", opts)
 
 -- select word under cursor
 vim.cmd([[nnoremap <expr> & ':%s/'.expand('<cword>').'//gn<CR>``']])
@@ -59,10 +59,10 @@ vim.cmd([[nnoremap <Leader>R :%s///g<Left><Left><Left>]])
 vim.keymap.set({ "v" }, "<Leader>r", [[y:%s/<C-r>"//g<Left><Left>]])
 
 -- resize alt + hjkl
-vim.cmd([[nnoremap <C-w>3 :vertical-resize -20<CR>]])
+vim.cmd([[nnoremap <C-w>6 :vertical-resize -20<CR>]])
 vim.cmd([[nnoremap <C-w>) :vertical-resize +20<CR>]])
-vim.cmd([[nnoremap <C-w>2 :res +10<CR>]])
-vim.cmd([[nnoremap <C-w>1 :res -10<CR>]])
+vim.cmd([[nnoremap <C-w>5 :res +10<CR>]])
+vim.cmd([[nnoremap <C-w>4 :res -10<CR>]])
 
 -- paste from
 vim.keymap.set({ "n", "v", "o" }, "<leader>p", '"0p', opts)
