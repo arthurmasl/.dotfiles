@@ -47,6 +47,10 @@ bindkey -s '^v' 'nvim .^M'
 bindkey -s '^x' 'clear^M' 
 bindkey -s '^b' 'cd ../^M' 
 
+bindkey '^p' backward-word
+bindkey '^n' forward-word
+bindkey '^o' end-of-line
+
 # bun completions
 [ -s "/Users/arthurmasl/.bun/_bun" ] && source "/Users/arthurmasl/.bun/_bun"
 
