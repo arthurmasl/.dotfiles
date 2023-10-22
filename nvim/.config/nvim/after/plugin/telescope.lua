@@ -3,7 +3,7 @@ local actions = require("telescope.actions")
 
 telescope.setup({
 	defaults = {
-		file_ignore_patterns = { "%.git", "node_modules" },
+		file_ignore_patterns = { "%.git", "node_modules", ".nuxt" },
 		mappings = {
 			i = {
 				-- map actions.which_key to <C-h> (default: <C-/>)
