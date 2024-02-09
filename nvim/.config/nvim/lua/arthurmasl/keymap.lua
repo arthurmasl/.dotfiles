@@ -139,6 +139,9 @@ vim.keymap.set("n", "[q", ":cprev<CR>", opts)
 vim.keymap.set("n", "]h", ":Gitsigns next_hunk<CR>", opts)
 vim.keymap.set("n", "[h", ":Gitsigns prev_hunk<CR>", opts)
 
+vim.keymap.set("n", "<Leader>uh", gitsigns.reset_hunk, opts)
+vim.keymap.set("n", "<Leader>uH", gitsigns.reset_buffer, opts)
+
 -- git
 vim.keymap.set("n", "<Leader>g", ":Neogit<CR>", opts)
 vim.keymap.set("n", "<Leader>dd", ":DiffviewOpen<CR>", opts)
