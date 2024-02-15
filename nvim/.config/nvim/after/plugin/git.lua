@@ -28,7 +28,7 @@ diffview.setup({
 			layout = "diff2_horizontal",
 		},
 		merge_tool = {
-			layout = "diff3_mixed",
+			layout = "diff1_plain",
 			disable_diagnostics = true,
 		},
 		file_history = {

@@ -24,6 +24,10 @@ export LIBRARY_PATH=/usr/local/lib
 export C_INCLUDE_PATH=/usr/local/include
 export LD_LIBRARY_PATH=/usr/local/lib
 
+export GIT_EDITOR=nvim
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
