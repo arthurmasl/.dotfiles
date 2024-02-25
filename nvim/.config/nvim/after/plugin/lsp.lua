@@ -51,20 +51,21 @@ lspconfig.volar.setup({
 
 lspconfig.clangd.setup({
 	capabilities = capabilities,
-	-- on_attach = on_attach,
-	on_attach = function(client, bufnr)
-		if client.supports_method("textDocument/formatting") then
-			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-			vim.api.nvim_create_autocmd("BufWritePre", {
-				group = augroup,
-				buffer = bufnr,
-				callback = function()
-					vim.cmd("TermExec cmd='clear; gcc ./main.c -lcs50; ./a.out'")
-					-- vim.cmd("TermExec cmd='gcc ./main.c; ./a.out'")
-				end,
-			})
-		end
-	end,
+	on_attach = on_attach,
+
+	-- on_attach = function(client, bufnr)
+	-- 	if client.supports_method("textDocument/formatting") then
+	-- 		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+	-- 		vim.api.nvim_create_autocmd("BufWritePre", {
+	-- 			group = augroup,
+	-- 			buffer = bufnr,
+	-- 			callback = function()
+	-- 				-- vim.cmd("TermExec cmd='clear; gcc ./main.c -lcs50; ./a.out'")
+	-- 				-- vim.cmd("TermExec cmd='clear; gcc ./main.c; ./a.out'")
+	-- 			end,
+	-- 		})
+	-- 	end
+	-- end,
 })
 
 -- rt.setup({
