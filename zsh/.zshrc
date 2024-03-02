@@ -24,7 +24,7 @@ export LIBRARY_PATH=/usr/local/lib
 export C_INCLUDE_PATH=/usr/local/include
 export LD_LIBRARY_PATH=/usr/local/lib
 
-export GIT_EDITOR=nvim
+# export GIT_EDITOR=nvim
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 
