@@ -1,5 +1,6 @@
 local gitsigns = require("gitsigns")
 local telescope = require("telescope.builtin")
+local ls = require("luasnip")
 
 local opts = { noremap = true, silent = true }
 
@@ -148,6 +149,14 @@ vim.keymap.set("n", "<Leader>dd", ":DiffviewOpen<CR>", opts)
 vim.keymap.set("n", "<Leader>db", ":DiffviewOpen develop<CR>", opts) -- origin-develop
 vim.keymap.set("n", "<Leader>dH", ":DiffviewFileHistory<CR>", opts)
 vim.keymap.set("n", "<Leader>dh", ":DiffviewFileHistory %<CR>", opts)
+
+-- luasnip
+vim.keymap.set({ "i", "s" }, "<C-a>", function()
+	ls.jump(1)
+end, { silent = true })
+vim.keymap.set({ "i", "s" }, "<C-x>", function()
+	ls.jump(-1)
+end, { silent = true })
 
 -- spectre
 -- vim.cmd([[nnoremap <leader>F :lua require('spectre').open()<CR>]])
