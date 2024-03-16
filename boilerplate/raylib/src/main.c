@@ -3,7 +3,7 @@
 
 int main() {
   SetConfigFlags(FLAG_WINDOW_RESIZABLE);
-  InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "ray3d");
+  InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "main");
   SetWindowPosition(WINDOW_X, WINDOW_Y);
   SetTargetFPS(60);
 
