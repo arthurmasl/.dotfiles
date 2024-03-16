@@ -36,6 +36,15 @@ export MANWIDTH=999
 alias vim='nvim'
 alias v='nvim'
 
+# c aliases
+alias cinit='cmake -B ./build && cmake --build ./build'
+alias cbuild='cmake --build ./build'
+alias crun='cbuild && ./build/main'
+alias cwatch='watchexec -r -e c,h "cmake --build ./build && ./build/main"'
+
+# copy boilerplate
+alias bp-raylib='rsync -av ~/.dotfiles/boilerplate/raylib/ ./'
+
 # fzf
 DISABLE_FZF_KEY_BINDINGS="true"
 

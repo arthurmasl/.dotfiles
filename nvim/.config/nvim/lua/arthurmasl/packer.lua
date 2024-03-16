@@ -29,6 +29,8 @@ return require("packer").startup(function()
 	use({ "kylechui/nvim-surround" })
 
 	use({ "kyazdani42/nvim-tree.lua" })
+	-- use({ "stevearc/oil.nvim" })
+
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "akinsho/toggleterm.nvim" })
 	use({ "numToStr/Comment.nvim" })
