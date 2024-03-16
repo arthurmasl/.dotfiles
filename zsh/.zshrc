@@ -43,7 +43,8 @@ alias crun='cbuild && ./build/main'
 alias cwatch='watchexec -r -e c,h "cmake --build ./build && ./build/main"'
 
 # copy boilerplate
-alias bp-raylib='rsync -av ~/.dotfiles/boilerplate/raylib/ ./'
+alias bp-c='rsync -av ~/.dotfiles/boilerplate/c/ ./'
+alias bp-raylib='bp-c && rsync -av ~/.dotfiles/boilerplate/raylib/ ./'
 
 # fzf
 DISABLE_FZF_KEY_BINDINGS="true"
