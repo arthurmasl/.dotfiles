@@ -8,8 +8,9 @@ vim.keymap.set("n", "<Leader>bs", dap.continue)
 vim.keymap.set("n", "<Leader>bc", dap.terminate)
 
 vim.keymap.set("n", "<Leader>bn", dap.step_over)
+vim.keymap.set("n", "<Leader>bp", dap.step_back)
 vim.keymap.set("n", "<Leader>bi", dap.step_into)
-vim.keymap.set("n", "<Leader>bp", dap.step_out)
+vim.keymap.set("n", "<Leader>bo", dap.step_out)
 
 vim.keymap.set("n", "<Leader>bb", dap.toggle_breakpoint)
 vim.keymap.set("n", "<Leader>bB", function()
