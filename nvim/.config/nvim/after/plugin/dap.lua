@@ -1,5 +1,9 @@
 local dap, dapui = require("dap"), require("dapui")
 
+require("mason-nvim-dap").setup({
+	ensure_installed = { "codelldb" },
+})
+
 vim.keymap.set("n", "<Leader>bs", dap.continue)
 vim.keymap.set("n", "<Leader>bc", dap.terminate)
 
@@ -11,6 +15,31 @@ vim.keymap.set("n", "<Leader>bb", dap.toggle_breakpoint)
 vim.keymap.set("n", "<Leader>bB", function()
 	dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
 end)
+
+dap.adapters.codelldb = {
+	type = "server",
+	host = "127.0.0.1",
+	port = "${port}",
+	executable = {
+		command = "/Users/arthurmasl/.local/share/nvim/mason/bin/codelldb",
+		args = { "--port", "${port}" },
+	},
+}
+
+dap.configurations.c = {
+	{
+		name = "LLDB: Launch",
+		type = "codelldb",
+		request = "launch",
+		program = function()
+			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/build/main", "file")
+		end,
+		cwd = "${workspaceFolder}",
+		stopOnEntry = false,
+		args = {},
+		console = "integratedTerminal",
+	},
+}
 
 require("dap-vscode-js").setup({
 	-- node_path = "node", -- Path of node executable. Defaults to $NODE_PATH, and then "node"

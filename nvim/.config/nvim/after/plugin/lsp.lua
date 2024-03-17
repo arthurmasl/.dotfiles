@@ -1,6 +1,23 @@
-require("mason").setup()
-require("mason-lspconfig").setup()
+require("mason").setup({
+	ensure_installed = {},
+})
+require("mason-lspconfig").setup({})
 require("lsp-format").setup({})
+
+-- mason packages list:
+-- "clang-format",
+-- "clangd",
+-- "codelldb",
+
+-- "stylua",
+-- "lua-language-server",
+
+-- "tsserver",
+-- "prettierd",
+-- "eslint_d",
+--
+-- "volar"
+-- "stylelint"
 
 -- local rt = require("rust-tools")
 local lspconfig = require("lspconfig")

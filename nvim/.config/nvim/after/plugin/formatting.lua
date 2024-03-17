@@ -18,7 +18,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.prettierd,
 		null_ls.builtins.formatting.stylelint,
 
-		null_ls.builtins.formatting.rustfmt,
+		-- null_ls.builtins.formatting.rustfmt,
 
 		null_ls.builtins.formatting.clang_format,
 	},

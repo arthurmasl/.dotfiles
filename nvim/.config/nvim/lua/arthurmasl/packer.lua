@@ -51,6 +51,7 @@ return require("packer").startup(function()
 			"mxsdev/nvim-dap-vscode-js",
 		},
 	})
+	use({ "jay-babu/mason-nvim-dap.nvim" })
 
 	use({
 		"microsoft/vscode-js-debug",
