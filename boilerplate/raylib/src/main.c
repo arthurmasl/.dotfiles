@@ -3,9 +3,11 @@
 
 int main() {
   SetConfigFlags(FLAG_WINDOW_UNFOCUSED);
+  SetConfigFlags(FLAG_WINDOW_RESIZABLE);
+
   InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "main");
   SetWindowPosition(WINDOW_X, WINDOW_Y);
-  SetTargetFPS(60);
+  SetTargetFPS(GetMonitorRefreshRate(0));
 
   while (!WindowShouldClose()) {
     BeginDrawing();
