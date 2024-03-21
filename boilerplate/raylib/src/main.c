@@ -1,8 +1,8 @@
-#include <raylib.h>
 #include "main.h"
+#include <raylib.h>
 
 int main() {
-  SetConfigFlags(FLAG_WINDOW_RESIZABLE);
+  SetConfigFlags(FLAG_WINDOW_UNFOCUSED);
   InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "main");
   SetWindowPosition(WINDOW_X, WINDOW_Y);
   SetTargetFPS(60);
