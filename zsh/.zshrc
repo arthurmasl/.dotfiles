@@ -47,6 +47,8 @@ alias cwatch='watchexec -r -e c,h "cmake --build ./build && ./build/main"'
 alias bp-c='rsync -av ~/.dotfiles/boilerplate/c/ ./'
 alias bp-raylib='bp-c && rsync -av ~/.dotfiles/boilerplate/raylib/ ./'
 
+alias csource='rsync -av ~/.dotfiles/boilerplate/c/.clang-format ./ && rsync -av ~/.dotfiles/boilerplate/c/CMakeLists.txt ./'
+
 # fzf
 DISABLE_FZF_KEY_BINDINGS="true"
 
