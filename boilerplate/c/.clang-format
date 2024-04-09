@@ -5,9 +5,9 @@ AccessModifierOffset: -2
 AlignAfterOpenBracket: BlockIndent
 AlignArrayOfStructures: None
 AlignConsecutiveMacros:
-  Enabled: true
-  AcrossEmptyLines: true
-  AcrossComments: true
+  Enabled: false
+  AcrossEmptyLines: false
+  AcrossComments: false
 AlignConsecutiveAssignments: None
 AlignConsecutiveBitFields:
   Enabled: true
