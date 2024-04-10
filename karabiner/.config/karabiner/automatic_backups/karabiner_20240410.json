@@ -686,13 +686,33 @@
             ]
           },
           {
-            "description": "Map cmd+shift+w to cmd+",
+            "description": "lock screen (fn  + l)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": ["fn"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "q",
+                    "modifiers": ["left_control", "left_command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "cmd+",
             "manipulators": [
               {
                 "from": {
                   "key_code": "w",
                   "modifiers": {
-                    "mandatory": ["shift", "right_command"]
+                    "mandatory": ["left_control", "right_command"]
                   }
                 },
                 "to": [
@@ -706,13 +726,13 @@
             ]
           },
           {
-            "description": "Map cmd+shift+e to cmd-",
+            "description": "cmd-",
             "manipulators": [
               {
                 "from": {
                   "key_code": "e",
                   "modifiers": {
-                    "mandatory": ["shift", "right_command"]
+                    "mandatory": ["left_control", "right_command"]
                   }
                 },
                 "to": [
@@ -726,13 +746,13 @@
             ]
           },
           {
-            "description": "Map cmd+shift+= to cmd=",
+            "description": "cmd=",
             "manipulators": [
               {
                 "from": {
                   "key_code": "r",
                   "modifiers": {
-                    "mandatory": ["shift", "right_command"]
+                    "mandatory": ["left_control", "right_command"]
                   }
                 },
                 "to": [

@@ -54,35 +54,14 @@ lspconfig.volar.setup({
 	capabilities = capabilities,
 })
 
--- lspconfig.emmet_ls.setup({
--- 	capabilities = capabilities,
--- 	filetypes = {
--- 		"css",
--- 		"html",
--- 		"javascriptreact",
--- 		"less",
--- 		"sass",
--- 		"scss",
--- 	},
--- })
-
 lspconfig.clangd.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+})
 
-	-- on_attach = function(client, bufnr)
-	-- 	if client.supports_method("textDocument/formatting") then
-	-- 		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-	-- 		vim.api.nvim_create_autocmd("BufWritePre", {
-	-- 			group = augroup,
-	-- 			buffer = bufnr,
-	-- 			callback = function()
-	-- 				-- vim.cmd("TermExec cmd='clear; gcc ./main.c -lcs50; ./a.out'")
-	-- 				-- vim.cmd("TermExec cmd='clear; gcc ./main.c; ./a.out'")
-	-- 			end,
-	-- 		})
-	-- 	end
-	-- end,
+lspconfig.ols.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 -- rt.setup({

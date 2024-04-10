@@ -25,6 +25,12 @@ export LIBRARY_PATH=/usr/local/lib
 export C_INCLUDE_PATH=/usr/local/include
 export LD_LIBRARY_PATH=/usr/local/lib
 
+export PATH="/opt/homebrew/opt/llvm@14/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/llvm@14/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm@14/include"
+
+export PATH="$HOME/Work/odin/Odin:$PATH"
+
 # export GIT_EDITOR=nvim
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999

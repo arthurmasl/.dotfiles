@@ -16,6 +16,7 @@ require("nvim-treesitter.configs").setup({
 		"toml",
 		"bash",
 		"gitignore",
+		"odin",
 	},
 	sync_install = false,
 	auto_install = true,

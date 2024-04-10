@@ -24,3 +24,8 @@ null_ls.setup({
 	},
 	on_attach = require("lsp-format").on_attach,
 })
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+	pattern = "*.odin",
+	command = 'silent execute "!odinfmt -w" | e',
+})
