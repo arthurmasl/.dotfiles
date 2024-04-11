@@ -30,6 +30,7 @@ export LDFLAGS="-L/opt/homebrew/opt/llvm@14/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm@14/include"
 
 export PATH="$HOME/Work/odin/Odin:$PATH"
+export PATH="$HOME/Work/odin/ols:$PATH"
 
 # export GIT_EDITOR=nvim
 export MANPAGER='nvim +Man!'
@@ -48,6 +49,9 @@ alias cinit='cmake -B ./build && cmake --build ./build'
 alias cbuild='cmake --build ./build'
 alias crun='cbuild && ./build/main'
 alias cwatch='watchexec -r -e c,h "cmake --build ./build && ./build/main"'
+
+alias orun='odin run ./src -out:build/main -debug'
+alias owatch='watchexec -r -e odin "odin run ./src -out:build/main -debug"'
 
 # copy boilerplate
 alias bp-c='rsync -av ~/.dotfiles/boilerplate/c/ ./'
