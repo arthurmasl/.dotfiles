@@ -52,6 +52,7 @@ alias cwatch='watchexec -r -e c,h "cmake --build ./build && ./build/main"'
 
 alias orun='odin run ./src -out:build/main -debug'
 alias owatch='watchexec -r -e odin "odin run ./src -out:build/main -debug"'
+alias obuild='odin build ./src -out:build/release -o:speed && ./build/release'
 
 # copy boilerplate
 alias bp-c='rsync -av ~/.dotfiles/boilerplate/c/ ./'
