@@ -4,6 +4,11 @@ require("mason-nvim-dap").setup({
 	ensure_installed = { "codelldb" },
 })
 
+require("nvim-dap-virtual-text").setup({
+	only_first_definition = false,
+	all_references = true,
+})
+
 vim.keymap.set("n", "<Leader>bs", dap.continue)
 vim.keymap.set("n", "<Leader>bc", dap.terminate)
 
@@ -12,7 +17,11 @@ vim.keymap.set("n", "<Leader>bp", dap.step_back)
 vim.keymap.set("n", "<Leader>bi", dap.step_into)
 vim.keymap.set("n", "<Leader>bo", dap.step_out)
 
+vim.keymap.set("n", "<Leader>br", dap.restart)
+
 vim.keymap.set("n", "<Leader>bb", dap.toggle_breakpoint)
+vim.keymap.set("n", "<Leader>bu", dap.clear_breakpoints)
+
 vim.keymap.set("n", "<Leader>bB", function()
 	dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
 end)
