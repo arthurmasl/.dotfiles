@@ -59,6 +59,8 @@ return require("packer").startup(function()
 		opt = true,
 		run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
 	})
+
+	-- use({ "norcalli/nvim-colorizer.lua" })
 	-- use({ "mattn/emmet-vim" })
 	-- use({ "windwp/nvim-spectre" })
 	-- use({ "RRethy/vim-illuminate" })

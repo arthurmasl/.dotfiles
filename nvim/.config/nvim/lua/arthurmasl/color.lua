@@ -5,6 +5,23 @@ require("nightfox").setup({
 	},
 })
 
+-- require("colorizer").setup({
+-- 	lua = {
+-- 		mode = "background",
+-- 	},
+-- 	odin = {
+-- 		RGB = true, -- #RGB hex codes
+-- 		RRGGBB = true, -- #RRGGBB hex codes
+-- 		names = true, -- "Name" codes like Blue
+-- 		RRGGBBAA = true, -- #RRGGBBAA hex codes
+-- 		rgb_fn = true, -- CSS rgb() and rgba() functions
+-- 		hsl_fn = true, -- CSS hsl() and hsla() functions
+-- 		css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+-- 		css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+-- 		mode = "background",
+-- 	},
+-- })
+
 vim.api.nvim_set_hl(0, "Normal", { bg = "None" })
 -- vim.api.nvim_set_hl(0, 'WinSeparator', { bg = 'None', fg = '#495162' })
 vim.api.nvim_set_hl(0, "SignColumn", { bg = "None" })
