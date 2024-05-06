@@ -5,7 +5,8 @@
 :: media @
 
 ctrl - m ; yab
-ctrl - 0x29 ; apps
+# ctrl - 0x29 ; apps
+# ctrl - p ; apps
 ctrl - y ; media
 
 yab < escape ; default
@@ -13,67 +14,67 @@ apps < escape ; default
 media < escape ; default
 
 # navigation
-yab < h : yabai -m window --focus west
-yab < j : yabai -m window --focus south
-yab < k : yabai -m window --focus north
-yab < l : yabai -m window --focus east
+yab < h : yabai -m window --focus west ; skhd -k escape
+yab < j : yabai -m window --focus south ; skhd -k escape
+yab < k : yabai -m window --focus north ; skhd -k escape
+yab < l : yabai -m window --focus east ; skhd -k escape
 
-yab < w : yabai -m window --focus recent
+yab < w : yabai -m window --focus recent ; skhd -k escape
 
 # moving windows
-yab < left : yabai -m window --warp west
-yab < down : yabai -m window --warp south
-yab < up : yabai -m window --warp north
-yab < right : yabai -m window --warp east
+yab < left : yabai -m window --warp west ; skhd -k escape
+yab < down : yabai -m window --warp south ; skhd -k escape
+yab < up : yabai -m window --warp north ; skhd -k escape
+yab < right : yabai -m window --warp east ; skhd -k escape
 
 # displays
-yab < p : yabai -m display --focus prev
-yab < n : yabai -m display --focus recent
+yab < p : yabai -m display --focus prev skhd -k escape
+yab < n : yabai -m display --focus recent skhd -k escape 
 
 # move to display
-yab < shift - h : yabai -m window --display prev --focus
-yab < shift - l : yabai -m window --display next --focus
+yab < shift - h : yabai -m window --display prev --focus ; skhd -k escape
+yab < shift - l : yabai -m window --display next --focus ; skhd -k escape
 
 # zoom
-yab < m: yabai -m window --toggle zoom-fullscreen
-yab < f: yabai -m window --toggle native-fullscreen
+yab < m: yabai -m window --toggle zoom-fullscreen ; skhd -k escape
+# yab < f: yabai -m window --toggle native-fullscreen ; skhd -k escape
 
 # resize 
-yab < b : yabai -m space --balance
+yab < b : yabai -m space --balance ; skhd -k escape
 
 yab < shift - 0 : yabai -m window --resize left:-100:0; \
-                  yabai -m window --resize right:-100:0
+                  yabai -m window --resize right:-100:0 ; skhd -k escape
 yab < 4 : yabai -m window --resize bottom:0:100; \
-                  yabai -m window --resize top:0:100
+                  yabai -m window --resize top:0:100 ; skhd -k escape
 yab < 5 : yabai -m window --resize top:0:-100; \
-                  yabai -m window --resize bottom:0:-100
+                  yabai -m window --resize bottom:0:-100 ; skhd -k escape
 yab < 6 : yabai -m window --resize right:100:0; \
-                  yabai -m window --resize left:100:0
+                  yabai -m window --resize left:100:0 ; skhd -k escape
 
 # rotate
-yab < r : yabai -m space --rotate 270
-yab < shift -r : yabai -m space --rotate 90
+yab < r : yabai -m space --rotate 270 ; skhd -k escape
+yab < shift -r : yabai -m space --rotate 90 ; skhd -k escape
 
-yab < x : yabai -m space --mirror x-axis
-yab < v : yabai -m space --mirror y-axis
+yab < x : yabai -m space --mirror x-axis ; skhd -k escape
+yab < v : yabai -m space --mirror y-axis ; skhd -k escape
 
-yab < s : yabai -m window --toggle split
-yab < z : yabai -m window --toggle zoom-parent
-# yab < o : yabai -m window --grid "1:2:0:0:1:1"
-yab < i : yabai -m window --swap west
-yab < o : yabai -m window --swap east
+yab < s : yabai -m window --toggle split ; skhd -k escape
+yab < z : yabai -m window --toggle zoom-parent ; skhd -k escape
+# yab < o : yabai -m window --grid "1:2:0:0:1:1" ; skhd -k escape
+yab < i : yabai -m window --swap west ; skhd -k escape
+yab < o : yabai -m window --swap east ; skhd -k escape
 
 
 #apps
-apps < j : open -a "iTerm"
-apps < k : open -a "Google Chrome"
-apps < l : open -a "Google Chrome Canary"
-apps < f : open -a "Finder"
-apps < n : open -a "Notes"
-apps < a : open -a "Aseprite"
+yab < t : open -a "iTerm" ; skhd -k escape
+yab < c : open -a "Google Chrome"; skhd -k escape 
+yab < y : open -a "Google Chrome Canary"; skhd -k escape 
+yab < f : open -a "Finder"; skhd -k escape 
+yab < a : open -a "Aseprite"; skhd -k escape 
+# yab < n : open -a "Notes"; skhd -k escape 
 
 # media
-media < m : osascript -e 'set volume output muted not (output muted of (get volume settings))'
-media < k : osascript -e 'set volume output volume (output volume of (get volume settings)) + 10'
-media < j : osascript -e 'set volume output volume (output volume of (get volume settings)) - 10'
-media < j : osascript -e 'tell application "System Events" to key code 122'
+media < m : osascript -e 'set volume output muted not (output muted of (get volume settings))' ; skhd -k escape
+media < k : osascript -e 'set volume output volume (output volume of (get volume settings)) + 10' ; skhd -k escape
+media < j : osascript -e 'set volume output volume (output volume of (get volume settings)) - 10' ; skhd -k escape
+media < j : osascript -e 'tell application "System Events" to key code 122' ; skhd -k escape
