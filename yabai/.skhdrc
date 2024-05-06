@@ -59,7 +59,9 @@ yab < v : yabai -m space --mirror y-axis
 
 yab < s : yabai -m window --toggle split
 yab < z : yabai -m window --toggle zoom-parent
-yab < o : yabai -m window --grid 1:3:0:0:2:1
+# yab < o : yabai -m window --grid "1:2:0:0:1:1"
+yab < i : yabai -m window --swap west
+yab < o : yabai -m window --swap east
 
 
 #apps
