@@ -48,7 +48,7 @@ return require("packer").startup(function()
 		requires = {
 			"rcarriga/nvim-dap-ui",
 			"theHamsta/nvim-dap-virtual-text",
-			"mxsdev/nvim-dap-vscode-js",
+			-- "mxsdev/nvim-dap-vscode-js",
 		},
 	})
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
@@ -60,7 +60,7 @@ return require("packer").startup(function()
 		run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
 	})
 
-	-- use({ "norcalli/nvim-colorizer.lua" })
+	use({ "norcalli/nvim-colorizer.lua" })
 	-- use({ "mattn/emmet-vim" })
 	-- use({ "windwp/nvim-spectre" })
 	-- use({ "RRethy/vim-illuminate" })
