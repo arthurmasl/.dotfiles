@@ -5,8 +5,6 @@
 :: media @
 
 ctrl - m ; yab
-# ctrl - 0x29 ; apps
-# ctrl - p ; apps
 ctrl - y ; media
 
 yab < escape ; default
@@ -28,8 +26,8 @@ yab < up : yabai -m window --warp north ; skhd -k escape
 yab < right : yabai -m window --warp east ; skhd -k escape
 
 # displays
-yab < p : yabai -m display --focus prev skhd -k escape
-yab < n : yabai -m display --focus recent skhd -k escape 
+yab < p : yabai -m display --focus prev ; skhd -k escape
+yab < n : yabai -m display --focus recent ; skhd -k escape 
 
 # move to display
 yab < shift - h : yabai -m window --display prev --focus ; skhd -k escape
@@ -43,13 +41,13 @@ yab < m: yabai -m window --toggle zoom-fullscreen ; skhd -k escape
 yab < b : yabai -m space --balance ; skhd -k escape
 
 yab < shift - 0 : yabai -m window --resize left:-100:0; \
-                  yabai -m window --resize right:-100:0 ; skhd -k escape
+                  yabai -m window --resize right:-100:0
 yab < 4 : yabai -m window --resize bottom:0:100; \
-                  yabai -m window --resize top:0:100 ; skhd -k escape
+                  yabai -m window --resize top:0:100 
 yab < 5 : yabai -m window --resize top:0:-100; \
-                  yabai -m window --resize bottom:0:-100 ; skhd -k escape
+                  yabai -m window --resize bottom:0:-100
 yab < 6 : yabai -m window --resize right:100:0; \
-                  yabai -m window --resize left:100:0 ; skhd -k escape
+                  yabai -m window --resize left:100:0
 
 # rotate
 yab < r : yabai -m space --rotate 270 ; skhd -k escape
@@ -75,6 +73,6 @@ yab < a : open -a "Aseprite"; skhd -k escape
 
 # media
 media < m : osascript -e 'set volume output muted not (output muted of (get volume settings))' ; skhd -k escape
-media < k : osascript -e 'set volume output volume (output volume of (get volume settings)) + 10' ; skhd -k escape
-media < j : osascript -e 'set volume output volume (output volume of (get volume settings)) - 10' ; skhd -k escape
+media < k : osascript -e 'set volume output volume (output volume of (get volume settings)) + 5' ; skhd -k escape
+media < j : osascript -e 'set volume output volume (output volume of (get volume settings)) - 5' ; skhd -k escape
 media < j : osascript -e 'tell application "System Events" to key code 122' ; skhd -k escape
