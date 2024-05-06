@@ -71,8 +71,7 @@ apps < n : open -a "Notes"
 apps < a : open -a "Aseprite"
 
 # media
-# media < m : osascript -e 'set volume output muted not (output muted of (get volume settings))'
-# media < j : osascript -e 'set volume output volume (output volume of (get volume settings)) + 10'
-# media < k : osascript -e 'set volume output volume (output volume of (get volume settings)) - 10'
-# media < p : osascript -e 'tell application "Google Chrome Canary" to playpause'
-
+media < m : osascript -e 'set volume output muted not (output muted of (get volume settings))'
+media < k : osascript -e 'set volume output volume (output volume of (get volume settings)) + 10'
+media < j : osascript -e 'set volume output volume (output volume of (get volume settings)) - 10'
+media < j : osascript -e 'tell application "System Events" to key code 122'
