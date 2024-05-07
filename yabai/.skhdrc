@@ -29,8 +29,8 @@ yab < up : yabai -m window --warp north ; skhd -k escape
 yab < right : yabai -m window --warp east ; skhd -k escape
 
 # displays
-yab < p : yabai -m display --focus prev ; skhd -k escape
-yab < n : yabai -m display --focus recent ; skhd -k escape 
+yab < p : yabai -m display --focus prev || yabai -m display --focus last ; skhd -k escape
+yab < n : yabai -m display --focus next || yabai -m display --focus first ; skhd -k escape 
 
 # move to display
 yab < shift - h : yabai -m window --display prev --focus ; skhd -k escape
