@@ -58,9 +58,11 @@ yab < v : yabai -m space --mirror y-axis ; skhd -k escape
 
 yab < s : yabai -m window --toggle split ; skhd -k escape
 yab < z : yabai -m window --toggle zoom-parent ; skhd -k escape
-# yab < o : yabai -m window --grid "1:2:0:0:1:1" ; skhd -k escape
 yab < i : yabai -m window --swap west ; skhd -k escape
 yab < o : yabai -m window --swap east ; skhd -k escape
+
+# yab < g : yabai -m window --grid "1:3:0:0:2:1" ; skhd -k escape
+yab < shift - m : yabai -m space --layout bsp
 
 
 #apps
