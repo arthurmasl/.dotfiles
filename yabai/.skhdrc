@@ -39,7 +39,6 @@ yab < shift - l : yabai -m window --display next --focus ; skhd -k escape
 # zoom
 yab < m: yabai -m window --toggle zoom-fullscreen ; skhd -k escape
 yab < z : yabai -m window --toggle zoom-parent ; skhd -k escape
-# yab < f: yabai -m window --toggle native-fullscreen ; skhd -k escape
 
 # balance
 yab < b : yabai -m space --balance ; skhd -k escape
@@ -65,11 +64,10 @@ yab < s : yabai -m window --toggle split ; skhd -k escape
 yab < i : yabai -m window --swap west ; skhd -k escape
 yab < o : yabai -m window --swap east ; skhd -k escape
 
-# yab < g : yabai -m window --grid "1:3:0:0:2:1" ; skhd -k escape
-# yab < shift - m : yabai -m space --layout bsp ; skhd-k escape
-
+# minimize and balance
 yab < shift - b : yabai -m space --layout bsp ;  yabai -m space --balance ; skhd -k escape
 
+# toggle fullscreen all windows
 yab < shift - m : \
                   yabai -m window --focus first ; \
                   yabai -m window --toggle zoom-fullscreen ; \
@@ -83,7 +81,7 @@ yab < shift - m : \
                   skhd -k escape
 
 # gap
-yab < shift - g : yabai -m space --toggle padding; yabai -m space --toggle gap
+yab < shift - g : yabai -m space --toggle padding; yabai -m space --toggle gap ; skhd -k escape
 
 #apps
 yab < t : open -a "iTerm" ; skhd -k escape
