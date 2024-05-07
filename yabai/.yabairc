@@ -38,3 +38,10 @@ yabai -m config window_placement first_child
 # yabai -m rule --add label="Main" app="^main$" grid="2:3:0:0:2:2"
 
 borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 &
+
+# #!/bin/bash
+# ids=$(yabai -m query --windows --display | jq '.[].id')
+# for id in $ids; do
+#     yabai -m window $id --focus
+#     yabai -m window $id --toggle zoom-fullscreen
+# done

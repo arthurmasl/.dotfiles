@@ -17,6 +17,9 @@ yab < j : yabai -m window --focus south ; skhd -k escape
 yab < k : yabai -m window --focus north ; skhd -k escape
 yab < l : yabai -m window --focus east ; skhd -k escape
 
+# next/prev/recent
+yab < u : yabai -m window --focus next || yabai -m window --focus first ; skhd -k escape
+yab < shift - u : yabai -m window --focus prev || yabai -m window --focus last ; skhd -k escape
 yab < w : yabai -m window --focus recent ; skhd -k escape
 
 # moving windows
@@ -35,34 +38,49 @@ yab < shift - l : yabai -m window --display next --focus ; skhd -k escape
 
 # zoom
 yab < m: yabai -m window --toggle zoom-fullscreen ; skhd -k escape
+yab < z : yabai -m window --toggle zoom-parent ; skhd -k escape
 # yab < f: yabai -m window --toggle native-fullscreen ; skhd -k escape
 
-# resize 
+# balance
 yab < b : yabai -m space --balance ; skhd -k escape
 
-yab < shift - 0 : yabai -m window --resize left:-100:0; \
-                  yabai -m window --resize right:-100:0
-yab < 4 : yabai -m window --resize bottom:0:100; \
-                  yabai -m window --resize top:0:100 
-yab < 5 : yabai -m window --resize top:0:-100; \
-                  yabai -m window --resize bottom:0:-100
-yab < 6 : yabai -m window --resize right:100:0; \
-                  yabai -m window --resize left:100:0
+# resize 
+yab < shift - 0 : yabai -m window --resize left:-100:0 ; yabai -m window --resize right:-100:0
+yab < 4 : yabai -m window --resize bottom:0:100 ; yabai -m window --resize top:0:100 
+yab < 5 : yabai -m window --resize top:0:-100 ; yabai -m window --resize bottom:0:-100
+yab < 6 : yabai -m window --resize right:100:0 ; yabai -m window --resize left:100:0
 
 # rotate
 yab < r : yabai -m space --rotate 270 ; skhd -k escape
 yab < shift -r : yabai -m space --rotate 90 ; skhd -k escape
 
+# mirror
 yab < x : yabai -m space --mirror x-axis ; skhd -k escape
 yab < v : yabai -m space --mirror y-axis ; skhd -k escape
 
+# split
 yab < s : yabai -m window --toggle split ; skhd -k escape
-yab < z : yabai -m window --toggle zoom-parent ; skhd -k escape
+
+# swap
 yab < i : yabai -m window --swap west ; skhd -k escape
 yab < o : yabai -m window --swap east ; skhd -k escape
 
 # yab < g : yabai -m window --grid "1:3:0:0:2:1" ; skhd -k escape
-yab < shift - m : yabai -m space --layout bsp
+# yab < shift - m : yabai -m space --layout bsp ; skhd-k escape
+
+yab < shift - b : yabai -m space --layout bsp
+
+yab < shift - m : \
+                  yabai -m window --focus first ; \
+                  yabai -m window --toggle zoom-fullscreen ; \
+                  yabai -m window --focus next && \
+                  yabai -m window --toggle zoom-fullscreen ; \
+                  yabai -m window --focus next && \
+                  yabai -m window --toggle zoom-fullscreen ; \
+                  yabai -m window --focus next && \
+                  yabai -m window --toggle zoom-fullscreen ; \
+                  yabai -m window --focus first ; \
+                  skhd -k escape
 
 # gap
 yab < shift - g : yabai -m space --toggle padding; yabai -m space --toggle gap
