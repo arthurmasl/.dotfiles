@@ -64,6 +64,8 @@ yab < o : yabai -m window --swap east ; skhd -k escape
 # yab < g : yabai -m window --grid "1:3:0:0:2:1" ; skhd -k escape
 yab < shift - m : yabai -m space --layout bsp
 
+# gap
+yab < shift - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
 #apps
 yab < t : open -a "iTerm" ; skhd -k escape
@@ -78,3 +80,4 @@ media < m : osascript -e 'set volume output muted not (output muted of (get volu
 media < k : osascript -e 'set volume output volume (output volume of (get volume settings)) + 5' ; skhd -k escape
 media < j : osascript -e 'set volume output volume (output volume of (get volume settings)) - 5' ; skhd -k escape
 media < j : osascript -e 'tell application "System Events" to key code 122' ; skhd -k escape
+
