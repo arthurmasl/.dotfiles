@@ -64,6 +64,11 @@ lspconfig.ols.setup({
 	on_attach = on_attach,
 })
 
+lspconfig.glsl_analyzer.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 -- rt.setup({
 -- 	tools = {
 -- 		runnables = {
