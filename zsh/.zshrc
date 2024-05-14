@@ -54,6 +54,9 @@ alias orun='odin run ./src -out:build/main -debug'
 alias owatch='watchexec -r -e odin,png "odin run ./src -out:build/main -debug"'
 alias obuild='odin build ./src -out:build/release -o:speed && ./build/release'
 
+alias owin='watchexec -r -w src/window "odin run ./src/window -out:build/window -debug"' 
+alias ohot='watchexec -r -w src/library "odin build ./src/library -build-mode=shared -o:none -debug -out:build/library_tmp && mv ./build/library_tmp.dylib ./build/library.dylib"'
+
 # copy boilerplate
 alias bp-c='rsync -av ~/.dotfiles/boilerplate/c/ ./'
 alias bp-raylib='bp-c && rsync -av ~/.dotfiles/boilerplate/raylib/ ./'

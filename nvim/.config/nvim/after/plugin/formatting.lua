@@ -30,13 +30,13 @@ null_ls.setup({
 -- 	command = 'silent execute "!odinfmt -w" | e',
 -- })
 
--- vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
+vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
 
-vim.api.nvim_create_augroup("AutoFormatting", {})
-vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*.odin",
-	group = "AutoFormatting",
-	callback = function()
-		vim.lsp.buf.format({ async = true })
-	end,
-})
+-- vim.api.nvim_create_augroup("AutoFormatting", {})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+-- 	pattern = "*.odin",
+-- 	group = "AutoFormatting",
+-- 	callback = function()
+-- 		vim.lsp.buf.format({ async = true })
+-- 	end,
+-- })
