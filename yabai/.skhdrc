@@ -18,7 +18,7 @@ yab < k : yabai -m window --focus north ; skhd -k escape
 yab < l : yabai -m window --focus east ; skhd -k escape
 
 # next/prev/recent
-yab < u : yabai -m window --focus next || yabai -m window --focus first ; skhd -k escape
+yab < m : yabai -m window --focus next || yabai -m window --focus first ; skhd -k escape
 yab < shift - u : yabai -m window --focus prev || yabai -m window --focus last ; skhd -k escape
 yab < w : yabai -m window --focus recent ; skhd -k escape
 
@@ -37,7 +37,7 @@ yab < shift - h : yabai -m window --display prev --focus ; skhd -k escape
 yab < shift - l : yabai -m window --display next --focus ; skhd -k escape
 
 # zoom
-yab < m: yabai -m window --toggle zoom-fullscreen ; skhd -k escape
+yab < u: yabai -m window --toggle zoom-fullscreen ; skhd -k escape
 yab < z : yabai -m window --toggle zoom-parent ; skhd -k escape
 
 # balance
