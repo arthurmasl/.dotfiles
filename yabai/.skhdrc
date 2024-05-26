@@ -43,6 +43,9 @@ yab < z : yabai -m window --toggle zoom-parent ; skhd -k escape
 # balance
 yab < b : yabai -m space --balance ; skhd -k escape
 
+# minimize and balance
+yab < shift - o : yabai -m space --layout bsp ;  yabai -m space --balance ; skhd -k escape
+
 # resize 
 yab < shift - 0 : yabai -m window --resize left:-100:0 ; yabai -m window --resize right:-100:0
 yab < 4 : yabai -m window --resize bottom:0:100 ; yabai -m window --resize top:0:100 
@@ -61,14 +64,12 @@ yab < v : yabai -m space --mirror y-axis ; skhd -k escape
 yab < s : yabai -m window --toggle split ; skhd -k escape
 
 # swap
-yab < i : yabai -m window --swap west ; skhd -k escape
-yab < o : yabai -m window --swap east ; skhd -k escape
+# yab < i : yabai -m window --swap west ; skhd -k escape
+# yab < o : yabai -m window --swap east ; skhd -k escape
 
-# minimize and balance
-yab < shift - b : yabai -m space --layout bsp ;  yabai -m space --balance ; skhd -k escape
 
 # toggle fullscreen all windows
-yab < shift - m : \
+yab < o : \
                   yabai -m window --focus first ; \
                   yabai -m window --toggle zoom-fullscreen ; \
                   yabai -m window --focus next && \
