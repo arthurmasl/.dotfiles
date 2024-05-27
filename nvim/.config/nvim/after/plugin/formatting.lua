@@ -21,6 +21,7 @@ null_ls.setup({
 		-- null_ls.builtins.formatting.rustfmt,
 
 		null_ls.builtins.formatting.clang_format,
+		-- null_ls.builtins.formatting.zigfmt,
 	},
 	on_attach = require("lsp-format").on_attach,
 })

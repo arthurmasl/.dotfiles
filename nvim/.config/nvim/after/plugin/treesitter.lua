@@ -17,6 +17,7 @@ require("nvim-treesitter.configs").setup({
 		"bash",
 		"gitignore",
 		"odin",
+		"zig",
 	},
 	sync_install = false,
 	auto_install = true,

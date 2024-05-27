@@ -66,6 +66,21 @@ dap.configurations.odin = {
 	},
 }
 
+dap.configurations.zig = {
+	{
+		name = "LLDB: Launch",
+		type = "codelldb",
+		request = "launch",
+		program = function()
+			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/build/main", "file")
+		end,
+		cwd = "${workspaceFolder}",
+		stopOnEntry = false,
+		args = {},
+		console = "integratedTerminal",
+	},
+}
+
 -- require("dap-vscode-js").setup({
 -- 	adapters = { "pwa-node", "pwa-chrome", "node-terminal", "pwa-extensionHost" }, -- which adapters to register in nvim-dap
 -- })
