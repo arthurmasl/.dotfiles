@@ -26,11 +26,13 @@ export C_INCLUDE_PATH=/usr/local/include
 export LD_LIBRARY_PATH=/usr/local/lib
 
 export PATH="/opt/homebrew/opt/llvm@14/bin:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/llvm@14/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm@14/include"
 
 export PATH="$HOME/Work/odin/Odin:$PATH"
-export PATH="$HOME/Work/odin/ols:$PATH"
+# export PATH="$HOME/Work/odin/ols:$PATH"
+
 
 export PATH="$HOME/.local/share/nvim/mason/bin/zls$PATH"
 export PATH="/opt/homebrew/bin/zig:$PATH"
