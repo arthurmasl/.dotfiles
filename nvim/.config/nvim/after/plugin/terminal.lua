@@ -1,7 +1,7 @@
 require("toggleterm").setup({
 	open_mapping = [[<c-_>]],
 	autochdir = false,
-	start_in_insert = true,
+	start_in_insert = false,
 	auto_scroll = true,
 	size = 15,
 	persist_mode = false,
