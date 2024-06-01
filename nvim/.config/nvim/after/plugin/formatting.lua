@@ -22,6 +22,10 @@ null_ls.setup({
 
 		null_ls.builtins.formatting.clang_format,
 		null_ls.builtins.formatting.zigfmt,
+
+		null_ls.builtins.formatting.gofumpt,
+		null_ls.builtins.formatting.goimports_reviser,
+		null_ls.builtins.formatting.golines,
 	},
 	on_attach = require("lsp-format").on_attach,
 })

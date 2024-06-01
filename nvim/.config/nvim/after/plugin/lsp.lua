@@ -40,7 +40,12 @@ vim.diagnostic.config({
 	},
 })
 
--- vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
+-- vim.cmd([[autolocal on_attach = function(client, bufnr)
+
+local on_attach = function(client, bufnr)
+	-- Enable completion triggered by <c-x><c-o>
+	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+end
 
 lspconfig.tsserver.setup({
 	on_attach = on_attach,
@@ -74,6 +79,22 @@ lspconfig.glsl_analyzer.setup({
 	on_attach = on_attach,
 })
 
+lspconfig.gopls.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	settings = {
+		gopls = {
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
+			gofumpt = true,
+		},
+	},
+})
+
+-- vim.api.nvim_buf_set_option(0, "omnifunc", "v:lua.vim.lsp.omnifunc")
+
 -- rt.setup({
 -- 	tools = {
 -- 		runnables = {
@@ -98,5 +119,3 @@ lspconfig.glsl_analyzer.setup({
 -- 		},
 -- 	},
 -- })
-
--- vim.api.nvim_buf_set_option(0, "omnifunc", "v:lua.vim.lsp.omnifunc")
