@@ -35,4 +35,4 @@ null_ls.setup({
 -- 	command = 'silent execute "!odinfmt -w" | e',
 -- })
 
-vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
+vim.cmd([[autocmd BufWritePre *.odin lua vim.lsp.buf.format()]])
