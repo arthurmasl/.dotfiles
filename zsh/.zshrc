@@ -33,6 +33,9 @@ export CPPFLAGS="-I/opt/homebrew/opt/llvm@14/include"
 export PATH="$HOME/Work/odin/Odin:$PATH"
 # export PATH="$HOME/Work/odin/ols:$PATH"
 
+export GOPATH=$HOME/go
+export PATH="$GOPATH/bin:$PATH"
+
 
 export PATH="$HOME/.local/share/nvim/mason/bin/zls$PATH"
 export PATH="/opt/homebrew/bin/zig:$PATH"
