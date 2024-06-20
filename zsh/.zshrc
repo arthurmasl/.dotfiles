@@ -52,7 +52,7 @@ export MANWIDTH=999
 alias vim='nvim'
 alias v='nvim'
 
-# c aliases
+# aliases
 alias cinit='cmake -B ./build && cmake --build ./build'
 alias cbuild='cmake --build ./build'
 alias crun='cbuild && ./build/main'
