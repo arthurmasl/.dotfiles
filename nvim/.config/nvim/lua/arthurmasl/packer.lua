@@ -36,7 +36,7 @@ return require("packer").startup(function()
 	use({ "numToStr/Comment.nvim" })
 	use({ "kwkarlwang/bufjump.nvim" })
 
-	use({ "NeogitOrg/neogit" })
+	use({ "NeogitOrg/neogit", commit = "0cd089944e4a6ecc24913a9d8621071cb36f8f6f" }) -- TODO revert
 	use({ "sindrets/diffview.nvim" })
 	use({ "lewis6991/gitsigns.nvim" })
 
