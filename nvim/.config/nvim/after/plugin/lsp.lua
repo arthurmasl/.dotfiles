@@ -5,19 +5,23 @@ require("mason-lspconfig").setup({})
 require("lsp-format").setup({})
 
 -- mason packages list:
--- "clang-format",
--- "clangd",
--- "codelldb",
-
--- "stylua",
--- "lua-language-server",
-
--- "tsserver",
--- "prettierd",
--- "eslint_d",
 --
--- "volar"
--- "stylelint"
+-- clangd
+-- codelldb
+-- eslint_d
+-- glsl_analyzer
+-- gofumpt
+-- goimports-reviser
+-- golines
+-- gopls
+-- lua-language-server lua_ls
+-- ols
+-- prettierd
+-- stylelint
+-- stylua
+-- typescript-language-server tsserver
+-- vue-language-server volar
+-- zls
 
 -- local rt = require("rust-tools")
 local lspconfig = require("lspconfig")
