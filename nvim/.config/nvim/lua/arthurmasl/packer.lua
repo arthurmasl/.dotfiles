@@ -36,7 +36,7 @@ return require("packer").startup(function()
 	use({ "numToStr/Comment.nvim" })
 	use({ "kwkarlwang/bufjump.nvim" })
 
-	use({ "NeogitOrg/neogit", commit = "0cd089944e4a6ecc24913a9d8621071cb36f8f6f" }) -- TODO revert
+	use({ "NeogitOrg/neogit" })
 	use({ "sindrets/diffview.nvim" })
 	use({ "lewis6991/gitsigns.nvim" })
 
@@ -46,7 +46,7 @@ return require("packer").startup(function()
 	use({
 		"mfussenegger/nvim-dap",
 		requires = {
-			"rcarriga/nvim-dap-ui",
+			"frcarriga/nvim-dap-ui",
 			"theHamsta/nvim-dap-virtual-text",
 			-- "mxsdev/nvim-dap-vscode-js",
 		},
