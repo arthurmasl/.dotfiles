@@ -26,6 +26,9 @@ yabai -m config window_gap     0
 yabai -m rule --add app="^Karabiner-Elements$" manage=on
 yabai -m rule --add app="^System Settings$" manage=off
 
+# yabai -m rule --add app="^main$" manage=off
+# yabai -m rule --add app="^Google Chrome Canary$" manage=off grid=1:2:1:0:1:1
+
 # #!/bin/bash
 # ids=$(yabai -m query --windows --display | jq '.[].id')
 # for id in $ids; do

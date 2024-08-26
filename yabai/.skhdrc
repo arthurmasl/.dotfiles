@@ -63,6 +63,12 @@ yab < v : yabai -m space --mirror y-axis ; skhd -k escape
 # split
 yab < s : yabai -m window --toggle split ; skhd -k escape
 
+# absolute dev
+yab < d : \
+  yabai -m rule --add app="^main$" manage=off ; \
+  yabai -m rule --add app="^Google Chrome Canary$" manage=off grid=1:2:1:0:1:1 ; \
+  skhd -k escape
+
 # swap
 # yab < i : yabai -m window --swap west ; skhd -k escape
 # yab < o : yabai -m window --swap east ; skhd -k escape
@@ -70,16 +76,16 @@ yab < s : yabai -m window --toggle split ; skhd -k escape
 
 # toggle fullscreen all windows
 yab < o : \
-                  yabai -m window --focus first ; \
-                  yabai -m window --toggle zoom-fullscreen ; \
-                  yabai -m window --focus next && \
-                  yabai -m window --toggle zoom-fullscreen ; \
-                  yabai -m window --focus next && \
-                  yabai -m window --toggle zoom-fullscreen ; \
-                  yabai -m window --focus next && \
-                  yabai -m window --toggle zoom-fullscreen ; \
-                  yabai -m window --focus first ; \
-                  skhd -k escape
+  yabai -m window --focus first ; \
+  yabai -m window --toggle zoom-fullscreen ; \
+  yabai -m window --focus next && \
+  yabai -m window --toggle zoom-fullscreen ; \
+  yabai -m window --focus next && \
+  yabai -m window --toggle zoom-fullscreen ; \
+  yabai -m window --focus next && \
+  yabai -m window --toggle zoom-fullscreen ; \
+  yabai -m window --focus first ; \
+  skhd -k escape
 
 # gap
 yab < shift - g : yabai -m space --toggle padding; yabai -m space --toggle gap ; skhd -k escape
