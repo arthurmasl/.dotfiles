@@ -54,7 +54,7 @@ yab < 6 : yabai -m window --resize right:100:0 ; yabai -m window --resize left:1
 
 # rotate
 yab < r : yabai -m space --rotate 270 ; skhd -k escape
-yab < shift -r : yabai -m space --rotate 90 ; skhd -k escape
+yab < shift - r : yabai -m space --rotate 90 ; skhd -k escape
 
 # mirror
 yab < x : yabai -m space --mirror x-axis ; skhd -k escape
@@ -62,6 +62,8 @@ yab < v : yabai -m space --mirror y-axis ; skhd -k escape
 
 # split
 yab < s : yabai -m window --toggle split ; skhd -k escape
+
+yab < shift - f : yabai -m window --toggle float ; skhd -k escape
 
 # absolute dev
 yab < d : \
