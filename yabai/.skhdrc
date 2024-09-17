@@ -1,14 +1,12 @@
 # modes
 :: default
 :: yab @
-:: apps @
 :: media @
 
 ctrl - m ; yab
 ctrl - y ; media
 
 yab < escape ; default
-apps < escape ; default
 media < escape ; default
 
 # navigation
