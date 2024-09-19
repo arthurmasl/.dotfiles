@@ -68,6 +68,7 @@ alias ohot='watchexec -r -w src/library "odin build ./src/library -build-mode=sh
 
 alias gorun='go run ./src'
 alias gowatch='watchexec -r -e go,mod "go run ./src"'
+alias gobuildw='watchexec -r -e go,mod "go build -o main ./src"'
 
 # copy boilerplate
 alias bp-c='rsync -av ~/.dotfiles/boilerplate/c/ ./'

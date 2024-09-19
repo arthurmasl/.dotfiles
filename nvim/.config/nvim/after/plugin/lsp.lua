@@ -97,6 +97,11 @@ lspconfig.gopls.setup({
 	},
 })
 
+lspconfig.dockerls.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 -- vim.api.nvim_buf_set_option(0, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
 -- rt.setup({
