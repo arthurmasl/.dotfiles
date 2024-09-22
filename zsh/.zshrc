@@ -39,6 +39,8 @@ export PATH="$HOME/Work/odin/Odin:$PATH"
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
 
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
 # export GIT_EDITOR=nvim
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
@@ -68,6 +70,8 @@ alias ohot='watchexec -r -w src/library "odin build ./src/library -build-mode=sh
 alias gorun='go run ./src'
 alias gowatch='watchexec -r -e go,mod "go run ./src"'
 alias gobuildw='watchexec -r -e go,mod "go build -o main ./src"'
+
+alias sqlwatch='watchexec -r -e sql "psql -h localhost -p 5432 -U root -d box -f ./schema.sql"'
 
 # copy boilerplate
 alias bp-c='rsync -av ~/.dotfiles/boilerplate/c/ ./'
