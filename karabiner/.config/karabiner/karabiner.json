@@ -612,6 +612,27 @@
             ]
           },
           {
+            "description": "Map ctrl enter to enter",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "return_or_enter"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+
+          {
             "description": "Map ctrl u to delete line back",
             "manipulators": [
               {
