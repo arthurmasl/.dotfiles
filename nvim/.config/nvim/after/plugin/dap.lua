@@ -1,4 +1,4 @@
-local dap, dapui = require("dap"), require("dapui")
+local dap, dapui, dapGo = require("dap"), require("dapui"), require("dap-go")
 
 require("mason-nvim-dap").setup({
 	ensure_installed = { "codelldb" },
@@ -21,6 +21,8 @@ vim.keymap.set("n", "<Leader>br", dap.restart)
 
 vim.keymap.set("n", "<Leader>bb", dap.toggle_breakpoint)
 vim.keymap.set("n", "<Leader>bu", dap.clear_breakpoints)
+
+vim.keymap.set("n", "<leader>bt", dapui.toggle)
 
 vim.keymap.set("n", "<Leader>bB", function()
 	dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
@@ -80,6 +82,31 @@ dap.configurations.zig = {
 		console = "integratedTerminal",
 	},
 }
+
+dapGo.setup({
+	dap_configurations = {
+		{
+			type = "go",
+			name = "Attach remote",
+			mode = "remote",
+			request = "attach",
+		},
+	},
+	delve = {
+		path = "dlv",
+		initialize_timeout_sec = 20,
+		port = "${port}",
+		args = {},
+		build_flags = {},
+		detached = vim.fn.has("win32") == 0,
+		cwd = nil,
+	},
+	-- options related to running closest test
+	tests = {
+		-- enables verbosity when running the test.
+		verbose = false,
+	},
+})
 
 -- require("dap-vscode-js").setup({
 -- 	adapters = { "pwa-node", "pwa-chrome", "node-terminal", "pwa-extensionHost" }, -- which adapters to register in nvim-dap
@@ -162,5 +189,3 @@ end
 dap.listeners.before.event_exited["dapui_config"] = function()
 	dapui.close({})
 end
-
-vim.keymap.set("n", "<leader>bt", dapui.toggle)

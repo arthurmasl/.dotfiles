@@ -54,6 +54,7 @@ return require("packer").startup(function()
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
 	use({ "jay-babu/mason-nvim-dap.nvim" })
 
+	use({ "leoluz/nvim-dap-go" })
 	use({
 		"microsoft/vscode-js-debug",
 		opt = true,
