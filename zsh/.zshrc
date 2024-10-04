@@ -67,9 +67,9 @@ alias obuild='odin build ./src -out:build/release -o:speed && ./build/release'
 alias owin='watchexec -r -w src/window "odin run ./src/window -out:build/window -debug"' 
 alias ohot='watchexec -r -w src/library "odin build ./src/library -build-mode=shared -o:none -debug -out:build/library_tmp && mv ./build/library_tmp.dylib ./build/library.dylib"'
 
-alias gorun='go run ./cmd/main'
-alias gowatch='watchexec -r -e go,mod "go run ./cmd/main"'
-alias gobuildw='watchexec -r -e go,mod "go build -o main ./cmd/main"'
+alias gorun='go run ./cmd/app'
+alias gowatch='watchexec -r -e go,mod "go run ./cmd/app"'
+alias gobuildw='watchexec -r -e go,mod "go build -o main ./cmd/app"'
 
 alias sqlwatch='watchexec -r -e sql "psql -h localhost -p 5432 -U root -d box -f ./schema.sql"'
 

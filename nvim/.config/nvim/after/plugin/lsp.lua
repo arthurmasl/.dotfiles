@@ -4,6 +4,8 @@ require("mason").setup({
 require("mason-lspconfig").setup({})
 require("lsp-format").setup({})
 
+local gopher = require("gopher")
+
 -- mason packages list:
 --
 -- clangd
@@ -97,10 +99,35 @@ lspconfig.gopls.setup({
 	},
 })
 
+gopher.setup({
+	commands = {
+		go = "go",
+		gomodifytags = "gomodifytags",
+		gotests = "gotests",
+		impl = "impl",
+		iferr = "iferr",
+		dlv = "dlv",
+	},
+	gotests = {
+		template = "default",
+		template_dir = nil,
+		named = false,
+	},
+	gotag = {
+		transform = "snakecase",
+	},
+})
+
 lspconfig.dockerls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
+
+vim.keymap.set("n", "<Leader>he", ":GoIfErr<CR>", opts)
+vim.keymap.set("n", "<Leader>ht", ":GoTestAdd<CR>", opts)
+
+vim.keymap.set("n", "<Leader>hj", ":GoTagAdd json<CR>", opts)
+vim.keymap.set("n", "<Leader>hy", ":GoTagAdd yaml<CR>", opts)
 
 -- vim.api.nvim_buf_set_option(0, "omnifunc", "v:lua.vim.lsp.omnifunc")
 

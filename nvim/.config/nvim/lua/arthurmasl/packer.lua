@@ -43,6 +43,7 @@ return require("packer").startup(function()
 	use({ "AckslD/nvim-neoclip.lua" })
 	use({ "kkharji/sqlite.lua", module = "sqlite" })
 
+	use({ "olexsmir/gopher.nvim" })
 	use({
 		"mfussenegger/nvim-dap",
 		requires = {
