@@ -53,7 +53,7 @@ local on_attach = function(client, bufnr)
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 end
 
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
 	on_attach = on_attach,
 	flags = lsp_flags,
 	capabilities = capabilities,
@@ -123,11 +123,11 @@ lspconfig.dockerls.setup({
 	on_attach = on_attach,
 })
 
-vim.keymap.set("n", "<Leader>he", ":GoIfErr<CR>", opts)
-vim.keymap.set("n", "<Leader>ht", ":GoTestAdd<CR>", opts)
+vim.keymap.set("n", "<Leader>He", ":GoIfErr<CR>", opts)
+vim.keymap.set("n", "<Leader>Ht", ":GoTestAdd<CR>", opts)
 
-vim.keymap.set("n", "<Leader>hj", ":GoTagAdd json<CR>", opts)
-vim.keymap.set("n", "<Leader>hy", ":GoTagAdd yaml<CR>", opts)
+vim.keymap.set("n", "<Leader>Hj", ":GoTagAdd json<CR>", opts)
+vim.keymap.set("n", "<Leader>Hy", ":GoTagAdd yaml<CR>", opts)
 
 -- vim.api.nvim_buf_set_option(0, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
