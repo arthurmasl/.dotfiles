@@ -55,6 +55,10 @@ return require("packer").startup(function()
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
 	use({ "jay-babu/mason-nvim-dap.nvim" })
 
+	use({ "tpope/vim-dadbod" })
+	use({ "kristijanhusak/vim-dadbod-ui" })
+	use({ "kristijanhusak/vim-dadbod-completion" })
+
 	-- use({ "rest-nvim/rest.nvim", requires = { "rest-nvim/tree-sitter-http" } })
 	use({ "diepm/vim-rest-console" })
 

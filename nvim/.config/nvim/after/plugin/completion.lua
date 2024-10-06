@@ -16,6 +16,7 @@ cmp.setup({
 		{ name = "buffer", keyword_length = 2 },
 		{ name = "path" },
 		{ name = "nvim_lsp_signature_help" },
+		{ name = "vim-dadbod-completion", keyword_length = 2 },
 	},
 
 	mapping = cmp.mapping.preset.insert({

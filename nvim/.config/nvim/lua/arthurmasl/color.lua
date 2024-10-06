@@ -40,3 +40,6 @@ vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#3e4d5c" })
 -- vim.api.nvim_set_hl(0, "IlluminatedWordRead", { bg = "#3f495a" })
 -- vim.api.nvim_set_hl(0, "IlluminatedWordText", { bg = "#3f495a" })
 -- vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { bg = "#3f495a" })
+
+-- db ui
+vim.api.nvim_set_hl(0, "NotificationInfo", { bg = "None" })

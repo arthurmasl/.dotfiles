@@ -631,6 +631,26 @@
               }
             ]
           },
+          {
+            "description": "Map alt space to space",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": ["option"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
 
           {
             "description": "Map ctrl u to delete line back",

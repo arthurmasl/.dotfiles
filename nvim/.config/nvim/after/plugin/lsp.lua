@@ -123,11 +123,11 @@ lspconfig.dockerls.setup({
 	on_attach = on_attach,
 })
 
-vim.keymap.set("n", "<Leader>He", ":GoIfErr<CR>", opts)
-vim.keymap.set("n", "<Leader>Ht", ":GoTestAdd<CR>", opts)
+vim.keymap.set("n", "<Leader>le", ":GoIfErr<CR>", opts)
+vim.keymap.set("n", "<Leader>lt", ":GoTestAdd<CR>", opts)
 
-vim.keymap.set("n", "<Leader>Hj", ":GoTagAdd json<CR>", opts)
-vim.keymap.set("n", "<Leader>Hy", ":GoTagAdd yaml<CR>", opts)
+vim.keymap.set("n", "<Leader>lj", ":GoTagAdd json<CR>", opts)
+vim.keymap.set("n", "<Leader>ly", ":GoTagAdd yaml<CR>", opts)
 
 -- vim.api.nvim_buf_set_option(0, "omnifunc", "v:lua.vim.lsp.omnifunc")
 

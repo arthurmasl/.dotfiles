@@ -158,5 +158,8 @@ vim.keymap.set({ "i", "s" }, "<C-x>", function()
 	ls.jump(-1)
 end, { silent = true })
 
+-- db
+vim.keymap.set("n", "<Leader>s", ":DBUIToggle<CR>", opts)
+
 -- spectre
 -- vim.cmd([[nnoremap <leader>F :lua require('spectre').open()<CR>]])
