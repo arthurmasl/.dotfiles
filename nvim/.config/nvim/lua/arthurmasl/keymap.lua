@@ -102,7 +102,7 @@ vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 vim.keymap.set("n", "<Leader>lh", vim.lsp.buf.signature_help, opts)
 
 -- telescope
-vim.keymap.set("n", "<Leader>ff", ":Telescope find_files hidden=true no_ignore=false<CR>", opts)
+vim.keymap.set("n", "<Leader>ff", ":Telescope find_files hidden=true no_ignore=false no_ignore_parent=false<CR>", opts)
 vim.keymap.set("n", "<Leader>fg", ":Telescope live_grep no_ignore=false disable_coordinates=true<CR>", opts)
 vim.keymap.set(
 	"n",

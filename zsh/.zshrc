@@ -69,7 +69,7 @@ alias ohot='watchexec -r -w src/library "odin build ./src/library -build-mode=sh
 
 alias gorun='go run ./cmd/app'
 alias gowatch='watchexec -r -e go,mod "go run ./cmd/app"'
-alias gobuildw='watchexec -r -e go,mod "go build -o main ./cmd/app"'
+alias gotest='watchexec -r -e go,mod "go test ./... -v"'
 
 alias sqlwatch='watchexec -r -e sql "psql -h localhost -p 5432 -U root -d box -f ./schema.sql"'
 

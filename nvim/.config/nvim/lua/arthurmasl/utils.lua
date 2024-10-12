@@ -7,3 +7,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	group = highlight_group,
 	pattern = "*",
 })
+
+vim.g.db_ui_save_location = "~/Work/sql"
