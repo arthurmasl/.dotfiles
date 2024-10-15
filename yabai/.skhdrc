@@ -16,9 +16,17 @@ yab < k : yabai -m window --focus north ; skhd -k escape
 yab < l : yabai -m window --focus east ; skhd -k escape
 
 # next/prev/recent
-yab < m : yabai -m window --focus next || yabai -m window --focus first ; skhd -k escape
-yab < shift - u : yabai -m window --focus prev || yabai -m window --focus last ; skhd -k escape
-yab < w : yabai -m window --focus recent ; skhd -k escape
+yab < m : \
+  yabai -m window --focus stack.next || yabai -m window --focus stack.first & \
+  yabai -m window --focus next || yabai -m window --focus first ; \
+  skhd -k escape
+
+# minimize and balance
+yab < o : \
+  [ "$(yabai -m query --spaces --space | jq -r '.type')" = "bsp" ] && \
+  yabai -m space --layout stack || yabai -m space --layout bsp; \
+  yabai -m space --balance ; \
+  skhd -k escape
 
 # moving windows
 yab < left : yabai -m window --warp west ; skhd -k escape
@@ -40,9 +48,6 @@ yab < z : yabai -m window --toggle zoom-parent ; skhd -k escape
 
 # balance
 yab < b : yabai -m space --balance ; skhd -k escape
-
-# minimize and balance
-yab < shift - o : yabai -m space --layout bsp ;  yabai -m space --balance ; skhd -k escape
 
 # resize 
 yab < shift - 0 : yabai -m window --resize left:-100:0 ; yabai -m window --resize right:-100:0
@@ -69,23 +74,6 @@ yab < d : \
   yabai -m rule --add app="^Google Chrome Canary$" manage=off grid=1:2:1:0:1:1 ; \
   skhd -k escape
 
-# swap
-# yab < i : yabai -m window --swap west ; skhd -k escape
-# yab < o : yabai -m window --swap east ; skhd -k escape
-
-
-# toggle fullscreen all windows
-yab < o : \
-  yabai -m window --focus first ; \
-  yabai -m window --toggle zoom-fullscreen ; \
-  yabai -m window --focus next && \
-  yabai -m window --toggle zoom-fullscreen ; \
-  yabai -m window --focus next && \
-  yabai -m window --toggle zoom-fullscreen ; \
-  yabai -m window --focus next && \
-  yabai -m window --toggle zoom-fullscreen ; \
-  yabai -m window --focus first ; \
-  skhd -k escape
 
 # gap
 yab < shift - g : yabai -m space --toggle padding; yabai -m space --toggle gap ; skhd -k escape

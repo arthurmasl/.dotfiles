@@ -1,5 +1,5 @@
 # layout
-yabai -m config layout bsp
+yabai -m config layout stack
 yabai -m config window_placement first_child
 yabai -m config auto_balance off
 
