@@ -85,6 +85,11 @@ lspconfig.glsl_analyzer.setup({
 	on_attach = on_attach,
 })
 
+lspconfig.bashls.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 lspconfig.gopls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
