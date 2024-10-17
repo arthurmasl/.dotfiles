@@ -17,19 +17,14 @@ vim.keymap.set("n", "<Leader>h", ":noh<CR>", opts)
 -- split
 vim.keymap.set("n", "s", "o<ESC>", opts)
 vim.keymap.set("n", "<C-s>", "O<ESC>", opts)
--- vim.keymap.set("n", "<C-a>", "a<CR><ESC>", opts)
--- vim.keymap.set("n", "<C-S>", "a<CR><ESC>k$", opts)
-
 vim.keymap.set("n", "S", "s", opts)
 
--- explorer
+-- filetree
 vim.keymap.set("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>", opts)
 vim.keymap.set("n", "<Leader>E", ":NvimTreeFocus<CR>", opts)
 
 -- alternative file
 vim.keymap.set("n", "<C-y>", ":e #<CR>", opts)
--- vim.keymap.set("n", "<C-b>", ":bprevious<CR>", opts)
--- vim.keymap.set("n", "<C-n>", ":bnext<CR>", opts)
 vim.keymap.set("n", "<C-b>", ":lua require('bufjump').backward()<cr>", opts)
 vim.keymap.set("n", "<C-n>", ":lua require('bufjump').forward()<cr>", opts)
 
@@ -79,15 +74,16 @@ vim.keymap.set("n", "G", "Gzz", opts)
 vim.keymap.set("n", "n", "nzzzv", opts)
 vim.keymap.set("n", "N", "Nzzzv", opts)
 
--- diagnostic
-vim.keymap.set("n", "<leader>od", vim.diagnostic.open_float)
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-
 -- LSP
 vim.keymap.set("n", "<Leader>lr", vim.lsp.buf.rename, opts)
 vim.keymap.set("n", "<Leader>lc", vim.lsp.buf.code_action, opts)
+vim.keymap.set("n", "<Leader>le", ":GoIfErr<CR>", opts)
+vim.keymap.set("n", "<Leader>lt", ":GoTestAdd<CR>", opts)
 
+vim.keymap.set("n", "<Leader>lj", ":GoTagAdd json<CR>", opts)
+vim.keymap.set("n", "<Leader>ly", ":GoTagAdd yaml<CR>", opts)
+
+-- search
 vim.keymap.set("n", "gd", telescope.lsp_definitions, opts)
 vim.keymap.set("n", "gD", telescope.lsp_implementations, opts)
 vim.keymap.set("n", "gV", function()
@@ -96,7 +92,6 @@ end, opts)
 vim.keymap.set("n", "gX", function()
 	telescope.lsp_definitions({ jump_type = "split" })
 end, opts)
--- vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 vim.keymap.set("n", "<Leader>lh", vim.lsp.buf.signature_help, opts)
@@ -111,7 +106,6 @@ vim.keymap.set(
 	opts
 )
 vim.keymap.set("n", "<Leader>f'", telescope.registers, opts)
-
 vim.keymap.set("n", "<Leader>fh", ":Telescope help_tags<CR>", opts)
 vim.keymap.set("n", "<Leader>fd", ":Telescope diagnostics<CR>", opts)
 vim.keymap.set("n", "<Leader>fu", ":Telescope git_status<CR>", opts)
@@ -135,13 +129,15 @@ vim.keymap.set("n", "<Leader>fq", function()
 end, opts)
 vim.keymap.set("n", "<Leader>fQ", telescope.quickfixhistory, opts)
 
+-- next/prpev
 vim.keymap.set("n", "]q", ":cnext<CR>", opts)
 vim.keymap.set("n", "[q", ":cprev<CR>", opts)
 vim.keymap.set("n", "]h", ":Gitsigns next_hunk<CR>", opts)
 vim.keymap.set("n", "[h", ":Gitsigns prev_hunk<CR>", opts)
 
-vim.keymap.set("n", "<Leader>uh", gitsigns.reset_hunk, opts)
-vim.keymap.set("n", "<Leader>uH", gitsigns.reset_buffer, opts)
+vim.keymap.set("n", "<leader>od", vim.diagnostic.open_float)
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 
 -- git
 vim.keymap.set("n", "<Leader>g", ":Neogit<CR>", opts)
@@ -149,6 +145,10 @@ vim.keymap.set("n", "<Leader>dd", ":DiffviewOpen<CR>", opts)
 vim.keymap.set("n", "<Leader>db", ":DiffviewOpen origin/main<CR>", opts) -- origin-develop
 vim.keymap.set("n", "<Leader>dH", ":DiffviewFileHistory<CR>", opts)
 vim.keymap.set("n", "<Leader>dh", ":DiffviewFileHistory %<CR>", opts)
+
+-- hunk
+vim.keymap.set("n", "<Leader>uh", gitsigns.reset_hunk, opts)
+vim.keymap.set("n", "<Leader>uH", gitsigns.reset_buffer, opts)
 
 -- luasnip
 vim.keymap.set({ "i", "s" }, "<C-a>", function()
@@ -161,5 +161,22 @@ end, { silent = true })
 -- db
 vim.keymap.set("n", "<Leader>s", ":DBUIToggle<CR>", opts)
 
--- spectre
--- vim.cmd([[nnoremap <leader>F :lua require('spectre').open()<CR>]])
+-- debug
+vim.keymap.set("n", "<Leader>bs", dap.continue)
+vim.keymap.set("n", "<Leader>bc", dap.terminate)
+
+vim.keymap.set("n", "<Leader>bn", dap.step_over)
+vim.keymap.set("n", "<Leader>bp", dap.step_back)
+vim.keymap.set("n", "<Leader>bi", dap.step_into)
+vim.keymap.set("n", "<Leader>bo", dap.step_out)
+
+vim.keymap.set("n", "<Leader>br", dap.restart)
+
+vim.keymap.set("n", "<Leader>bb", dap.toggle_breakpoint)
+vim.keymap.set("n", "<Leader>bu", dap.clear_breakpoints)
+
+vim.keymap.set("n", "<leader>bt", dapui.toggle)
+
+vim.keymap.set("n", "<Leader>bB", function()
+	dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
+end)

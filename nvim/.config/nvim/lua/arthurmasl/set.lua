@@ -49,10 +49,6 @@ vim.opt.undofile = true
 vim.opt.updatetime = 50
 vim.opt.autoread = true
 
--- vim.opt.foldlevel = 20
--- vim.opt.foldmethod = "expr"
--- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-
 vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
 vim.opt.shortmess = vim.opt.shortmess + { c = true }
 

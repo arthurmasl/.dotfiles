@@ -6,26 +6,6 @@ require("lsp-format").setup({})
 
 local gopher = require("gopher")
 
--- mason packages list:
---
--- clangd
--- codelldb
--- eslint_d
--- glsl_analyzer
--- gofumpt
--- goimports-reviser
--- golines
--- gopls
--- lua-language-server lua_ls
--- ols
--- prettierd
--- stylelint
--- stylua
--- typescript-language-server tsserver
--- vue-language-server volar
--- zls
-
--- local rt = require("rust-tools")
 local lspconfig = require("lspconfig")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
@@ -39,17 +19,12 @@ vim.diagnostic.config({
 	underline = true,
 	severity_sort = false,
 	float = {
-		-- border = "rounded",
-		-- source = "always",
 		header = "",
 		prefix = "",
 	},
 })
 
--- vim.cmd([[autolocal on_attach = function(client, bufnr)
-
 local on_attach = function(client, bufnr)
-	-- Enable completion triggered by <c-x><c-o>
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 end
 
@@ -127,36 +102,3 @@ lspconfig.dockerls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-
-vim.keymap.set("n", "<Leader>le", ":GoIfErr<CR>", opts)
-vim.keymap.set("n", "<Leader>lt", ":GoTestAdd<CR>", opts)
-
-vim.keymap.set("n", "<Leader>lj", ":GoTagAdd json<CR>", opts)
-vim.keymap.set("n", "<Leader>ly", ":GoTagAdd yaml<CR>", opts)
-
--- vim.api.nvim_buf_set_option(0, "omnifunc", "v:lua.vim.lsp.omnifunc")
-
--- rt.setup({
--- 	tools = {
--- 		runnables = {
--- 			use_telescope = true,
--- 		},
--- 		-- inlay_hints = {
--- 		-- 	auto = true,
--- 		-- 	show_parameter_hints = false,
--- 		-- 	parameter_hints_prefix = "",
--- 		-- 	other_hints_prefix = "",
--- 		-- },
--- 	},
---
--- 	server = {
--- 		settings = {
--- 			on_attach = on_attach,
--- 			["rust-analyzer"] = {
--- 				checkOnSave = {
--- 					command = "clippy",
--- 				},
--- 			},
--- 		},
--- 	},
--- })

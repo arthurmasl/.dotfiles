@@ -29,7 +29,6 @@ return require("packer").startup(function()
 	use({ "kylechui/nvim-surround" })
 
 	use({ "kyazdani42/nvim-tree.lua" })
-	-- use({ "stevearc/oil.nvim" })
 
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "akinsho/toggleterm.nvim" })
@@ -59,20 +58,14 @@ return require("packer").startup(function()
 	use({ "kristijanhusak/vim-dadbod-ui" })
 	use({ "kristijanhusak/vim-dadbod-completion" })
 
-	-- use({ "rest-nvim/rest.nvim", requires = { "rest-nvim/tree-sitter-http" } })
 	use({ "diepm/vim-rest-console" })
 
 	use({ "leoluz/nvim-dap-go" })
-	use({
-		"microsoft/vscode-js-debug",
-		opt = true,
-		run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
-	})
+	-- use({
+	-- 	"microsoft/vscode-js-debug",
+	-- 	opt = true,
+	-- 	run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+	-- })
 
 	use({ "norcalli/nvim-colorizer.lua" })
-	-- use({ "mattn/emmet-vim" })
-	-- use({ "windwp/nvim-spectre" })
-	-- use({ "RRethy/vim-illuminate" })
-	-- use({ "simrat39/rust-tools.nvim" })
-	-- use({ "ThePrimeagen/vim-be-good" })
 end)

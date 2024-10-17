@@ -17,21 +17,6 @@ yabai -m config left_padding   0
 yabai -m config right_padding  0
 yabai -m config window_gap     0
 
-# ctrl + left/right mosue to move/resize
-# yabai -m config mouse_modifier ctrl
-# yabai -m config mouse_action1 move
-# yabai -m config mouse_action2 resize
-
 # rules
 yabai -m rule --add app="^Karabiner-Elements$" manage=on
 yabai -m rule --add app="^System Settings$" manage=off
-
-# yabai -m rule --add app="^main$" manage=off
-# yabai -m rule --add app="^Google Chrome Canary$" manage=off grid=1:2:1:0:1:1
-
-# #!/bin/bash
-# ids=$(yabai -m query --windows --display | jq '.[].id')
-# for id in $ids; do
-#     yabai -m window $id --focus
-#     yabai -m window $id --toggle zoom-fullscreen
-# done

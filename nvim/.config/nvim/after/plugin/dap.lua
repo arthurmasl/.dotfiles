@@ -9,24 +9,23 @@ require("nvim-dap-virtual-text").setup({
 	all_references = true,
 })
 
-vim.keymap.set("n", "<Leader>bs", dap.continue)
-vim.keymap.set("n", "<Leader>bc", dap.terminate)
-
-vim.keymap.set("n", "<Leader>bn", dap.step_over)
-vim.keymap.set("n", "<Leader>bp", dap.step_back)
-vim.keymap.set("n", "<Leader>bi", dap.step_into)
-vim.keymap.set("n", "<Leader>bo", dap.step_out)
-
-vim.keymap.set("n", "<Leader>br", dap.restart)
-
-vim.keymap.set("n", "<Leader>bb", dap.toggle_breakpoint)
-vim.keymap.set("n", "<Leader>bu", dap.clear_breakpoints)
-
-vim.keymap.set("n", "<leader>bt", dapui.toggle)
-
-vim.keymap.set("n", "<Leader>bB", function()
-	dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
-end)
+dapui.setup({
+	controls = {
+		element = "repl",
+		enabled = false,
+		icons = {
+			disconnect = "D",
+			pause = "S",
+			play = "P",
+			run_last = "L",
+			step_back = "<",
+			step_into = "v",
+			step_out = "<",
+			step_over = ">>",
+			terminate = "X",
+		},
+	},
+})
 
 dap.adapters.codelldb = {
 	type = "server",
@@ -101,9 +100,7 @@ dapGo.setup({
 		detached = vim.fn.has("win32") == 0,
 		cwd = nil,
 	},
-	-- options related to running closest test
 	tests = {
-		-- enables verbosity when running the test.
 		verbose = false,
 	},
 })
@@ -161,24 +158,6 @@ for _, language in ipairs({ "javascript", "javascriptreact", "typescript", "type
 		},
 	}
 end
-
-dapui.setup({
-	controls = {
-		element = "repl",
-		enabled = false,
-		icons = {
-			disconnect = "D",
-			pause = "S",
-			play = "P",
-			run_last = "L",
-			step_back = "<",
-			step_into = "v",
-			step_out = "<",
-			step_over = ">>",
-			terminate = "X",
-		},
-	},
-})
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
 	dapui.open({})

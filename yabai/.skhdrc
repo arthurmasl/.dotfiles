@@ -83,16 +83,12 @@ yab < t : open -a "iTerm" ; skhd -k escape
 #
 yab < c : open -a "Google Chrome"; skhd -k escape 
 yab < y : open -a "Google Chrome Canary"; skhd -k escape 
-# yab < c : ~/.dotfiles/yabai/open_chrome_left.sh ; skhd -k escape
-# yab < y : ~/.dotfiles/yabai/open_chrome_right.sh ; skhd -k escape
 
 yab < f : open -a "Finder"; skhd -k escape 
 yab < a : open -a "Aseprite"; skhd -k escape 
-# yab < n : open -a "Notes"; skhd -k escape 
 
 # media
 media < m : osascript -e 'set volume output muted not (output muted of (get volume settings))' ; skhd -k escape
 media < k : osascript -e 'set volume output volume (output volume of (get volume settings)) + 5' ; skhd -k escape
 media < j : osascript -e 'set volume output volume (output volume of (get volume settings)) - 5' ; skhd -k escape
-# media < j : osascript -e 'tell application "System Events" to key code 122' ; skhd -k escape
 
