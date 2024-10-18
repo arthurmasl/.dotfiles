@@ -1,6 +1,8 @@
 local gitsigns = require("gitsigns")
 local telescope = require("telescope.builtin")
 local ls = require("luasnip")
+local dap = require("dap")
+local dapui = require("dapui")
 
 local opts = { noremap = true, silent = true }
 
