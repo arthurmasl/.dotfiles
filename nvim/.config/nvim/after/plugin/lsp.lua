@@ -28,41 +28,26 @@ local on_attach = function(client, bufnr)
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 end
 
-lspconfig.ts_ls.setup({
+vim.filetype.add({ extension = { templ = "templ" } })
+
+local servers = { "ts_ls", "volar", "templ", "clangd", "ols", "zls", "bashls", "glsl_analyzer", "dockerls" }
+for _, lsp in ipairs(servers) do
+	lspconfig[lsp].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
+end
+
+lspconfig.html.setup({
 	on_attach = on_attach,
-	flags = lsp_flags,
 	capabilities = capabilities,
+	filetypes = { "html", "templ" },
 })
 
-lspconfig.volar.setup({
+lspconfig.htmx.setup({
 	on_attach = on_attach,
-	flags = lsp_flags,
 	capabilities = capabilities,
-})
-
-lspconfig.clangd.setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
-lspconfig.ols.setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
-lspconfig.zls.setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
-lspconfig.glsl_analyzer.setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
-lspconfig.bashls.setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
+	filetypes = { "html", "templ" },
 })
 
 lspconfig.gopls.setup({
@@ -96,9 +81,4 @@ gopher.setup({
 	gotag = {
 		transform = "snakecase",
 	},
-})
-
-lspconfig.dockerls.setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
 })
