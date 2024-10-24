@@ -30,13 +30,29 @@ end
 
 vim.filetype.add({ extension = { templ = "templ" } })
 
-local servers = { "ts_ls", "volar", "templ", "clangd", "ols", "zls", "bashls", "glsl_analyzer", "dockerls" }
+local servers = {
+	"ts_ls",
+	"volar",
+	"templ",
+	"clangd",
+	"ols",
+	"zls",
+	"bashls",
+	"glsl_analyzer",
+	"dockerls",
+}
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		on_attach = on_attach,
 		capabilities = capabilities,
 	})
 end
+
+lspconfig.emmet_language_server.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "html", "templ" },
+})
 
 lspconfig.html.setup({
 	on_attach = on_attach,
