@@ -54,7 +54,7 @@ lspconfig.lua_ls.setup({
 	settings = {
 		Lua = {
 			diagnostics = {
-				globals = { "vim", "opts" },
+				globals = { "vim", "opts", "use" },
 			},
 		},
 	},
