@@ -182,9 +182,3 @@ vim.keymap.set("n", "<leader>bt", dapui.toggle)
 vim.keymap.set("n", "<Leader>bB", function()
 	dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
 end)
-
--- terminal
-vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
-vim.keymap.set("t", "<C-o>", [[<Cmd>wincmd p<CR>]], opts)
-vim.keymap.set("n", "<Leader>/", ":ToggleTerm<CR><Cmd>wincmd p<CR>", opts)
--- vim.keymap.set("n", "<Leader>tt", ":ToggleTerm<CR><cmd>wincmd H<CR> <cmd>vertical-resize -60<CR>", opts)
