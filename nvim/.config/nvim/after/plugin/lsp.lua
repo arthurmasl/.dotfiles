@@ -24,7 +24,7 @@ vim.diagnostic.config({
 	},
 })
 
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 end
 
@@ -47,6 +47,18 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
+
+lspconfig.lua_ls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim", "opts" },
+			},
+		},
+	},
+})
 
 lspconfig.emmet_language_server.setup({
 	on_attach = on_attach,
