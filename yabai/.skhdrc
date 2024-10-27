@@ -10,10 +10,14 @@ yab < escape ; default
 media < escape ; default
 
 # navigation
-yab < h : yabai -m window --focus west ; skhd -k escape
+yab < h : yabai -m window --focus west || yabai -m display --focus prev ; skhd -k escape
+yab < l : yabai -m window --focus east || yabai -m display --focus next ; skhd -k escape
 yab < j : yabai -m window --focus south ; skhd -k escape
 yab < k : yabai -m window --focus north ; skhd -k escape
-yab < l : yabai -m window --focus east ; skhd -k escape
+
+# displays
+yab < p : yabai -m display --focus prev || yabai -m display --focus last ; skhd -k escape
+yab < n : yabai -m display --focus next || yabai -m display --focus first ; skhd -k escape 
 
 # next/prev/recent
 yab < m : \
@@ -33,10 +37,6 @@ yab < left : yabai -m window --warp west ; skhd -k escape
 yab < down : yabai -m window --warp south ; skhd -k escape
 yab < up : yabai -m window --warp north ; skhd -k escape
 yab < right : yabai -m window --warp east ; skhd -k escape
-
-# displays
-yab < p : yabai -m display --focus prev || yabai -m display --focus last ; skhd -k escape
-yab < n : yabai -m display --focus next || yabai -m display --focus first ; skhd -k escape 
 
 # move to display
 yab < shift - h : yabai -m window --display prev --focus ; skhd -k escape
