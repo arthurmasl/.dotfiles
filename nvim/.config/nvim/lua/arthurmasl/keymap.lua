@@ -160,8 +160,9 @@ vim.keymap.set({ "i", "s" }, "<C-x>", function()
 	ls.jump(-1)
 end, { silent = true })
 
--- db
-vim.keymap.set("n", "<Leader>s", ":DBUIToggle<CR>", opts)
+-- db sql
+vim.keymap.set("n", "<Leader>ss", ":NvimTreeClose<CR>:DBUIToggle<CR>", opts)
+vim.keymap.set("n", "<Leader>sw", ":normal vip<CR><PLUG>(DBUI_ExecuteQuery)", opts)
 
 -- debug
 vim.keymap.set("n", "<Leader>bs", dap.continue)
