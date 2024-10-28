@@ -4,7 +4,7 @@ local ls = require("luasnip")
 local dap = require("dap")
 local dapui = require("dapui")
 
-local opts = { noremap = true, silent = true }
+opts = { noremap = true, silent = true }
 
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", opts)
 
