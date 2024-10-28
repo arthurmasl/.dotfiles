@@ -26,6 +26,13 @@ null_ls.setup({
 		null_ls.builtins.formatting.gofumpt,
 		null_ls.builtins.formatting.goimports_reviser,
 		null_ls.builtins.formatting.golines,
+
+		null_ls.builtins.formatting.sqlfluff.with({
+			extra_args = { "--dialect", "postgres" },
+		}),
+		null_ls.builtins.diagnostics.sqlfluff.with({
+			extra_args = { "--dialect", "postgres" },
+		}),
 	},
 	on_attach = require("lsp-format").on_attach,
 })
