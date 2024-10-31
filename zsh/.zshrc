@@ -71,6 +71,7 @@ alias gorun='go run ./cmd/app'
 alias gowatch='watchexec -r -e go,mod "go run ./cmd/app"'
 alias gotest='watchexec -r -e go,mod "go test ./... -v"'
 
+alias sql='psql -h localhost -p 5432 -U root -d box'
 alias sqlwatch='watchexec -r -e sql "psql -h localhost -p 5432 -U root -d box -f ./schema.sql"'
 
 # copy boilerplate
