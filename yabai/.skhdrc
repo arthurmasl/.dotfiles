@@ -66,6 +66,7 @@ yab < v : yabai -m space --mirror y-axis ; skhd -k escape
 # split
 yab < s : yabai -m window --toggle split ; skhd -k escape
 
+# float
 yab < shift - f : yabai -m window --toggle float ; skhd -k escape
 
 # absolute dev

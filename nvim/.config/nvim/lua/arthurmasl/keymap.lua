@@ -163,6 +163,7 @@ end, { silent = true })
 -- db sql
 vim.keymap.set("n", "<Leader>ss", ":NvimTreeClose<CR>:DBUIToggle<CR>", opts)
 vim.keymap.set("n", "<Leader>sw", ":normal vip<CR><PLUG>(DBUI_ExecuteQuery)", opts)
+vim.keymap.set("n", "<C-v>", "<PLUG>(DBUI_SelectLineVsplit)<CR>", opts)
 
 -- debug
 vim.keymap.set("n", "<Leader>bs", dap.continue)
