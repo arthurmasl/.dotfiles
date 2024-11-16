@@ -1,14 +1,14 @@
 local null_ls = require("null-ls")
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+-- local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-local lsp_formatting = function(bufnr)
-	vim.lsp.buf.format({
-		filter = function(client)
-			return client.name == "null-ls"
-		end,
-		bufnr = bufnr,
-	})
-end
+-- local lsp_formatting = function(bufnr)
+-- 	vim.lsp.buf.format({
+-- 		filter = function(client)
+-- 			return client.name == "null-ls"
+-- 		end,
+-- 		bufnr = bufnr,
+-- 	})
+-- end
 
 null_ls.setup({
 	sources = {
