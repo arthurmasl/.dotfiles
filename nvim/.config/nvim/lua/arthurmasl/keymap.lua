@@ -22,7 +22,8 @@ vim.keymap.set("n", "<C-s>", "O<ESC>", opts)
 vim.keymap.set("n", "S", "s", opts)
 
 -- filetree
-vim.keymap.set("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>", opts)
+-- vim.keymap.set("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>", opts)
+vim.keymap.set("n", "<Leader>e", function() end, opts)
 vim.keymap.set("n", "<Leader>E", ":NvimTreeFocus<CR>", opts)
 
 -- alternative file

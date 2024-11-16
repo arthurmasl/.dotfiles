@@ -55,3 +55,5 @@ vim.opt.shortmess = vim.opt.shortmess + { c = true }
 vim.opt.fillchars = {
 	eob = " ",
 }
+
+vim.opt.lazyredraw = true
