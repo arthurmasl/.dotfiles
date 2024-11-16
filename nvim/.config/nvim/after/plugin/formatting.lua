@@ -24,6 +24,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.zigfmt,
 
 		null_ls.builtins.formatting.gofumpt,
+		null_ls.builtins.formatting.goimports,
 		null_ls.builtins.formatting.goimports_reviser,
 		null_ls.builtins.formatting.golines,
 
