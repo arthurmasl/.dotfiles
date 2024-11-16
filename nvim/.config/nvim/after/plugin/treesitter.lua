@@ -71,8 +71,8 @@ require("nvim-treesitter.configs").setup({
 				["ae"] = "@assignment.outer",
 				["ie"] = "@assignment.inner",
 
-				-- T comment (text)
-				["at"] = "@comment.outer",
+				-- / comment (text)
+				["a/"] = "@comment.outer",
 			},
 			-- You can choose the select mode (default is charwise 'v')
 			--
