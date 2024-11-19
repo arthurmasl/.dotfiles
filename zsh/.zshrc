@@ -71,7 +71,12 @@ alias ohot='watchexec -r -w src/library "odin build ./src/library -build-mode=sh
 
 alias gorun='go run ./cmd/app'
 alias gowatch='watchexec -r -e go,mod "go run ./cmd/app"'
-alias gotest='watchexec -r -e go,mod "go test ./... -v"'
+
+alias gotest='go test ./... -v'
+alias gotestwatch='watchexec -r -e go,mod "go test ./... -v"'
+
+alias gobench='watchexec -r -e go,mod "go test ./... -bench=. -benchmem -v"'
+alias gobenchwatch='watchexec -r -e go,mod "go test ./... -bench=. -benchmem -v"'
 
 alias sql='psql -h localhost -p 5432 -U root -d box'
 alias sqlwatch='watchexec -r -e sql "psql -h localhost -p 5432 -U root -d box -f ./schema.sql"'
