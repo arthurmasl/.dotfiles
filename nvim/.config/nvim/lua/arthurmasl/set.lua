@@ -57,3 +57,4 @@ vim.opt.fillchars = {
 }
 
 vim.opt.lazyredraw = true
+vim.opt.shell = "/bin/zsh"

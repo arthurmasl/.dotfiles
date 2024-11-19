@@ -81,6 +81,12 @@ vim.keymap.set("n", "<Leader>lr", vim.lsp.buf.rename, opts)
 vim.keymap.set("n", "<Leader>lc", vim.lsp.buf.code_action, opts)
 vim.keymap.set("n", "<Leader>le", ":GoIfErr<CR>", opts)
 vim.keymap.set("n", "<Leader>lt", ":GoTestAdd<CR>", opts)
+vim.keymap.set("n", "<Leader>lT", ":GoTestsAll<CR>", opts)
+
+-- vim.keymap.set("n", "<Leader>lb", function()
+-- 	vim.cmd('lua require("gopher.config").gotests.template = "benchmark"')
+-- 	vim.cmd("GoTestAdd")
+-- end, opts)
 
 vim.keymap.set("n", "<Leader>lj", ":GoTagAdd json<CR>", opts)
 vim.keymap.set("n", "<Leader>ly", ":GoTagAdd yaml<CR>", opts)
