@@ -43,6 +43,8 @@ export PATH="$GOPATH/bin:$PATH"
 
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
+export JAVA_HOME=$(/usr/libexec/java_home -v 21)
+
 # export GIT_EDITOR=nvim
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999

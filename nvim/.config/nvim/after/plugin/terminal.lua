@@ -11,7 +11,7 @@ terminal.setup({
 		if term.direction == "horizontal" then
 			return 15
 		elseif term.direction == "vertical" then
-			return 60
+			return 70
 		end
 	end,
 	persist_mode = false,
@@ -28,7 +28,7 @@ terminal.setup({
 			end
 
 			vim.cmd("wincmd H")
-			vim.cmd("vertical resize 60")
+			vim.cmd("vertical resize 70")
 			return
 		end
 	end,
