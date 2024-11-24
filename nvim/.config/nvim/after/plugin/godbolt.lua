@@ -2,8 +2,9 @@ require("godbolt").setup({
 	languages = {
 		cpp = { compiler = "g122", options = {} },
 		c = { compiler = "cg122", options = {} },
-		go = { compiler = "gccgoarm641420", options = {} },
-		-- go = { compiler = "arm64_gltip", options = {} },
+
+		-- go = { compiler = "gccgoarm641420", options = {} },
+		go = { compiler = "arm64_gltip", options = {} },
 	},
 	auto_cleanup = true, -- remove highlights and autocommands on buffer close
 	highlight = {
