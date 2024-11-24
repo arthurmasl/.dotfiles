@@ -190,3 +190,5 @@ vim.keymap.set("n", "<leader>bt", dapui.toggle)
 vim.keymap.set("n", "<Leader>bB", function()
 	dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
 end)
+
+vim.keymap.set("n", "<Leader>aa", ":Godbolt<CR>", opts)

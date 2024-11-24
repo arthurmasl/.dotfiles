@@ -67,6 +67,7 @@ return require("packer").startup(function()
 	use({ "diepm/vim-rest-console" })
 
 	use({ "leoluz/nvim-dap-go" })
+	use({ "p00f/godbolt.nvim" })
 	-- use({
 	-- 	"microsoft/vscode-js-debug",
 	-- 	opt = true,
