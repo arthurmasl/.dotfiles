@@ -1,21 +1,103 @@
-tap "helix-editor/helix"
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
-tap "homebrew/services"
-tap "jesseduffield/lazygit"
-tap "jhawthorn/fzy"
-tap "sambadevi/powerlevel9k"
-brew "ncurses"
-brew "fish"
-brew "gnu-sed"
-brew "helix"
-brew "lazygit"
-brew "libevent"
-brew "neovim", args: ["HEAD"]
-brew "redis"
-brew "ripgrep"
-brew "screen"
-brew "stow"
-brew "tmux"
-brew "zsh"
+aom                     
+brotli                  
+ca-certificates         
+cairo                   
+cmake                   
+fd                      
+fnm                     
+fontconfig              
+freetype                
+fribidi                 
+fzf                     
+gcc                     
+gd                      
+gdk-pixbuf              
+gettext                 
+giflib                  
+glib                    
+gmp                     
+gnu-sed                 
+graphite2               
+graphviz                
+gts                     
+harfbuzz                
+highway                 
+htop                    
+icu4c                   
+icu4c@76                
+imath                   
+inetutils               
+isl                     
+jasper                  
+jpeg-turbo              
+jpeg-xl                 
+jq                      
+krb5                    
+lftp                    
+libavif                 
+libdeflate              
+libevent                
+libidn2                 
+libmpc                  
+libpng                  
+librsvg                 
+libtiff                 
+libtool                 
+libunistring            
+libuv                   
+libvmaf                 
+libvterm                
+libx11                  
+libxau                  
+libxcb
+libxdmcp
+libxext
+libxrender
+little-cms2
+llvm
+llvm@14
+lpeg
+luajit
+luv
+lz4
+lzo
+m-cli
+m4
+mpdecimal
+mpfr
+msgpack
+ncftp
+ncurses
+neovim
+netpbm
+oniguruma
+openexr
+openssl@3
+pango
+pcre
+pcre2
+pixman
+postgresql@16
+python-packaging
+python@3.13
+readline
+ripgrep
+skhd
+sqlite
+stow
+tmux
+tree-sitter
+unibilium
+utf8proc
+watchexec
+webp
+xorgproto
+xz
+yabai
+z3
+zig
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
+zstd
+
