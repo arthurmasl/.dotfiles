@@ -6,19 +6,15 @@ require("godbolt").setup({
 		-- go = { compiler = "gccgoarm641420", options = {} },
 		go = { compiler = "arm64_gltip", options = {} },
 	},
-	auto_cleanup = true, -- remove highlights and autocommands on buffer close
+	auto_cleanup = true,
 	highlight = {
-		cursor = "Visual", -- `cursor = false` to disable
-		-- values in this table can be:
-		-- 1. existing highlight group
-		-- 2. hex color string starting with #
-		static = { "#222222", "#333333", "#444444", "#555555", "#444444", "#333333" },
-		-- `static = false` to disable
+		cursor = "Visual",
+		-- static = { "#222222", "#333333", "#444444", "#555555", "#444444", "#333333" },
+		static = false,
 	},
-	-- `highlight = false` to disable highlights
 	quickfix = {
-		enable = false, -- whether to populate the quickfix list in case of errors
-		auto_open = false, -- whether to open the quickfix list in case of errors
+		enable = false,
+		auto_open = false,
 	},
 	url = "https://godbolt.org",
 })
