@@ -74,6 +74,10 @@ alias ohot='watchexec -r -w src/library "odin build ./src/library -build-mode=sh
 alias gorun='go run ./cmd/app'
 alias gowatch='watchexec -r -e go,mod "go run ./cmd/app"'
 
+alias goasm='GOARCH=arm64 GOOS=darwin go tool compile -S cmd/app/main.go'
+alias goasmt='GOARCH=arm64 GOOS=darwin go tool compile -S cmd/app/main.go | cut -c55-150'
+alias goasmf='GOARCH=arm64 GOOS=darwin go tool compile -S cmd/app/main.go > main.asm'
+
 alias gotest='go test ./... -v'
 alias gotestwatch='watchexec -r -e go,mod "go test ./... -v"'
 
