@@ -26,7 +26,7 @@ vim.keymap.set("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>", opts)
 vim.keymap.set("n", "<Leader>E", ":NvimTreeFocus<CR>", opts)
 
 -- alternative file
-vim.keymap.set("n", "<C-y>", ":e #<CR>", opts)
+vim.keymap.set("n", "<C-p>", ":b#<CR>", opts)
 vim.keymap.set("n", "<C-b>", ":lua require('bufjump').backward()<cr>", opts)
 vim.keymap.set("n", "<C-n>", ":lua require('bufjump').forward()<cr>", opts)
 

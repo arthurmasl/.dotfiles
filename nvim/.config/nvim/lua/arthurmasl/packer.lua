@@ -68,6 +68,8 @@ return require("packer").startup(function()
 
 	use({ "leoluz/nvim-dap-go" })
 	use({ "p00f/godbolt.nvim" })
+
+	use({ "dhruvasagar/vim-zoom" })
 	-- use({
 	-- 	"microsoft/vscode-js-debug",
 	-- 	opt = true,
