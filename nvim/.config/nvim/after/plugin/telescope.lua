@@ -13,7 +13,11 @@ telescope.setup({
 		},
 	},
 	pickers = {
-		-- theme = 'dropdown',
+		live_grep = {
+			additional_args = function()
+				return { "--hidden" }
+			end,
+		},
 	},
 	extensions = {
 		fzf = {
