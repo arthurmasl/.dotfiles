@@ -80,7 +80,7 @@ yab < d : \
 yab < shift - g : yabai -m space --toggle padding; yabai -m space --toggle gap ; skhd -k escape
 
 #apps
-yab < t : open -a "iTerm" ; skhd -k escape
+yab < t : open -a "WezTerm" ; skhd -k escape
 
 yab < c : open -a "Google Chrome"; skhd -k escape 
 yab < y : open -a "Google Chrome Canary"; skhd -k escape 
