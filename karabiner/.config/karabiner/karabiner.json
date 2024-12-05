@@ -657,7 +657,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [".iterm2$"],
+                    "bundle_identifiers": [".iterm2$", ".wezterm$"],
                     "type": "frontmost_application_unless"
                   }
                 ],
@@ -684,7 +684,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [".iterm2$"],
+                    "bundle_identifiers": [".iterm2$", ".wezterm$"],
                     "type": "frontmost_application_unless"
                   }
                 ],
