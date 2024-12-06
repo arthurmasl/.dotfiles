@@ -35,7 +35,7 @@ config.background = {
 		},
 
 		hsb = {
-			brightness = 0.70,
+			brightness = 0.85,
 			hue = 1.0,
 			saturation = 1.0,
 		},
