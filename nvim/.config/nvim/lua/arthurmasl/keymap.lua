@@ -1,5 +1,6 @@
 local gitsigns = require("gitsigns")
 local telescope = require("telescope.builtin")
+local utils = require("telescope.utils")
 local ls = require("luasnip")
 local dap = require("dap")
 local dapui = require("dapui")
@@ -106,6 +107,9 @@ vim.keymap.set("n", "<Leader>lh", vim.lsp.buf.signature_help, opts)
 
 -- telescope
 vim.keymap.set("n", "<Leader>ff", ":Telescope find_files hidden=true no_ignore=false no_ignore_parent=false<CR>", opts)
+vim.keymap.set("n", "<Leader>fo", function()
+	telescope.find_files({ cwd = utils.buffer_dir(), hidden = true, no_ignore = false, no_ignore_parent = false })
+end, opts)
 vim.keymap.set("n", "<Leader>fg", ":Telescope live_grep no_ignore=false disable_coordinates=true<CR>", opts)
 vim.keymap.set(
 	"n",
