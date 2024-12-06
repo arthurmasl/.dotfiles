@@ -6,7 +6,7 @@ vim.opt.encoding = "utf-8"
 vim.opt.hidden = true
 
 vim.opt.clipboard = "unnamedplus"
-vim.opt.mouse = "a"
+vim.opt.mouse = ""
 vim.opt.pumheight = 15
 
 vim.opt.showmode = false
