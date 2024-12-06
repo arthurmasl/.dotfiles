@@ -15,10 +15,18 @@ config.disable_default_mouse_bindings = true
 config.mouse_wheel_scrolls_tabs = false
 config.alternate_buffer_wheel_scroll_speed = 0
 
-config.font = wezterm.font({ family = "Menlo", weight = "Regular", stretch = "Expanded" })
+config.font = wezterm.font({
+	family = "Menlo",
+	weight = "Regular",
+	stretch = "Expanded",
+})
+
+-- config.dpi = 144.0
 config.font_size = 14.5
 config.cell_width = 0.90
+config.line_height = 1.00
 config.allow_square_glyphs_to_overflow_width = "Always"
+config.custom_block_glyphs = false
 
 config.window_padding = {
 	left = 0,
@@ -47,8 +55,6 @@ config.background = {
 		horizontal_align = "Center",
 	},
 }
-
-config.custom_block_glyphs = false
 
 config.window_background_opacity = 1.0
 config.text_background_opacity = 1.0
