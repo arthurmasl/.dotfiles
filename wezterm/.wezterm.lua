@@ -38,14 +38,23 @@ config.window_padding = {
 config.background = {
 	{
 		source = {
-			-- File = "/Users/arthurmasl/.dotfiles/misc/har-large-blended.jpg",
-			File = "/Users/arthurmasl/.dotfiles/misc/har-blended.jpg",
+			Color = "#2e3440",
+		},
+		width = "100%",
+		height = "100%",
+		hsb = {
+			brightness = 1.0,
+		},
+		-- opacity = 0.8,
+	},
+	{
+		source = {
+			File = "/Users/arthurmasl/.dotfiles/misc/haruhi-4k.jpg",
+			-- File = "/Users/arthurmasl/.dotfiles/misc/har-dark.jpg",
 		},
 
 		hsb = {
-			brightness = 0.85,
-			hue = 1.0,
-			saturation = 1.0,
+			brightness = 1.0,
 		},
 
 		width = "Cover",
@@ -53,6 +62,8 @@ config.background = {
 
 		vertical_align = "Middle",
 		horizontal_align = "Center",
+		-- opacity = 0.40,
+		opacity = 0.005,
 	},
 }
 
