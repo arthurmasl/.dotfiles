@@ -18,7 +18,7 @@ config.alternate_buffer_wheel_scroll_speed = 0
 config.font = wezterm.font({
 	family = "Menlo",
 	weight = "Regular",
-	stretch = "Expanded",
+	-- stretch = "Expanded",
 })
 
 -- config.dpi = 144.0
@@ -27,6 +27,9 @@ config.cell_width = 0.90
 config.line_height = 1.00
 config.allow_square_glyphs_to_overflow_width = "Always"
 config.custom_block_glyphs = false
+config.freetype_load_target = "Light"
+config.freetype_render_target = "Light"
+-- config.freetype_interpreter_version = 35
 
 config.window_padding = {
 	left = 0,
@@ -71,6 +74,8 @@ config.window_background_opacity = 1.0
 config.text_background_opacity = 1.0
 
 config.front_end = "WebGpu"
+config.webgpu_power_preference = "HighPerformance"
+config.webgpu_preferred_adapter = wezterm.gui.enumerate_gpus()[0]
 config.max_fps = 120
 config.animation_fps = 120
 
@@ -80,6 +85,7 @@ config.colors = {
 
 	cursor_bg = "#cdcdce",
 	cursor_fg = "#404959",
+	cursor_border = "#cdcdce",
 
 	selection_fg = "#cdcdce",
 	selection_bg = "#404959",
