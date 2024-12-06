@@ -2,18 +2,17 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
--- config.color_scheme = "AdventureTime"
---
 config.automatically_reload_config = true
 config.enable_tab_bar = false
 config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
 config.enable_scroll_bar = false
---
+
 config.disable_default_key_bindings = false
 config.disable_default_mouse_bindings = true
 config.mouse_wheel_scrolls_tabs = false
 config.alternate_buffer_wheel_scroll_speed = 0
+config.audible_bell = "Disabled"
 
 config.font = wezterm.font({
 	family = "Menlo",
@@ -21,7 +20,6 @@ config.font = wezterm.font({
 	-- stretch = "Expanded",
 })
 
--- config.dpi = 144.0
 config.font_size = 14.5
 config.cell_width = 0.90
 config.line_height = 1.00
@@ -29,7 +27,6 @@ config.allow_square_glyphs_to_overflow_width = "Always"
 config.custom_block_glyphs = false
 config.freetype_load_target = "Light"
 config.freetype_render_target = "Light"
--- config.freetype_interpreter_version = 35
 
 config.window_padding = {
 	left = 0,
@@ -53,7 +50,6 @@ config.background = {
 	{
 		source = {
 			File = "/Users/arthurmasl/.dotfiles/misc/haruhi-4k.jpg",
-			-- File = "/Users/arthurmasl/.dotfiles/misc/har-dark.jpg",
 		},
 
 		hsb = {
