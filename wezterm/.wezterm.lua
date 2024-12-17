@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 
 config.automatically_reload_config = true
 config.enable_tab_bar = false
-config.window_close_confirmation = "NeverPrompt"
+-- config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
 config.enable_scroll_bar = false
 
@@ -111,6 +111,17 @@ config.colors = {
 
 	indexed = { [136] = "#af8700" },
 	compose_cursor = "orange",
+}
+
+config.keys = {
+	-- { key = '=', mods = 'CTRL', action = wezterm.action.IncreaseFontSize },
+	-- { key = '-', mods = 'CTRL', action = wezterm.action.DecreaseFontSize },
+	-- { key = '0', mods = 'CTRL', action = wezterm.action.ResetFontSize },
+	{
+		key = "z",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.ToggleFullScreen,
+	},
 }
 
 return config
