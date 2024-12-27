@@ -5,10 +5,10 @@ local config = wezterm.config_builder()
 config.automatically_reload_config = true
 config.enable_tab_bar = false
 -- config.window_close_confirmation = "NeverPrompt"
+config.window_close_confirmation = "AlwaysPrompt"
 config.window_decorations = "RESIZE"
 config.enable_scroll_bar = false
 
-config.disable_default_key_bindings = false
 config.disable_default_mouse_bindings = true
 config.mouse_wheel_scrolls_tabs = false
 config.alternate_buffer_wheel_scroll_speed = 0
@@ -113,15 +113,13 @@ config.colors = {
 	compose_cursor = "orange",
 }
 
+config.disable_default_key_bindings = true
 config.keys = {
-	-- { key = '=', mods = 'CTRL', action = wezterm.action.IncreaseFontSize },
-	-- { key = '-', mods = 'CTRL', action = wezterm.action.DecreaseFontSize },
-	-- { key = '0', mods = 'CTRL', action = wezterm.action.ResetFontSize },
-	{
-		key = "z",
-		mods = "SHIFT|CTRL",
-		action = wezterm.action.ToggleFullScreen,
-	},
+	{ key = "+", mods = "CMD", action = wezterm.action.IncreaseFontSize },
+	{ key = "-", mods = "CMD", action = wezterm.action.DecreaseFontSize },
+	{ key = "0", mods = "CMD", action = wezterm.action.ResetFontSize },
+	{ key = "z", mods = "SHIFT|CTRL", action = wezterm.action.ToggleFullScreen },
+	{ key = "v", mods = "CMD", action = wezterm.action.PasteFrom("PrimarySelection") },
 }
 
 return config
