@@ -32,7 +32,7 @@ export PATH="$HOME/Work/odin/Odin:$PATH"
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
 
-export PATH="/usr/local/opt/homebrew/bin/zig:$PATH"
+export PATH="$HOME/opt/homebrew/opt/zig/bin:$PATH"
 
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 export JAVA_HOME=$(/usr/libexec/java_home -v 21)
