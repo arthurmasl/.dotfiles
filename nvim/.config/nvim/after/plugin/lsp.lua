@@ -36,6 +36,7 @@ local servers = {
 	"templ",
 	"clangd",
 	"ols",
+	"zls",
 	"bashls",
 	"glsl_analyzer",
 	"dockerls",
@@ -47,8 +48,6 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
-
-lspconfig.zls.setup({})
 
 lspconfig.lua_ls.setup({
 	on_attach = on_attach,

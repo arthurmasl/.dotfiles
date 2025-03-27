@@ -2,6 +2,11 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
+config.check_for_updates = true
+config.show_update_window = true
+
+config.send_composed_key_when_left_alt_is_pressed = true
+
 config.automatically_reload_config = true
 config.enable_tab_bar = false
 -- config.window_close_confirmation = "NeverPrompt"
