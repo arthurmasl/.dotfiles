@@ -35,7 +35,6 @@ local servers = {
 	"volar",
 	"templ",
 	"clangd",
-	"ols",
 	"zls",
 	"bashls",
 	"glsl_analyzer",
@@ -48,6 +47,19 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
+
+lspconfig.ols.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	init_options = {
+		enable_snippets = true,
+		enable_inlay_hints = true,
+		enable_references = true,
+		enable_rename = true,
+		enable_checker_only_saved = true,
+		checker_args = "-vet -strict-style",
+	},
+})
 
 lspconfig.lua_ls.setup({
 	on_attach = on_attach,
