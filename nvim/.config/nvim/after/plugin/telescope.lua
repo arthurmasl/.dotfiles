@@ -3,7 +3,15 @@ local actions = require("telescope.actions")
 
 telescope.setup({
 	defaults = {
-		file_ignore_patterns = { "%.git", "node_modules", ".nuxt", "build/", ".DS_Store", ".cache/" },
+		file_ignore_patterns = {
+			"%.git",
+			"node_modules",
+			".nuxt",
+			"build/",
+			".DS_Store",
+			".cache/",
+			"vendor/",
+		},
 		mappings = {
 			i = {
 				["<C-f>"] = actions.send_to_qflist,
