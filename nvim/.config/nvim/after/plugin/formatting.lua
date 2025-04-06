@@ -39,13 +39,17 @@ null_ls.setup({
 	on_attach = require("lsp-format").on_attach,
 })
 
--- vim.api.nvim_create_autocmd("BufWritePost", {
--- 	pattern = "*.odin",
--- 	command = 'silent execute "!odinfmt -w" | e',
--- })
-
 vim.cmd([[autocmd BufWritePre *.odin lua vim.lsp.buf.format()]])
 vim.cmd([[autocmd BufWritePre *.glsl lua vim.lsp.buf.format()]])
 
 vim.cmd([[autocmd BufWritePre *.rest call VrcQuery()]])
 vim.cmd([[autocmd BufWritePre *.templ lua vim.lsp.buf.format()]])
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "glsl",
+	callback = function()
+		vim.opt_local.shiftwidth = 4
+		vim.opt_local.tabstop = 4
+		vim.opt_local.softtabstop = 4
+	end,
+})
