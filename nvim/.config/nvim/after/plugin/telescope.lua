@@ -11,6 +11,7 @@ telescope.setup({
 			".DS_Store",
 			".cache/",
 			"vendor/",
+			"examples/",
 		},
 		mappings = {
 			i = {

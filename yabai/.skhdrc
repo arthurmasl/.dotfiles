@@ -47,7 +47,7 @@ yab < u: yabai -m window --toggle zoom-fullscreen ; skhd -k escape
 yab < z : yabai -m window --toggle zoom-parent ; skhd -k escape
 
 # balance
-yab < b : yabai -m space --balance ; skhd -k escape
+yab < shift - b : yabai -m space --balance ; skhd -k escape
 
 # resize 
 yab < shift - 0 : yabai -m window --resize left:-100:0 ; yabai -m window --resize right:-100:0
@@ -87,7 +87,9 @@ yab < y : open -a "Google Chrome Canary"; skhd -k escape
 
 yab < f : open -a "Finder"; skhd -k escape 
 yab < a : open -a "Aseprite"; skhd -k escape 
+yab < b : open -a "Blender"; skhd -k escape 
 yab < g : open -a "/Users/arthurmasl/Work/odin/sokoool/game_hot_reload.bin"; skhd -k escape 
+# yab < g : open -a "/Users/arthurmasl/Work/odin/esnf/game_hot_reload.bin"; skhd -k escape 
 
 # media
 media < m : osascript -e 'set volume output muted not (output muted of (get volume settings))' ; skhd -k escape
