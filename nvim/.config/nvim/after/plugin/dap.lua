@@ -58,7 +58,8 @@ dap.configurations.odin = {
 		type = "codelldb",
 		request = "launch",
 		program = function()
-			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/build/main", "file")
+			-- return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/game_hot_reload.bin", "file")
+			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/build/release/game_release.bin", "file")
 		end,
 		cwd = "${workspaceFolder}",
 		stopOnEntry = false,
