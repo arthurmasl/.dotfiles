@@ -12,6 +12,7 @@ telescope.setup({
 			".cache/",
 			"vendor/",
 			"examples/",
+			"assets/",
 		},
 		mappings = {
 			i = {
