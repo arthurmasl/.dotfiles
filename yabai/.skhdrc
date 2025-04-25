@@ -82,8 +82,8 @@ yab < shift - g : yabai -m space --toggle padding; yabai -m space --toggle gap ;
 #apps
 yab < t : open -a "WezTerm" ; skhd -k escape
 
-yab < c : open -a "Google Chrome"; skhd -k escape 
-yab < y : open -a "Google Chrome Canary"; skhd -k escape 
+yab < y : open -a "Google Chrome"; skhd -k escape 
+yab < c : open -a "Google Chrome Canary"; skhd -k escape 
 
 yab < f : open -a "Finder"; skhd -k escape 
 yab < a : open -a "Aseprite"; skhd -k escape 
