@@ -1817,7 +1817,6 @@
                     },
                     {
                         "description": "Map ctrl enter to enter",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
