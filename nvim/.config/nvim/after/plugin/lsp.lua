@@ -1,7 +1,7 @@
 require("mason").setup({
 	ensure_installed = {},
 })
-require("mason-lspconfig").setup({})
+require("mason-lspconfig").setup({automatic_enable=false})
 require("lsp-format").setup({})
 
 local gopher = require("gopher")
