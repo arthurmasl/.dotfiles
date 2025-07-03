@@ -17,6 +17,14 @@ vim.opt.cursorlineopt = "both"
 vim.opt.laststatus = 3
 vim.opt.cmdheight = 1
 vim.opt.showtabline = 0
+vim.opt.guicursor = {
+  "n-v-c:block",        -- Normal/Visual/Command: block cursor
+  "i-ci-ve:ver25",      -- Insert/Insert Cmdline/Visual Ex: vertical bar
+  "r-cr:hor20",         -- Replace: horizontal bar
+  "o:hor50",            -- Operator-pending
+  "sm:block-blinkwait175-blinkoff150-blinkon175",  -- Showmatch
+  "t:block"             -- Terminal mode: block (can remove blinking)
+}
 
 vim.opt.number = true
 vim.opt.relativenumber = true
