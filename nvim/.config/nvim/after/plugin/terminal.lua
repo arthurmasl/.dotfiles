@@ -1,5 +1,5 @@
 local terminal = require("toggleterm")
-local nvimtree_view = require("nvim-tree.view")
+local api = require("nvim-tree.api")
 
 terminal.setup({
 	open_mapping = [[<c-_>]],
@@ -23,7 +23,7 @@ terminal.setup({
 		local dir = w < h and "vertical" or "horizontal"
 
 		if dir == "vertical" then
-			if nvimtree_view.is_visible() then
+			if api.tree.is_visible() then
 				vim.cmd("NvimTreeClose")
 			end
 
