@@ -16,8 +16,8 @@ yab < j : yabai -m window --focus south ; skhd -k escape
 yab < k : yabai -m window --focus north ; skhd -k escape
 
 # displays
-yab < p : yabai -m display --focus prev || yabai -m display --focus last ; skhd -k escape
-yab < n : yabai -m display --focus next || yabai -m display --focus first ; skhd -k escape 
+# yab < p : yabai -m display --focus prev || yabai -m display --focus last ; skhd -k escape
+# yab < n : yabai -m display --focus next || yabai -m display --focus first ; skhd -k escape 
 
 # next/prev/recent
 yab < m : \
@@ -70,14 +70,14 @@ yab < s : yabai -m window --toggle split ; skhd -k escape
 yab < shift - f : yabai -m window --toggle float ; skhd -k escape
 
 # absolute dev
-yab < d : \
-  yabai -m rule --add app="^main$" manage=off ; \
-  yabai -m rule --add app="^Google Chrome Canary$" manage=off grid=1:2:1:0:1:1 ; \
-  skhd -k escape
+# yab < d : \
+#   yabai -m rule --add app="^main$" manage=off ; \
+#   yabai -m rule --add app="^Google Chrome Canary$" manage=off grid=1:2:1:0:1:1 ; \
+#   skhd -k escape
 
 
 # gap
-yab < shift - g : yabai -m space --toggle padding; yabai -m space --toggle gap ; skhd -k escape
+# yab < shift - g : yabai -m space --toggle padding; yabai -m space --toggle gap ; skhd -k escape
 
 #apps
 yab < t : open -a "WezTerm" ; skhd -k escape
@@ -88,6 +88,12 @@ yab < c : open -a "Google Chrome Canary"; skhd -k escape
 yab < f : open -a "Finder"; skhd -k escape 
 yab < a : open -a "Aseprite"; skhd -k escape 
 yab < b : open -a "Blender"; skhd -k escape 
+yab < d : open -a "Gimp"; skhd -k escape 
+yab < n : open -a "Notes"; skhd -k escape 
+yab < e : open -a "Freeform"; skhd -k escape 
+yab < i : open -a "Telegram"; skhd -k escape 
+yab < p : open -a "System Settings"; skhd -k escape 
+
 yab < g : open -a "/Users/arthurmasl/Work/odin/sokoool/game_hot_reload.bin"; skhd -k escape 
 # yab < g : open -a "/Users/arthurmasl/Work/odin/esnf/game_hot_reload.bin"; skhd -k escape 
 
