@@ -47,6 +47,7 @@ export MANWIDTH=999
 alias vim='nvim'
 alias v='nvim'
 
+# c
 alias cinit='cmake -B ./build && cmake --build ./build'
 alias cbuild='cmake --build ./build'
 alias crun='cbuild && ./build/main'
@@ -56,14 +57,19 @@ alias bp-c='rsync -av ~/.dotfiles/boilerplate/c/ ./'
 alias bp-raylib='bp-c && rsync -av ~/.dotfiles/boilerplate/raylib/ ./'
 alias csource='rsync -av ~/.dotfiles/boilerplate/c/.clang-format ./ && rsync -av ~/.dotfiles/boilerplate/c/CMakeLists.txt ./'
 
+# odin
 alias orun='odin run ./src -out:build/main -debug'
-alias owatch='watchexec -r -e odin,png "odin run ./src -out:build/main -debug"'
+alias owatch='watchexec -r -e odin "odin run ./src -out:build/main'
+alias owatchdedbug='watchexec -r -e odin "odin run ./src -out:build/main -debug"'
+
 alias sowatch='watchexec -r -e odin,glsl "./build.py -hot-reload -run"'
 alias sohardwatch='watchexec -r -e odin,glsl "./build.py -hot-reload -hard -run"'
 alias sodebug='watchexec -r -e odin,glsl "./build.py -release -debug"'
+
 alias otest='watchexec -r -e odin "odin test ./src -out:build/main -debug"'
 alias obuild='odin build ./src -out:build/release -o:speed && ./build/release'
 
+# go
 alias gorun='go run ./cmd/app'
 alias gowatch='watchexec -r -e go,mod "go run ./cmd/app"'
 
@@ -77,6 +83,7 @@ alias gotestwatch='watchexec -r -e go,mod "go test ./... -v"'
 alias gobench='watchexec -r -e go,mod "go test ./... -bench=. -benchmem -v"'
 alias gobenchwatch='watchexec -r -e go,mod "go test ./... -bench=. -benchmem -v"'
 
+# sql
 alias sql='psql -h localhost -p 5432 -U root -d box'
 alias sqlwatch='watchexec -r -e sql "psql -h localhost -p 5432 -U root -d box -f ./schema.sql"'
 
