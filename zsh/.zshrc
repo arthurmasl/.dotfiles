@@ -59,11 +59,11 @@ alias csource='rsync -av ~/.dotfiles/boilerplate/c/.clang-format ./ && rsync -av
 
 # odin
 alias orun='odin run ./src -out:build/main -debug'
-alias owatch='watchexec -r -e odin "odin run ./src -out:build/main"'
+alias owatch='watchexec -r -e odin "odin run ./src -out:build/main -debug"'
 alias owatchdedbug='watchexec -r -e odin "odin run ./src -out:build/main -debug"'
 
-alias sowatch='watchexec -r -e odin,glsl "./build.py -hot-reload -run"'
-alias sohardwatch='watchexec -r -e odin,glsl "./build.py -hot-reload -hard -run"'
+alias sowatch='watchexec -r -e odin,glsl "./build.py -hot-reload -run -debug"'
+alias sohardwatch='watchexec -r -e odin,glsl "./build.py -hot-reload -hard -run -debug"'
 alias sodebug='watchexec -r -e odin,glsl "./build.py -release -debug"'
 
 alias otest='watchexec -r -e odin "odin test ./src -out:build/main -debug"'
