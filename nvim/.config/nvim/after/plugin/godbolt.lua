@@ -5,6 +5,7 @@ require("godbolt").setup({
 
 		-- go = { compiler = "gccgoarm641420", options = {} },
 		go = { compiler = "arm64_gltip", options = {} },
+		odin = { compiler = "odin-dev-2025-01", options = {} },
 	},
 	auto_cleanup = true,
 	highlight = {
