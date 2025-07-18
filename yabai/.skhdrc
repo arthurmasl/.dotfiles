@@ -99,7 +99,7 @@ yab < g : open -a "/Users/arthurmasl/Work/odin/sokoool/game_hot_reload.bin"; skh
 
 # media
 media < m : osascript -e 'set volume output muted not (output muted of (get volume settings))' ; skhd -k escape
-media < k : osascript -e 'set volume output volume (output volume of (get volume settings)) + 5' ; skhd -k escape
-media < j : osascript -e 'set volume output volume (output volume of (get volume settings)) - 5' ; skhd -k escape
+media < u : osascript -e 'set volume output volume (output volume of (get volume settings)) + 5' ; skhd -k escape
+media < d : osascript -e 'set volume output volume (output volume of (get volume settings)) - 5' ; skhd -k escape
 
 # yab < shift - t : ~/.dotfiles/yabai/tabs.sh ; skhd -k escape
