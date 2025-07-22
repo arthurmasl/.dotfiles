@@ -62,7 +62,7 @@ alias orun='odin run ./src -out:build/main -debug'
 alias owatch='watchexec -r -e odin "odin run ./src -out:build/main -debug"'
 alias owatchdedbug='watchexec -r -e odin "odin run ./src -out:build/main -debug"'
 
-alias sowatch='watchexec -r -e odin,glsl "./build.py -hot-reload -run -debug"'
+alias sowatch='watchexec -r -e odin,glsl,png "./build.py -hot-reload -run -debug"'
 alias sohardwatch='watchexec -r -e odin,glsl "./build.py -hot-reload -hard -run -debug"'
 alias sodebug='watchexec -r -e odin,glsl "./build.py -release -debug"'
 
