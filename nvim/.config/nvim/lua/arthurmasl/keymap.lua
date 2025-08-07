@@ -11,7 +11,7 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", opts)
 
 vim.keymap.set("n", "<Leader><CR>", ":source %<CR>", { silent = false }, opts)
 vim.keymap.set("n", "<Leader>w", ":w<CR>", opts)
-vim.keymap.set("n", "<Leader>W", ":bufdo w<CR>", opts)
+-- vim.keymap.set("n", "<Leader>W", ":bufdo w<CR>", opts)
 vim.keymap.set("n", "<Leader>q", ":q<CR>", opts)
 vim.keymap.set("n", "<Leader>Q", ":qa<CR>", opts)
 vim.keymap.set("n", "<Leader>C", ":tabclose<CR>", opts)
