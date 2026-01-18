@@ -70,7 +70,7 @@ require("nvim-tree").setup({
 	filters = {
 		dotfiles = false,
 		git_ignored = true,
-		custom = { "^\\.DS_Store" },
+		custom = { "^\\.DS_Store", "*.uid", "*.import" },
 		-- custom = { "^\\.git", "^\\.DS_Store" },
 	},
 })

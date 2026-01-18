@@ -13,6 +13,8 @@ telescope.setup({
 			"vendor/",
 			"examples/",
 			"assets/",
+      "%.uid",
+      "%.import"
 		},
 		mappings = {
 			i = {
