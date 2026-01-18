@@ -95,8 +95,8 @@ yab < n : open -a "Notes"; skhd -k escape
 yab < i : open -a "Telegram"; skhd -k escape 
 yab < p : open -a "System Settings"; skhd -k escape 
 
-yab < e : yabai -m window --focus "$(yabai -m query --windows | jq -r '.[] | select(.app=="Godot" and .display==1) | .id' | head -n1)"
-yab < g : yabai -m window --focus "$(yabai -m query --windows | jq -r '.[] | select(.app=="Godot" and .display==2) | .id' | head -n1)"
+yab < e : yabai -m window --focus "$(yabai -m query --windows | jq -r '.[] | select(.app=="Godot" and .display==1) | .id' | head -n1)"; skhd -k escape
+yab < g : yabai -m window --focus "$(yabai -m query --windows | jq -r '.[] | select(.app=="Godot" and .display==2) | .id' | head -n1)"; skhd -k escape
 
 # yab < g : open -a "/Users/arthurmasl/Work/odin/sokoool/game_hot_reload.bin"; skhd -k escape 
 # yab < g : open -a "/Users/arthurmasl/Work/odin/esnf/game_hot_reload.bin"; skhd -k escape 
