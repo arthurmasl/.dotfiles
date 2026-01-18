@@ -23,6 +23,8 @@ null_ls.setup({
 		-- null_ls.builtins.formatting.clang_format,
 		-- null_ls.builtins.formatting.zigfmt,
 
+    -- null_ls.builtins.formatting.gdformat,
+
 		null_ls.builtins.formatting.gofumpt,
 		null_ls.builtins.formatting.goimports_reviser.with({
 			extra_args = { "-rm-unused" },
@@ -45,7 +47,7 @@ vim.cmd([[autocmd BufWritePre *.glsl lua vim.lsp.buf.format()]])
 vim.cmd([[autocmd BufWritePre *.rest call VrcQuery()]])
 vim.cmd([[autocmd BufWritePre *.templ lua vim.lsp.buf.format()]])
 
-vim.cmd([[autocmd BufWritePre *.gd lua vim.lsp.buf.format()]])
+-- vim.cmd([[autocmd BufWritePre *.gd lua vim.lsp.buf.format()]])
 
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "glsl",

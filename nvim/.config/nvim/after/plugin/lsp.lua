@@ -40,7 +40,7 @@ local servers = {
 	"glsl_analyzer",
 	"dockerls",
 	"sqlls",
-  "gdscript"
+  -- "gdscript"
 }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
@@ -125,3 +125,5 @@ gopher.setup({
 		transform = "snakecase",
 	},
 })
+
+require("godotdev").setup({})

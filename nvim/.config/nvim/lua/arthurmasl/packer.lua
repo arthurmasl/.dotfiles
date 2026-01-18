@@ -78,5 +78,7 @@ return require("packer").startup(function()
 	-- })
 
 	-- use({ "norcalli/nvim-colorizer.lua" })
-	use({ "habamax/vim-godot", event='VimEnter' })
+	-- use({ "habamax/vim-godot", event='VimEnter' })
+
+  use({"Mathijs-Bakker/godotdev.nvim"})
 end)
