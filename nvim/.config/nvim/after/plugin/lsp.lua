@@ -40,6 +40,7 @@ local servers = {
 	"glsl_analyzer",
 	"dockerls",
 	"sqlls",
+  "gdscript"
 }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({

@@ -66,3 +66,6 @@ vim.opt.fillchars = {
 
 vim.opt.lazyredraw = true
 vim.opt.shell = "/bin/zsh"
+
+vim.deprecate = function() end
+vim.g.godot_executable = "/Applications/Godot.app/Contents/MacOS/Godot"

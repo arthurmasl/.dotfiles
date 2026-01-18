@@ -21,6 +21,9 @@ require("nvim-treesitter.configs").setup({
 		"sql",
 		"go",
 		"dockerfile",
+    "gdscript",
+    "godot_resource",
+    "gdshader"
 	},
 	sync_install = false,
 	auto_install = true,

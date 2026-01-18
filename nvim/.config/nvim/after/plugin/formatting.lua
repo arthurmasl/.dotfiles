@@ -45,6 +45,8 @@ vim.cmd([[autocmd BufWritePre *.glsl lua vim.lsp.buf.format()]])
 vim.cmd([[autocmd BufWritePre *.rest call VrcQuery()]])
 vim.cmd([[autocmd BufWritePre *.templ lua vim.lsp.buf.format()]])
 
+vim.cmd([[autocmd BufWritePre *.gd lua vim.lsp.buf.format()]])
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "glsl",
 	callback = function()

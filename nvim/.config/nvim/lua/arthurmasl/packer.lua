@@ -77,5 +77,6 @@ return require("packer").startup(function()
 	-- 	run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
 	-- })
 
-	use({ "norcalli/nvim-colorizer.lua" })
+	-- use({ "norcalli/nvim-colorizer.lua" })
+	use({ "habamax/vim-godot", event='VimEnter' })
 end)

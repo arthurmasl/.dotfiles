@@ -90,7 +90,8 @@ yab < a : open -a "Aseprite"; skhd -k escape
 yab < b : open -a "Blender"; skhd -k escape 
 yab < d : open -a "Gimp"; skhd -k escape 
 yab < n : open -a "Notes"; skhd -k escape 
-yab < e : open -a "Freeform"; skhd -k escape 
+# yab < e : open -a "Freeform"; skhd -k escape 
+yab < e : open -a "Godot"; skhd -k escape 
 yab < i : open -a "Telegram"; skhd -k escape 
 yab < p : open -a "System Settings"; skhd -k escape 
 
