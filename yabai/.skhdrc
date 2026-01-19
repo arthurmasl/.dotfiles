@@ -69,12 +69,14 @@ yab < s : yabai -m window --toggle split ; skhd -k escape
 # float
 yab < shift - f : yabai -m window --toggle float ; skhd -k escape
 
-# absolute dev
-# yab < d : \
-#   yabai -m rule --add app="^main$" manage=off ; \
-#   yabai -m rule --add app="^Google Chrome Canary$" manage=off grid=1:2:1:0:1:1 ; \
-#   skhd -k escape
-
+# spaces
+# yab < shift - s : yabai -m space --create ; skhd -k escape
+# yab < shift - x : yabai -m space --destroy ; skhd -k escape
+#
+# yab < shift - n : yabai -m space --move next ; skhd -k escape
+# yab < shift - p : yabai -m space --move prev ; skhd -k escape
+#
+# yab < shift - m : yabai -m window --space prev ; skhd -k escape
 
 # gap
 # yab < shift - g : yabai -m space --toggle padding; yabai -m space --toggle gap ; skhd -k escape
@@ -86,14 +88,13 @@ yab < y : open -a "Google Chrome"; skhd -k escape
 yab < c : open -a "Google Chrome Canary"; skhd -k escape 
 
 yab < f : open -a "Finder"; skhd -k escape 
-# yab < a : open -a "Aseprite"; skhd -k escape 
 yab < b : open -a "Blender"; skhd -k escape 
 yab < d : open -a "Gimp"; skhd -k escape 
 yab < n : open -a "Notes"; skhd -k escape 
-# yab < e : open -a "Freeform"; skhd -k escape 
-# yab < e : open -a "Godot"; skhd -k escape 
 yab < i : open -a "Telegram"; skhd -k escape 
 yab < p : open -a "System Settings"; skhd -k escape 
+# yab < a : open -a "Aseprite"; skhd -k escape 
+# yab < e : open -a "Freeform"; skhd -k escape 
 
 yab < e : yabai -m window --focus "$(yabai -m query --windows | jq -r '.[] | select(.app=="Godot" and .display==1) | .id' | head -n1)"; skhd -k escape
 yab < g : yabai -m window --focus "$(yabai -m query --windows | jq -r '.[] | select(.app=="Godot" and .display==2) | .id' | head -n1)"; skhd -k escape
