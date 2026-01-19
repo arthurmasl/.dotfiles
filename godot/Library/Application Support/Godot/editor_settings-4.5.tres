@@ -1,0 +1,247 @@
+[gd_resource type="EditorSettings" load_steps=22 format=3]
+
+[sub_resource type="InputEventKey" id="InputEventKey_0w2le"]
+keycode = 4194308
+
+[sub_resource type="InputEventKey" id="InputEventKey_l0qov"]
+device = -1
+ctrl_pressed = true
+physical_keycode = 4194308
+
+[sub_resource type="InputEventKey" id="InputEventKey_aa11m"]
+device = -1
+physical_keycode = 83
+unicode = 115
+
+[sub_resource type="InputEventKey" id="InputEventKey_d8kde"]
+device = -1
+physical_keycode = 70
+unicode = 102
+
+[sub_resource type="InputEventKey" id="InputEventKey_ikfgb"]
+device = -1
+physical_keycode = 69
+unicode = 101
+
+[sub_resource type="InputEventKey" id="InputEventKey_p4u3v"]
+device = -1
+physical_keycode = 68
+unicode = 100
+
+[sub_resource type="InputEventKey" id="InputEventKey_nu5lu"]
+device = -1
+physical_keycode = 32
+unicode = 32
+
+[sub_resource type="InputEventKey" id="InputEventKey_spvo3"]
+device = -1
+physical_keycode = 90
+unicode = 122
+
+[sub_resource type="InputEventKey" id="InputEventKey_yj1y4"]
+device = -1
+ctrl_pressed = true
+meta_pressed = true
+physical_keycode = 44
+
+[sub_resource type="InputEventKey" id="InputEventKey_1gd3g"]
+alt_pressed = true
+keycode = 32
+unicode = 32
+
+[sub_resource type="InputEventKey" id="InputEventKey_3uqjw"]
+device = -1
+meta_pressed = true
+physical_keycode = 70
+
+[sub_resource type="InputEventKey" id="InputEventKey_liff1"]
+ctrl_pressed = true
+meta_pressed = true
+keycode = 49
+unicode = 49
+
+[sub_resource type="InputEventKey" id="InputEventKey_y7v4o"]
+device = -1
+shift_pressed = true
+physical_keycode = 49
+unicode = 33
+
+[sub_resource type="InputEventKey" id="InputEventKey_aqhhn"]
+ctrl_pressed = true
+meta_pressed = true
+keycode = 50
+unicode = 50
+
+[sub_resource type="InputEventKey" id="InputEventKey_cet71"]
+device = -1
+shift_pressed = true
+physical_keycode = 50
+unicode = 64
+
+[sub_resource type="InputEventKey" id="InputEventKey_7806o"]
+ctrl_pressed = true
+meta_pressed = true
+keycode = 51
+unicode = 51
+
+[sub_resource type="InputEventKey" id="InputEventKey_2s1wf"]
+device = -1
+shift_pressed = true
+physical_keycode = 55
+unicode = 38
+
+[sub_resource type="InputEventKey" id="InputEventKey_8hq05"]
+ctrl_pressed = true
+meta_pressed = true
+keycode = 52
+unicode = 52
+
+[sub_resource type="InputEventKey" id="InputEventKey_g6gm7"]
+device = -1
+shift_pressed = true
+physical_keycode = 53
+unicode = 37
+
+[sub_resource type="InputEventKey" id="InputEventKey_1mmmj"]
+ctrl_pressed = true
+meta_pressed = true
+keycode = 53
+unicode = 53
+
+[sub_resource type="InputEventKey" id="InputEventKey_57pyp"]
+device = -1
+shift_pressed = true
+physical_keycode = 57
+unicode = 40
+
+[resource]
+interface/editor/single_window_mode = true
+interface/editor/save_on_focus_loss = true
+interface/editor/import_resources_when_unfocused = true
+interface/theme/base_color = Color(0.21, 0.24, 0.29, 1)
+interface/theme/accent_color = Color(0.44, 0.73, 0.98, 1)
+interface/theme/contrast = 0.3
+text_editor/theme/highlighting/symbol_color = Color(0.67, 0.79, 1, 1)
+text_editor/theme/highlighting/keyword_color = Color(1, 0.44, 0.52, 1)
+text_editor/theme/highlighting/control_flow_keyword_color = Color(1, 0.55, 0.8, 1)
+text_editor/theme/highlighting/base_type_color = Color(0.26, 1, 0.76, 1)
+text_editor/theme/highlighting/engine_type_color = Color(0.56, 1, 0.86, 1)
+text_editor/theme/highlighting/user_type_color = Color(0.78, 1, 0.93, 1)
+text_editor/theme/highlighting/comment_color = Color(0.8025, 0.81, 0.8225, 0.5)
+text_editor/theme/highlighting/doc_comment_color = Color(0.6, 0.7, 0.8, 0.8)
+text_editor/theme/highlighting/string_color = Color(1, 0.93, 0.63, 1)
+text_editor/theme/highlighting/background_color = Color(0.115499996, 0.132, 0.15949999, 1)
+text_editor/theme/highlighting/completion_background_color = Color(0.21, 0.24, 0.29, 1)
+text_editor/theme/highlighting/completion_selected_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/completion_existing_color = Color(1, 1, 1, 0.14)
+text_editor/theme/highlighting/completion_font_color = Color(0.8025, 0.81, 0.8225, 1)
+text_editor/theme/highlighting/text_color = Color(0.8025, 0.81, 0.8225, 1)
+text_editor/theme/highlighting/line_number_color = Color(0.8025, 0.81, 0.8225, 0.5)
+text_editor/theme/highlighting/safe_line_number_color = Color(0.8025, 0.97200006, 0.8225, 0.75)
+text_editor/theme/highlighting/caret_color = Color(1, 1, 1, 1)
+text_editor/theme/highlighting/selection_color = Color(0.44, 0.73, 0.98, 0.4)
+text_editor/theme/highlighting/brace_mismatch_color = Color(1, 0.47, 0.42, 1)
+text_editor/theme/highlighting/current_line_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/line_length_guideline_color = Color(0.21, 0.24, 0.29, 1)
+text_editor/theme/highlighting/word_highlighted_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/number_color = Color(0.63, 1, 0.88, 1)
+text_editor/theme/highlighting/function_color = Color(0.34, 0.7, 1, 1)
+text_editor/theme/highlighting/member_variable_color = Color(0.736, 0.88, 1, 1)
+text_editor/theme/highlighting/mark_color = Color(1, 0.47, 0.42, 0.3)
+text_editor/theme/highlighting/warning_color = Color(1, 0.87, 0.4, 0.15)
+text_editor/theme/highlighting/breakpoint_color = Color(1, 0.47, 0.42, 1)
+text_editor/theme/highlighting/code_folding_color = Color(1, 1, 1, 0.27)
+text_editor/theme/highlighting/search_result_color = Color(1, 1, 1, 0.07)
+text_editor/appearance/caret/caret_blink = false
+text_editor/appearance/caret/highlight_current_line = false
+text_editor/appearance/guidelines/show_line_length_guidelines = false
+text_editor/appearance/minimap/show_minimap = false
+text_editor/appearance/whitespace/draw_tabs = false
+text_editor/behavior/navigation/scroll_past_end_of_file = true
+editors/3d_gizmos/gizmo_settings/bone_axis_length = 0.1
+editors/3d/navigation/navigation_scheme = 3
+editors/3d/navigation_feel/orbit_sensitivity = 0.1
+editors/3d/freelook/freelook_sensitivity = 0.1
+editors/3d/freelook/freelook_speed_zoom_link = true
+editors/animation/default_animation_step = 0.033333335
+run/window_placement/rect = 3
+run/window_placement/screen = 1
+network/connection/network_mode = 1
+export/android/debug_keystore = "/Users/arthurmasl/Library/Application Support/Godot/keystores/debug.keystore"
+export/android/debug_keystore_pass = "android"
+export/android/java_sdk_path = "/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home"
+export/android/android_sdk_path = "/Users/arthurmasl/Library/Android/sdk"
+export/ios/ios_deploy = ""
+export/macos/rcodesign = ""
+export/web/http_port = 8060
+export/web/tls_key = ""
+export/web/tls_certificate = ""
+export/windows/osslsigncode = ""
+_editor_settings_advanced_mode = true
+_project_settings_advanced_mode = true
+_export_template_download_directory = ""
+_default_feature_profile = ""
+_script_setup_templates_dictionary = {
+"Button": "0NodeDefault",
+"Label": "0NodeDefault",
+"MeshInstance3D": "0NodeDefault",
+"Node": "0NodeDefault",
+"Node2D": "0NodeDefault",
+"Sprite2D": "0NodeDefault"
+}
+_script_setup_use_script_templates = true
+_use_favorites_root_selection = false
+godot_neovim/neovim_executable_path = "nvim"
+godot_neovim/input_mode = 0
+godot_neovim/neovim_clean = false
+godot_neovim/timeoutlen = 1000
+shortcuts = [{
+"name": "spatial_editor/freelook_left",
+"shortcuts": [SubResource("InputEventKey_aa11m")]
+}, {
+"name": "spatial_editor/freelook_right",
+"shortcuts": [SubResource("InputEventKey_d8kde")]
+}, {
+"name": "spatial_editor/freelook_forward",
+"shortcuts": [SubResource("InputEventKey_ikfgb")]
+}, {
+"name": "spatial_editor/freelook_backwards",
+"shortcuts": [SubResource("InputEventKey_p4u3v")]
+}, {
+"name": "spatial_editor/freelook_up",
+"shortcuts": [SubResource("InputEventKey_nu5lu")]
+}, {
+"name": "spatial_editor/freelook_down",
+"shortcuts": [SubResource("InputEventKey_spvo3")]
+}, {
+"name": "canvas_item_editor/ruler_mode",
+"shortcuts": []
+}, {
+"name": "spatial_editor/measure",
+"shortcuts": []
+}, {
+"name": "editor/project_settings",
+"shortcuts": [SubResource("InputEventKey_yj1y4")]
+}, {
+"name": "editor/editor_help",
+"shortcuts": [SubResource("InputEventKey_1gd3g"), SubResource("InputEventKey_3uqjw")]
+}, {
+"name": "editor/editor_2d",
+"shortcuts": [SubResource("InputEventKey_liff1"), SubResource("InputEventKey_y7v4o")]
+}, {
+"name": "editor/editor_3d",
+"shortcuts": [SubResource("InputEventKey_aqhhn"), SubResource("InputEventKey_cet71")]
+}, {
+"name": "editor/editor_script",
+"shortcuts": [SubResource("InputEventKey_7806o"), SubResource("InputEventKey_2s1wf")]
+}, {
+"name": "editor/editor_game",
+"shortcuts": [SubResource("InputEventKey_8hq05"), SubResource("InputEventKey_g6gm7")]
+}, {
+"name": "editor/editor_assetlib",
+"shortcuts": [SubResource("InputEventKey_1mmmj"), SubResource("InputEventKey_57pyp")]
+}]
+builtin_action_overrides = [{
+"events": [SubResource("InputEventKey_0w2le"), SubResource("InputEventKey_l0qov")],
+"name": "ui_text_backspace"
+}]
