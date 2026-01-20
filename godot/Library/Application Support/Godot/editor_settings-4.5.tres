@@ -167,6 +167,7 @@ editors/animation/default_animation_step = 0.033333335
 run/window_placement/rect = 3
 run/window_placement/screen = 1
 network/connection/network_mode = 1
+debugger/auto_switch_to_stack_trace = false
 export/android/debug_keystore = "/Users/arthurmasl/Library/Application Support/Godot/keystores/debug.keystore"
 export/android/debug_keystore_pass = "android"
 export/android/java_sdk_path = "/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home"
@@ -187,14 +188,11 @@ _script_setup_templates_dictionary = {
 "MeshInstance3D": "0NodeDefault",
 "Node": "0NodeDefault",
 "Node2D": "0NodeDefault",
+"Path3D": "0NodeDefault",
 "Sprite2D": "0NodeDefault"
 }
 _script_setup_use_script_templates = true
 _use_favorites_root_selection = false
-godot_neovim/neovim_executable_path = "nvim"
-godot_neovim/input_mode = 0
-godot_neovim/neovim_clean = false
-godot_neovim/timeoutlen = 1000
 shortcuts = [{
 "name": "spatial_editor/freelook_left",
 "shortcuts": [SubResource("InputEventKey_aa11m")]
