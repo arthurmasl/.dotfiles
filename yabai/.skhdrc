@@ -72,6 +72,10 @@ yab < shift - f : yabai -m window --toggle float ; skhd -k escape
 # move focused window top and resize to 70%
 yab < shift - g : yabai -m space --rotate 270 ; yabai -m window --resize bottom:0:300  ; skhd -k escape
 
+cmd - b [
+    "WezTerm"       : skhd -k ctrl-m ; skhd -k e; skhd -k escape ; skhd -k cmd-b
+]
+
 # spaces
 # yab < shift - s : yabai -m space --create ; skhd -k escape
 # yab < shift - x : yabai -m space --destroy ; skhd -k escape
@@ -92,10 +96,10 @@ yab < c : open -a "Google Chrome Canary"; skhd -k escape
 
 yab < f : open -a "Finder"; skhd -k escape 
 yab < b : open -a "Blender"; skhd -k escape 
-yab < d : open -a "Gimp"; skhd -k escape 
-yab < n : open -a "Notes"; skhd -k escape 
-yab < i : open -a "Telegram"; skhd -k escape 
-yab < p : open -a "System Settings"; skhd -k escape 
+# yab < d : open -a "Gimp"; skhd -k escape 
+# yab < n : open -a "Notes"; skhd -k escape 
+# yab < i : open -a "Telegram"; skhd -k escape 
+# yab < p : open -a "System Settings"; skhd -k escape 
 # yab < a : open -a "Aseprite"; skhd -k escape 
 # yab < e : open -a "Freeform"; skhd -k escape 
 

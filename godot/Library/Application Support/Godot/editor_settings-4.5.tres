@@ -1,4 +1,4 @@
-[gd_resource type="EditorSettings" load_steps=22 format=3]
+[gd_resource type="EditorSettings" load_steps=27 format=3]
 
 [sub_resource type="InputEventKey" id="InputEventKey_0w2le"]
 keycode = 4194308
@@ -78,6 +78,11 @@ shift_pressed = true
 physical_keycode = 50
 unicode = 64
 
+[sub_resource type="InputEventKey" id="InputEventKey_jvm7o"]
+device = -1
+meta_pressed = true
+physical_keycode = 69
+
 [sub_resource type="InputEventKey" id="InputEventKey_7806o"]
 ctrl_pressed = true
 meta_pressed = true
@@ -113,6 +118,25 @@ device = -1
 shift_pressed = true
 physical_keycode = 57
 unicode = 40
+
+[sub_resource type="InputEventKey" id="InputEventKey_w2hc4"]
+ctrl_pressed = true
+keycode = 4194306
+
+[sub_resource type="InputEventKey" id="InputEventKey_xybsi"]
+device = -1
+ctrl_pressed = true
+physical_keycode = 78
+
+[sub_resource type="InputEventKey" id="InputEventKey_c67ex"]
+shift_pressed = true
+ctrl_pressed = true
+keycode = 4194306
+
+[sub_resource type="InputEventKey" id="InputEventKey_8p1k0"]
+device = -1
+ctrl_pressed = true
+physical_keycode = 80
 
 [resource]
 interface/editor/single_window_mode = true
@@ -158,6 +182,7 @@ text_editor/appearance/guidelines/show_line_length_guidelines = false
 text_editor/appearance/minimap/show_minimap = false
 text_editor/appearance/whitespace/draw_tabs = false
 text_editor/behavior/navigation/scroll_past_end_of_file = true
+text_editor/behavior/navigation/open_script_when_connecting_signal_to_existing_method = false
 editors/3d_gizmos/gizmo_settings/bone_axis_length = 0.1
 editors/3d/navigation/navigation_scheme = 3
 editors/3d/navigation_feel/orbit_sensitivity = 0.1
@@ -166,6 +191,8 @@ editors/3d/freelook/freelook_speed_zoom_link = true
 editors/animation/default_animation_step = 0.033333335
 run/window_placement/rect = 3
 run/window_placement/screen = 1
+run/bottom_panel/action_on_play = 0
+run/bottom_panel/action_on_stop = 1
 network/connection/network_mode = 1
 debugger/auto_switch_to_stack_trace = false
 export/android/debug_keystore = "/Users/arthurmasl/Library/Application Support/Godot/keystores/debug.keystore"
@@ -184,11 +211,15 @@ _export_template_download_directory = ""
 _default_feature_profile = ""
 _script_setup_templates_dictionary = {
 "Button": "0NodeDefault",
+"Camera3D": "0NodeDefault",
+"CharacterBody3D": "0CharacterBody3DBasic Movement",
+"Control": "0NodeDefault",
 "Label": "0NodeDefault",
 "MeshInstance3D": "0NodeDefault",
 "Node": "0NodeDefault",
 "Node2D": "0NodeDefault",
 "Path3D": "0NodeDefault",
+"SpringArm3D": "0NodeDefault",
 "Sprite2D": "0NodeDefault"
 }
 _script_setup_use_script_templates = true
@@ -228,7 +259,7 @@ shortcuts = [{
 "shortcuts": [SubResource("InputEventKey_liff1"), SubResource("InputEventKey_y7v4o")]
 }, {
 "name": "editor/editor_3d",
-"shortcuts": [SubResource("InputEventKey_aqhhn"), SubResource("InputEventKey_cet71")]
+"shortcuts": [SubResource("InputEventKey_aqhhn"), SubResource("InputEventKey_cet71"), SubResource("InputEventKey_jvm7o")]
 }, {
 "name": "editor/editor_script",
 "shortcuts": [SubResource("InputEventKey_7806o"), SubResource("InputEventKey_2s1wf")]
@@ -238,6 +269,12 @@ shortcuts = [{
 }, {
 "name": "editor/editor_assetlib",
 "shortcuts": [SubResource("InputEventKey_1mmmj"), SubResource("InputEventKey_57pyp")]
+}, {
+"name": "editor/next_tab",
+"shortcuts": [SubResource("InputEventKey_w2hc4"), SubResource("InputEventKey_xybsi")]
+}, {
+"name": "editor/prev_tab",
+"shortcuts": [SubResource("InputEventKey_c67ex"), SubResource("InputEventKey_8p1k0")]
 }]
 builtin_action_overrides = [{
 "events": [SubResource("InputEventKey_0w2le"), SubResource("InputEventKey_l0qov")],
