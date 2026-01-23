@@ -275,6 +275,9 @@ shortcuts = [{
 }, {
 "name": "editor/prev_tab",
 "shortcuts": [SubResource("InputEventKey_c67ex"), SubResource("InputEventKey_8p1k0")]
+}, {
+"name": "spatial_editor/toggle_camera_preview",
+"shortcuts": []
 }]
 builtin_action_overrides = [{
 "events": [SubResource("InputEventKey_0w2le"), SubResource("InputEventKey_l0qov")],
